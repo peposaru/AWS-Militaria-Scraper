@@ -1,3 +1,5 @@
+# This is the AWS Cloud version of this program designed to be used with EC2 and RDS
+
 # Making a more universal scraper which just takes a json library as input
 
 import requests, re, os, psycopg2,json
