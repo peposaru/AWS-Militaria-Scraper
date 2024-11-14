@@ -204,7 +204,7 @@ PROCESS DATE        : {todayDate}
 def main():
     print ('INITIALIZING. PLEASE WAIT...')
     # Location where credentials are located
-    infoLocation = r'/home/ec2-user/pgadminCredentials.json'
+    infoLocation = r'/home/ec2-user/'
     pgAdminCred  = 'pgadminCredentials.json'
     selectorJson = 'MILITARIA_SELECTORS.json'
     os.chdir(infoLocation)
