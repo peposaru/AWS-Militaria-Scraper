@@ -204,7 +204,7 @@ PROCESS DATE        : {todayDate}
 def main():
     print ('INITIALIZING. PLEASE WAIT...')
     # Location where credentials are located
-    infoLocation = r'C:\Users\keena\Desktop\Militaria Scraper'
+    infoLocation = r'/home/ec2-user/pgadminCredentials.json'
     pgAdminCred  = 'pgadminCredentials.json'
     selectorJson = 'MILITARIA_SELECTORS.json'
     os.chdir(infoLocation)
