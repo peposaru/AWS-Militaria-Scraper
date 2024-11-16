@@ -144,7 +144,8 @@ class JsonManager:
         return conflict,nation,item_type,grade,source,pageIncrement,currency,products,productUrlElement,titleElement,descElement,priceElement,availableElement,productsPageUrl,base_url
 
 class MainPrinting:
-    def newInstance(self,source,productsPage,runCycle,productsProcessed):
+    current_datetime = datetime.now()
+    def newInstance(self,source,productsPage,runCycle,productsProcessed,current_datetime):
             print(f"""
 --------------------------------------------
             NEW INSTANCE
@@ -152,17 +153,19 @@ MILITARIA SITE      : {source}
 PRODUCTS URL        : {productsPage}
 CYCLES RUN          : {runCycle}
 PRODUCTS PROCESSED  : {productsProcessed}
+TIMESTAMP           : {current_datetime}
 --------------------------------------------""")
-    def terminating(self,source,consecutiveMatches,runCycle,productsProcessed):
+    def terminating(self,source,consecutiveMatches,runCycle,productsProcessed,current_datetime):
         print (f"""
 --------------------------------------------
 MILITARIA SITE      : {source}
 CONSECUTIVE MATCHES : {consecutiveMatches}
 CYCLES RUN          : {runCycle}
 PRODUCTS PROCESSED  : {productsProcessed}
+TIMESTAMP           : {current_datetime}
         TERMINATING INSTANCE
 --------------------------------------------""")
-    def sysUpdate(self,page,urlCount,consecutiveMatches,productUrl):
+    def sysUpdate(self,page,urlCount,consecutiveMatches,productUrl,current_datetime):
         print(f"""
 --------------------------------------------
 PRODUCT IN SYSTEM   : UPDATED
@@ -170,8 +173,9 @@ CURRENT PAGE        : {page}
 PRODUCTS PROCESSED  : {urlCount} 
 CONSECUTIVE MATCHES : {consecutiveMatches}
 URL                 : {productUrl}
+TIMESTAMP           : {current_datetime}
 --------------------------------------------""")  
-    def noUpdate(self,page,urlCount,consecutiveMatches,productUrl):
+    def noUpdate(self,page,urlCount,consecutiveMatches,productUrl,current_datetime):
         print(f"""
 --------------------------------------------
 PRODUCT IN SYSTEM   : NO UPDATES
@@ -179,8 +183,9 @@ CURRENT PAGE        : {page}
 PRODUCTS PROCESSED  : {urlCount} 
 CONSECUTIVE MATCHES : {consecutiveMatches}
 URL                 : {productUrl}
+TIMESTAMP           : {current_datetime}
 --------------------------------------------""")
-    def newProduct(self,page,urlCount,title,productUrl,description,price,available,todayDate):
+    def newProduct(self,page,urlCount,title,productUrl,description,price,available,current_datetime):
         print (f"""  
 --------------------------------------------
 NEW PRODUCT                                              
@@ -191,12 +196,13 @@ URL                 : {productUrl}
 DESCRIPTION         : {description}
 PRICE               : {price}
 AVAILABLE           : {available}
-PROCESS DATE        : {todayDate}
+TIMESTAMP           : {current_datetime}
 --------------------------------------------""")
-    def standby(self):
-        print("""
+    def standby(self,current_datetime):
+        print(f"""
 --------------------------------------------
-    SITE SCRAPE PROCESS COMPLETE
+    SITE SCRAPE PROCESS COMPLETED AT:
+         {current_datetime}
         STAND BY FOR 5 MINUTES
 --------------------------------------------
 """)
