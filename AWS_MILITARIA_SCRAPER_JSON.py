@@ -367,7 +367,7 @@ def main():
                         appendQuery = f'''INSERT INTO militaria (url, title, description, price, available,date,site,currency,conflict,nation,item_type) VALUES ('{productUrl}','{title}','{description}',{price},{available},'{todayDate}','{source}','{currency}','{conflict}','{nation}','{item_type}')'''
                         # COMMENT THIS APPENDQUERY LINE OUT IF YOU WANT TO TEST BEFORE WRITING TO DATABASE 
                         dataManager.sqlExecute(appendQuery)
-                        prints.newProduct(page,urlCount,title,productUrl,description,price,available,todayDate)
+                        prints.newProduct(page,urlCount,title,productUrl,description,price,available)
 
                 page += int(pageIncrement)
 
