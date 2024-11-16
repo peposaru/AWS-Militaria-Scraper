@@ -5,6 +5,7 @@
 import requests, re, os, psycopg2,json
 from bs4 import BeautifulSoup
 from datetime import date
+from datetime import datetime
 from re import sub
 from tqdm import tqdm
 from time import sleep
