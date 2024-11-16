@@ -145,8 +145,8 @@ class JsonManager:
         return conflict,nation,item_type,grade,source,pageIncrement,currency,products,productUrlElement,titleElement,descElement,priceElement,availableElement,productsPageUrl,base_url
 
 class MainPrinting:
-    current_datetime = datetime.now()
-    def newInstance(self,source,productsPage,runCycle,productsProcessed,current_datetime):
+    def newInstance(self,source,productsPage,runCycle,productsProcessed):
+            current_datetime = datetime.now()
             print(f"""
 --------------------------------------------
             NEW INSTANCE
@@ -156,7 +156,8 @@ CYCLES RUN          : {runCycle}
 PRODUCTS PROCESSED  : {productsProcessed}
 TIMESTAMP           : {current_datetime}
 --------------------------------------------""")
-    def terminating(self,source,consecutiveMatches,runCycle,productsProcessed,current_datetime):
+    def terminating(self,source,consecutiveMatches,runCycle,productsProcessed):
+        current_datetime = datetime.now()
         print (f"""
 --------------------------------------------
 MILITARIA SITE      : {source}
@@ -166,7 +167,8 @@ PRODUCTS PROCESSED  : {productsProcessed}
 TIMESTAMP           : {current_datetime}
         TERMINATING INSTANCE
 --------------------------------------------""")
-    def sysUpdate(self,page,urlCount,consecutiveMatches,productUrl,current_datetime):
+    def sysUpdate(self,page,urlCount,consecutiveMatches,productUrl):
+        current_datetime = datetime.now()
         print(f"""
 --------------------------------------------
 PRODUCT IN SYSTEM   : UPDATED
@@ -176,7 +178,8 @@ CONSECUTIVE MATCHES : {consecutiveMatches}
 URL                 : {productUrl}
 TIMESTAMP           : {current_datetime}
 --------------------------------------------""")  
-    def noUpdate(self,page,urlCount,consecutiveMatches,productUrl,current_datetime):
+    def noUpdate(self,page,urlCount,consecutiveMatches,productUrl):
+        current_datetime = datetime.now()
         print(f"""
 --------------------------------------------
 PRODUCT IN SYSTEM   : NO UPDATES
@@ -186,7 +189,8 @@ CONSECUTIVE MATCHES : {consecutiveMatches}
 URL                 : {productUrl}
 TIMESTAMP           : {current_datetime}
 --------------------------------------------""")
-    def newProduct(self,page,urlCount,title,productUrl,description,price,available,current_datetime):
+    def newProduct(self,page,urlCount,title,productUrl,description,price,available):
+        current_datetime = datetime.now()
         print (f"""  
 --------------------------------------------
 NEW PRODUCT                                              
@@ -199,7 +203,8 @@ PRICE               : {price}
 AVAILABLE           : {available}
 TIMESTAMP           : {current_datetime}
 --------------------------------------------""")
-    def standby(self,current_datetime):
+    def standby(self):
+        current_datetime = datetime.now()
         print(f"""
 --------------------------------------------
     SITE SCRAPE PROCESS COMPLETED AT:
@@ -210,6 +215,7 @@ TIMESTAMP           : {current_datetime}
 
 def main():
     print ('INITIALIZING. PLEASE WAIT...')
+    current_datetime = datetime.now()
     # Location where credentials are located
     infoLocation = r'/home/ec2-user/projects/AWS-Militaria-Scraper/'
     pgAdminCred  = 'pgadminCredentials.json'
