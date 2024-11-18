@@ -9,30 +9,59 @@ from datetime import datetime
 from re import sub
 from tqdm import tqdm
 from time import sleep
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+from requests.exceptions import RequestException, ChunkedEncodingError, Timeout
+
 
 class ProductScraper:
-    def __init__(self,spreadSheetManager):
-         self.spreadSheetManager = spreadSheetManager
+    def __init__(self, spreadSheetManager):
+        self.spreadSheetManager = spreadSheetManager
+        # This part of init just helps with errors from websites and what not.
+        # Initialize a session with retries
+        self.session = requests.Session()
+        retry = Retry(
+            total=5,  # Retry up to 5 times
+            backoff_factor=1,  # Wait 1 second between retries, exponentially increasing
+            status_forcelist=[500, 502, 503, 504],  # Retry on these HTTP errors
+        )
+        adapter = HTTPAdapter(max_retries=retry)
+        self.session.mount("http://", adapter)
+        self.session.mount("https://", adapter)
 
-    def readProductPage(self,url):
+    def readProductPage(self, url):
         headers = {
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
-}        
-        response = requests.get(url,headers=headers)
-        if response.status_code != 200:
-            print(f"DEBUG: Failed to retrieve {url} - Status Code: {response.status_code}")
-        else:
-            print(f"DEBUG: Successfully retrieved {url}")
-        soup     = BeautifulSoup(response.content, 'html.parser')
-        return soup
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
+        }
+        try:
+            # Set timeout to 10 seconds
+            response = self.session.get(url, headers=headers, timeout=10)
+            response.raise_for_status()
+        except Timeout:
+            print(f"DEBUG: Timeout occurred while accessing {url}.")
+            return None
+        except RequestException as e:
+            print(f"DEBUG: Error occurred while accessing {url} - {e}")
+            return None
+        
+        return BeautifulSoup(response.content, 'html.parser')
     
-    def scrapePage(self,product):
+    def scrapePage(self, product):
         headers = {
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
-}     
-        response    = requests.get(product,headers=headers)
-        productSoup = BeautifulSoup(response.content, 'html.parser')
-        return productSoup
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
+        }
+        try:
+            # Set timeout to 10 seconds
+            response = self.session.get(product, headers=headers, timeout=10)
+            response.raise_for_status()
+        except Timeout:
+            print(f"DEBUG: Timeout occurred while accessing {product}.")
+            return None
+        except RequestException as e:
+            print(f"DEBUG: Error occurred while accessing {product} - {e}")
+            return None
+        
+        return BeautifulSoup(response.content, 'html.parser')
     
     def scrapeData(self,productSoup,titleElement,descElement,priceElement,availableElement,currency,source):
             
