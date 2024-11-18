@@ -2,12 +2,13 @@
 
 # Making a more universal scraper which just takes a json library as input
 
-import requests, re, os, psycopg2,json
+import requests, re, os, psycopg2,json, logging
 from bs4 import BeautifulSoup
 from datetime import date
 from datetime import datetime
 from re import sub
 from tqdm import tqdm
+from tqdm import trange
 from time import sleep
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -38,10 +39,10 @@ class ProductScraper:
             response = self.session.get(url, headers=headers, timeout=10)
             response.raise_for_status()
         except Timeout:
-            print(f"DEBUG: Timeout occurred while accessing {url}.")
+            logging.info(f"Timeout occurred while accessing {url}.")
             return None
         except RequestException as e:
-            print(f"DEBUG: Error occurred while accessing {url} - {e}")
+            logging.error(f"Error occurred while accessing {url} - {e}")
             return None
         
         return BeautifulSoup(response.content, 'html.parser')
@@ -58,13 +59,13 @@ class ProductScraper:
             content = b"".join(chunk for chunk in response.iter_content(chunk_size=1024) if chunk)
             
         except ChunkedEncodingError:
-            print(f"DEBUG: ChunkedEncodingError encountered while accessing {product}.")
+            logging.error(f"ChunkedEncodingError encountered while accessing {product}.")
             return None
         except Timeout:
-            print(f"DEBUG: Timeout occurred while accessing {product}.")
+            logging.error(f"Timeout occurred while accessing {product}.")
             return None
         except RequestException as e:
-            print(f"DEBUG: General RequestException for {product} - {e}")
+            logging.error(f"General RequestException for {product} - {e}")
             return None
         
         return BeautifulSoup(content, 'html.parser')
@@ -180,77 +181,79 @@ class JsonManager:
         return conflict,nation,item_type,grade,source,pageIncrement,currency,products,productUrlElement,titleElement,descElement,priceElement,availableElement,productsPageUrl,base_url
 
 class MainPrinting:
-    def newInstance(self,source,productsPage,runCycle,productsProcessed):
-            current_datetime = datetime.now()
-            print(f"""
---------------------------------------------
-            NEW INSTANCE
-MILITARIA SITE      : {source}
-PRODUCTS URL        : {productsPage}
-CYCLES RUN          : {runCycle}
-PRODUCTS PROCESSED  : {productsProcessed}
-TIMESTAMP           : {current_datetime}
---------------------------------------------""")
-    def terminating(self,source,consecutiveMatches,runCycle,productsProcessed):
+    def create_log_header(self, message, width=60):
+        """Helper method to create a formatted log header."""
+        border = '-' * width
+        return f"\n{border}\n{message.center(width)}\n{border}"
+
+    def newInstance(self, source, productsPage, runCycle, productsProcessed):
+        """Log the start of a new scraping instance."""
         current_datetime = datetime.now()
-        print (f"""
---------------------------------------------
-MILITARIA SITE      : {source}
-CONSECUTIVE MATCHES : {consecutiveMatches}
-CYCLES RUN          : {runCycle}
-PRODUCTS PROCESSED  : {productsProcessed}
-TIMESTAMP           : {current_datetime}
-        TERMINATING INSTANCE
---------------------------------------------""")
-    def sysUpdate(self,page,urlCount,consecutiveMatches,productUrl):
+        logging.info(self.create_log_header("NEW INSTANCE STARTED"))
+        logging.info(f"MILITARIA SITE      : {source}")
+        logging.info(f"PRODUCTS URL        : {productsPage}")
+        logging.info(f"CYCLES RUN          : {runCycle}")
+        logging.info(f"PRODUCTS PROCESSED  : {productsProcessed}")
+        logging.info(f"TIMESTAMP           : {current_datetime}")
+
+    def terminating(self, source, consecutiveMatches, runCycle, productsProcessed):
+        """Log the termination of a scraping instance."""
         current_datetime = datetime.now()
-        print(f"""
---------------------------------------------
-PRODUCT IN SYSTEM   : UPDATED
-CURRENT PAGE        : {page}
-PRODUCTS PROCESSED  : {urlCount} 
-CONSECUTIVE MATCHES : {consecutiveMatches}
-URL                 : {productUrl}
-TIMESTAMP           : {current_datetime}
---------------------------------------------""")  
-    def noUpdate(self,page,urlCount,consecutiveMatches,productUrl):
+        logging.info(self.create_log_header("INSTANCE TERMINATED"))
+        logging.info(f"MILITARIA SITE      : {source}")
+        logging.info(f"CONSECUTIVE MATCHES : {consecutiveMatches}")
+        logging.info(f"CYCLES RUN          : {runCycle}")
+        logging.info(f"PRODUCTS PROCESSED  : {productsProcessed}")
+        logging.info(f"TIMESTAMP           : {current_datetime}")
+
+    def sysUpdate(self, page, urlCount, consecutiveMatches, productUrl):
+        """Log when a product in the system is updated."""
         current_datetime = datetime.now()
-        print(f"""
---------------------------------------------
-PRODUCT IN SYSTEM   : NO UPDATES
-CURRENT PAGE        : {page}
-PRODUCTS PROCESSED  : {urlCount} 
-CONSECUTIVE MATCHES : {consecutiveMatches}
-URL                 : {productUrl}
-TIMESTAMP           : {current_datetime}
---------------------------------------------""")
-    def newProduct(self,page,urlCount,title,productUrl,description,price,available):
+        logging.info(self.create_log_header("PRODUCT UPDATED"))
+        logging.info(f"CURRENT PAGE        : {page}")
+        logging.info(f"PRODUCTS PROCESSED  : {urlCount}")
+        logging.info(f"CONSECUTIVE MATCHES : {consecutiveMatches}")
+        logging.info(f"PRODUCT URL         : {productUrl}")
+        logging.info(f"TIMESTAMP           : {current_datetime}")
+
+    def noUpdate(self, page, urlCount, consecutiveMatches, productUrl):
+        """Log when no updates are made to a product in the system."""
         current_datetime = datetime.now()
-        print (f"""  
---------------------------------------------
-NEW PRODUCT                                              
-CURRENT PAGE        : {page}
-PRODUCTS PROCESSED  : {urlCount}
-TITLE               : {title} 
-URL                 : {productUrl}        
-DESCRIPTION         : {description}
-PRICE               : {price}
-AVAILABLE           : {available}
-TIMESTAMP           : {current_datetime}
---------------------------------------------""")
+        logging.info(self.create_log_header("NO PRODUCT UPDATE"))
+        logging.info(f"CURRENT PAGE        : {page}")
+        logging.info(f"PRODUCTS PROCESSED  : {urlCount}")
+        logging.info(f"CONSECUTIVE MATCHES : {consecutiveMatches}")
+        logging.info(f"PRODUCT URL         : {productUrl}")
+        logging.info(f"TIMESTAMP           : {current_datetime}")
+
+    def newProduct(self, page, urlCount, title, productUrl, description, price, available):
+        """Log details of a newly scraped product."""
+        current_datetime = datetime.now()
+        logging.info(self.create_log_header("NEW PRODUCT FOUND"))
+        logging.info(f"CURRENT PAGE        : {page}")
+        logging.info(f"PRODUCTS PROCESSED  : {urlCount}")
+        logging.info(f"TITLE               : {title}")
+        logging.info(f"PRODUCT URL         : {productUrl}")
+        logging.info(f"DESCRIPTION         : {description}")
+        logging.info(f"PRICE               : {price}")
+        logging.info(f"AVAILABLE           : {available}")
+        logging.info(f"TIMESTAMP           : {current_datetime}")
+
     def standby(self):
+        """Log when the scraper enters a standby period between cycles."""
         current_datetime = datetime.now()
-        print(f"""
---------------------------------------------
-    SITE SCRAPE PROCESS COMPLETED AT:
-         {current_datetime}
-        STAND BY FOR 5 MINUTES
---------------------------------------------
-""")
+        logging.info(self.create_log_header("CYCLE COMPLETED"))
+        logging.info(f"PROCESS COMPLETED AT: {current_datetime}")
+        logging.info("STANDING BY FOR NEXT CYCLE...")
 
 def main():
     print ('INITIALIZING. PLEASE WAIT...')
     current_datetime = datetime.now()
+    logging.info(f"""
+------------------------------------------------------------
+                     PROGRAM INITIALIZED
+                     {current_datetime}          
+------------------------------------------------------------""")
     # Location where credentials are located
     infoLocation = r'/home/ec2-user/projects/AWS-Militaria-Scraper/'
     pgAdminCred  = 'pgadminCredentials.json'
@@ -283,7 +286,6 @@ def main():
     with open(selectorJson,'r') as userFile:
         jsonData = json.load(userFile)
 
-
     # Main Loop
     while True:
 
@@ -299,13 +301,13 @@ def main():
             # Iterating over all the products on a the products list.
             while consecutiveMatches != targetMatch:
                 productsPage = base_url + productsPageUrl.format(page=page)
-                print(f"DEBUG: Navigating to products page: {productsPage}")
+                logging.debug(f"Navigating to products page: {productsPage}")
 
                 soup             = webScrapeManager.readProductPage(productsPage)
 
                 # Checking if page loaded correctly
                 if soup is None:
-                    print(f"DEBUG: Failed to load products page: {productsPage}")
+                    logging.warning(f"Failed to load products page: {productsPage}")
                     break
 
                 prints.newInstance(source,productsPage,runCycle,productsProcessed)
@@ -313,30 +315,31 @@ def main():
                 # Confirm the products selector and check if products are found
                 product_list = eval(products)
                 if not product_list:
-                    print(f"DEBUG: No products found on page: {productsPage}")
+                    logging.warning(f"No products found on page: {productsPage}")
                     break
 
                 for product in product_list :
                     if len(product) == 0:
-                        print("DEBUG: Empty product element found, skipping.")
+                        logging.info(f"Empty product element found, skipping.")
                         continue
 
                     urlCount += 1
                     productsProcessed += 1
+
                     # Confirm the product URL is extracted correctly
                     try:
                         productUrl = eval(productUrlElement)
                         # Only add base_url if productUrl is a relative URL
                         if not productUrl.startswith("http"):
                             productUrl = base_url + productUrl
-                        print(f"DEBUG: Product URL extracted: {productUrl}")
+                        logging.debug(f"Product URL extracted: {productUrl}")
                     except Exception as e:
-                        print(f"DEBUG: Error extracting product URL: {e}")
+                        logging.debug(f"Error extracting product URL: {e}")
                         continue
                     # Fetch the individual product page and check if it loads
                     productSoup = webScrapeManager.scrapePage(productUrl)
                     if productSoup is None:
-                        print(f"DEBUG: Failed to load product page: {productUrl}")
+                        logging.warning(f"DEBUG: Failed to load product page: {productUrl}")
                         continue
                     
                     # Confirm title, description, price, and availability extraction
@@ -344,9 +347,9 @@ def main():
                         title, description, price, available = webScrapeManager.scrapeData(
                             productSoup, titleElement, descElement, priceElement, availableElement, currency, source
                         )
-                        print(f"DEBUG: Extracted data - Title: {title}, Price: {price}, Available: {available}")
+                        logging.debug(f"Extracted data - Title: {title}, Price: {price}, Available: {available}")
                     except Exception as e:
-                        print(f"DEBUG: Error extracting data from product page: {e}")
+                        logging.debug(f"Error extracting data from product page: {e}")
                         continue
 
                     # If x amount of matches are met, end this run for this site
@@ -379,7 +382,6 @@ def main():
 
                             match = [tup[0] for tup in cellValue]
                             if match != False:
-                                print('UPDATING SOLD DATE')
                                 updateStatus = f''' UPDATE militaria
                                                     SET available = False
                                                     WHERE url = '{productUrl}';'''
@@ -405,15 +407,24 @@ def main():
                         prints.newProduct(page,urlCount,title,productUrl,description,price,available)
 
                 page += int(pageIncrement)
-
+        # Pauses in between instances
+        sleepTime = int(os.getenv('CYCLE_PAUSE_SECONDS', 300))  # Default: 300 seconds
         runCycle += 1
         prints.standby()
 
-        for i in tqdm(range(100)):
-            sleep(5)
+        for _ in trange(sleepTime, desc="Waiting for the next cycle", unit="seconds"):
+            sleep(1)
 
 
-
+# Configure logging
+logging.basicConfig(
+    level=logging.DEBUG,  # Set the logging level
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("AWS_militaria_scraper.log"),  # Save logs to a file
+        logging.StreamHandler()              # Print logs to the console
+    ]
+)
 
 
 if __name__ == "__main__":
