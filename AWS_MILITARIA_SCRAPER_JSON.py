@@ -51,17 +51,23 @@ class ProductScraper:
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
         }
         try:
-            # Set timeout to 10 seconds
-            response = self.session.get(product, headers=headers, timeout=10)
+            response = self.session.get(product, headers=headers, stream=True, timeout=10)
             response.raise_for_status()
+            
+            # Combine chunks into a single content object
+            content = b"".join(chunk for chunk in response.iter_content(chunk_size=1024) if chunk)
+            
+        except ChunkedEncodingError:
+            print(f"DEBUG: ChunkedEncodingError encountered while accessing {product}.")
+            return None
         except Timeout:
             print(f"DEBUG: Timeout occurred while accessing {product}.")
             return None
         except RequestException as e:
-            print(f"DEBUG: Error occurred while accessing {product} - {e}")
+            print(f"DEBUG: General RequestException for {product} - {e}")
             return None
         
-        return BeautifulSoup(response.content, 'html.parser')
+        return BeautifulSoup(content, 'html.parser')
     
     def scrapeData(self,productSoup,titleElement,descElement,priceElement,availableElement,currency,source):
             
