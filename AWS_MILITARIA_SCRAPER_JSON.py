@@ -51,24 +51,29 @@ class ProductScraper:
         headers = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
         }
-        try:
-            response = self.session.get(product, headers=headers, stream=True, timeout=10)
-            response.raise_for_status()
-            
-            # Combine chunks into a single content object
-            content = b"".join(chunk for chunk in response.iter_content(chunk_size=1024) if chunk)
-            
-        except ChunkedEncodingError:
-            logging.error(f"ChunkedEncodingError encountered while accessing {product}.")
-            return None
-        except Timeout:
-            logging.error(f"Timeout occurred while accessing {product}.")
-            return None
-        except RequestException as e:
-            logging.error(f"General RequestException for {product} - {e}")
-            return None
-        
-        return BeautifulSoup(content, 'html.parser')
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                response = self.session.get(product, headers=headers, stream=True, timeout=(5, 30))
+                response.raise_for_status()
+
+                # Combine chunks into a single content object
+                content = b"".join(chunk for chunk in response.iter_content(chunk_size=1024) if chunk)
+                return BeautifulSoup(content, 'html.parser')
+
+            except ChunkedEncodingError:
+                logging.warning(f"ChunkedEncodingError on attempt {attempt + 1} for {product}")
+                if attempt == max_retries - 1:
+                    logging.error(f"Failed to load {product} after {max_retries} retries.")
+                    return None
+                sleep(1)  # Wait before retrying
+            except Timeout:
+                logging.error(f"Timeout occurred while accessing {product}.")
+                return None
+            except RequestException as e:
+                logging.error(f"RequestException for {product} - {e}")
+                return None
+
     
     def scrapeData(self,productSoup,titleElement,descElement,priceElement,availableElement,currency,source):
             
