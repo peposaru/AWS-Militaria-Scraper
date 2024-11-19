@@ -262,7 +262,7 @@ def main():
     # Location where credentials are located
     infoLocation = r'/home/ec2-user/projects/AWS-Militaria-Scraper/'
     pgAdminCred  = 'pgadminCredentials.json'
-    selectorJson = 'MILITARIA_SELECTORS.json'
+    selectorJson = 'AWS_MILITARIA_SELECTORS.json'
     os.chdir(infoLocation)
 
     # pgAdmin 4 Credentials
