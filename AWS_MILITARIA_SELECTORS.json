@@ -2,7 +2,7 @@
     {
         "source": "HISCOLL_MILITARY_ANTIQUES",
         "base_url": "https://www.hiscoll.com/",
-        "productsPageUrl": "shop.php?page={page}",
+        "productsPageUrl": "shop.php?pg={page}",
         "page_increment": "1",
         "currency": "EUR",
         "products": "soup.find_all('div', class_='shopitem')",
