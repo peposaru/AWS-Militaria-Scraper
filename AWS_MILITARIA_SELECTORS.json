@@ -1,5 +1,22 @@
 [
     {
+        "source": "WORLDWAR_COLLECTIBLES",
+        "base_url": "https://worldwarcollectibles.com",
+        "productsPageUrl": "/shop.php?pg={page}",
+        "page_increment": "1",
+        "currency": "EUR",
+        "products": "soup.find_all('div', class_='shopitem')",
+        "product_url_element": "base_url + '/shop.php' + product.find('a')['href']",
+        "title_element": "productSoup.find('h1', class_='shopitemTitle').text.strip()",
+        "desc_element": "productSoup.find('p', class_='itemDescription').get_text(separator=' ', strip=True)",
+        "price_element": "productSoup.find('p', class_='price').text.replace('EUR', '').replace(',', '').strip()",
+        "available_element": "True if productSoup.find('button', class_='btn cta add2cart') else False",
+        "conflict_element": "",
+        "nation_element": "",
+        "item_type_element": "",
+        "grade_element": ""
+    },    
+    {
         "source": "HISCOLL_MILITARY_ANTIQUES",
         "base_url": "https://www.hiscoll.com/",
         "productsPageUrl": "shop.php?pg={page}",
