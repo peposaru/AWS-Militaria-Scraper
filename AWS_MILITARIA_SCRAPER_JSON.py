@@ -101,7 +101,7 @@ class ProductScraper:
                 title  = title.replace('’','*')
                 title  = title.replace('click image for larger view.','')
                 title  = title.strip()
-            except:
+            except Exception as err:
                 logging.warning('Unable to retrieve product TITLE.')
                 logging.warning(f"AttributeError while evaluating title element: {err}")
                 title = 'NULL'
@@ -118,7 +118,7 @@ class ProductScraper:
                 description = description.replace('Full image','')
                 description = description.split('USD', 1)[0]
                 description = description.strip()
-            except:
+            except Exception as err:
                 logging.warning('Unable to retrieve product DESCRIPTION.')
                 logging.warning(f"AttributeError while evaluating description element: {err}")
                 description = 'NULL'
