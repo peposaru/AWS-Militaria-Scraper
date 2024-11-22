@@ -388,11 +388,6 @@ Choose your settings:
     # Setting up counts
     runCycle          = 0
     productsProcessed = 0
-    
-    ###############
-    # Set how many in a row you want to match
-    targetMatch = 1000
-    ###############
 
     # Opening the JSON file containing website specific selectors
     try:
