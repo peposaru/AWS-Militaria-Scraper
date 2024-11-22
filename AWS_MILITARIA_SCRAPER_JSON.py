@@ -2,7 +2,7 @@
 
 # Making a more universal scraper which just takes a json library as input
 
-import requests, re, os, psycopg2,json, logging
+import requests, re, os, psycopg2,json, logging, time
 from bs4 import BeautifulSoup
 from datetime import date
 from datetime import datetime
@@ -29,6 +29,20 @@ class ProductScraper:
         adapter = HTTPAdapter(max_retries=retry)
         self.session.mount("http://", adapter)
         self.session.mount("https://", adapter)
+
+    # Adding a retry system when getting productSoup
+    def fetch_with_retries(self, fetch_function, *args, max_retries=3, backoff_factor=2, **kwargs):
+        retries = 0
+        while retries < max_retries:
+            try:
+                return fetch_function(*args, **kwargs)  # Call the provided function with arguments
+            except Exception as e:
+                retries += 1
+                wait_time = backoff_factor ** retries
+                logging.warning(f"Retry {retries}/{max_retries}: {e}. Waiting {wait_time} seconds before retrying...")
+                time.sleep(wait_time)
+        logging.error(f"Failed after {max_retries} retries.")
+        return None
 
     def readProductPage(self, url):
         headers = {
@@ -88,6 +102,8 @@ class ProductScraper:
                 title  = title.replace('click image for larger view.','')
                 title  = title.strip()
             except:
+                logging.warning('Unable to retrieve product TITLE.')
+                logging.warning(f"AttributeError while evaluating title element: {err}")
                 title = 'NULL'
 
         # Scrape Description
@@ -103,6 +119,8 @@ class ProductScraper:
                 description = description.split('USD', 1)[0]
                 description = description.strip()
             except:
+                logging.warning('Unable to retrieve product DESCRIPTION.')
+                logging.warning(f"AttributeError while evaluating description element: {err}")
                 description = 'NULL'
 
         # Scrape Price
@@ -127,14 +145,24 @@ class ProductScraper:
                         price = price.replace('.','')
 
             except Exception as err:
-                    print (err)
-                    price = 0
+                logging.warning('Unable to retrieve product PRICE.')
+                logging.warning(f"AttributeError while evaluating price element: {err}")
+                price = 0
 
         # Scrape Availability
-            available = eval(availableElement)
+            try:
+                available = eval(availableElement) if productSoup else False
+            except AttributeError as e:
+                logging.warning(f"AttributeError while evaluating available element: {e}")
+                available = False
+            except Exception as err:
+                logging.warning('Unable to retrieve product AVAILABLE.')
+                logging.warning(f"AttributeError while evaluating available element: {err}")
+
 
         # Return all values
             return ([title,description,price,available])
+
 
 class PostgreSQLProcessor:
     def __init__(self,hostName, dataBase,userName,pwd,portId):
@@ -165,6 +193,7 @@ class PostgreSQLProcessor:
         self.cur.close()
         self.conn.close()
 
+
 class JsonManager:        
     def jsonSelectors(self,militariaSite):
         base_url         = militariaSite['base_url']
@@ -184,6 +213,7 @@ class JsonManager:
         grade            = militariaSite['grade_element']
 
         return conflict,nation,item_type,grade,source,pageIncrement,currency,products,productUrlElement,titleElement,descElement,priceElement,availableElement,productsPageUrl,base_url
+
 
 class MainPrinting:
     def create_log_header(self, message, width=60):
@@ -251,28 +281,103 @@ class MainPrinting:
         logging.info(f"PROCESS COMPLETED AT: {current_datetime}")
         logging.info("STANDING BY FOR NEXT CYCLE...")
 
+
 def main():
     print ('INITIALIZING. PLEASE WAIT...')
+
+    ###########################
+    # Make questions if user wants to use default setting or custom
+    ###########################
+    # Display options to the user
+    print("""
+Choose your settings:
+1. Amazon RDS Settings
+2. Personal Computer Settings
+3. Custom Settings
+""")
+    # Prompt user for choice
+    choice = input("Enter the number corresponding to your choice (1/2/3): ").strip()
+
+    # Default values
+    infoLocation = ''
+    pgAdminCred = ''
+    selectorJson = ''
+
+    # User's choice
+    if choice == '1':
+        print("Using Amazon RDS Settings...")
+        infoLocation = r'/home/ec2-user/projects/AWS-Militaria-Scraper/'
+        pgAdminCred = 'pgadminCredentials.json'
+        selectorJson = 'AWS_MILITARIA_SELECTORS.json'
+
+    elif choice == '2':
+        print("Using Personal Computer Settings...")
+        infoLocation = r'C:/Users/keena/Desktop/Cloud Militaria Scraper/Github Folder'
+        pgAdminCred = r'C:/Users/keena/Desktop/Cloud Militaria Scraper/pgadminCredentials.json'
+        selectorJson = r'C:/Users/keena/Desktop/Cloud Militaria Scraper/Github Folder/AWS_MILITARIA_SELECTORS.json'
+
+    elif choice == '3':
+        print("Custom settings selected.")
+        # Prompt user for custom settings
+        infoLocation = input("Enter the directory path for configuration files (e.g., /path/to/config/): ").strip()
+        pgAdminCred = input("Enter the name of the pgAdmin credentials file (e.g., pgadminCredentials.json): ").strip()
+        selectorJson = input("Enter the name of the JSON selector file (e.g., AWS_MILITARIA_SELECTORS.json): ").strip()
+
+    else:
+        print("Invalid choice. Exiting program.")
+        return
+    
+    try:
+        os.chdir(infoLocation)
+    except Exception as e:
+        logging.error(f"Error changing directory to {infoLocation}: {e}")
+        return
+
+# Ask user to select targetMatch settings
+    print("""
+    Choose your targetMatch setting:
+    1. Default (250)
+    2. New JSON (1000)
+    3. Custom (enter your own value)
+    """)
+    choice = input("Enter the number corresponding to your choice (1/2/3): ").strip()
+
+    if choice == '1':
+        targetMatch = 250
+        print(f"TargetMatch set to Default: {targetMatch}")
+    elif choice == '2':
+        targetMatch = 1000
+        print(f"TargetMatch set for New JSON: {targetMatch}")
+    elif choice == '3':
+        try:
+            targetMatch = int(input("Enter your desired targetMatch value: ").strip())
+            print(f"TargetMatch set to Custom: {targetMatch}")
+        except ValueError:
+            targetMatch = 250
+            print("Invalid input. Defaulting TargetMatch to 250.")
+    else:
+        print("Invalid choice. Defaulting TargetMatch to 250.")
+        targetMatch = 250
+
     current_datetime = datetime.now()
     logging.info(f"""
 ------------------------------------------------------------
                      PROGRAM INITIALIZED
                      {current_datetime}          
 ------------------------------------------------------------""")
-    # Location where credentials are located
-    infoLocation = r'/home/ec2-user/projects/AWS-Militaria-Scraper/'
-    pgAdminCred  = 'pgadminCredentials.json'
-    selectorJson = 'AWS_MILITARIA_SELECTORS.json'
-    os.chdir(infoLocation)
 
     # pgAdmin 4 Credentials
-    with open (pgAdminCred,'r') as credFile:
-        jsonData = json.load(credFile)
-        hostName = jsonData['hostName'] 
-        dataBase = jsonData['dataBase']
-        userName = jsonData['userName']
-        pwd      = jsonData['pwd']
-        portId   = jsonData['portId']
+    try:
+        with open (pgAdminCred,'r') as credFile:
+            jsonData = json.load(credFile)
+            hostName = jsonData['hostName'] 
+            dataBase = jsonData['dataBase']
+            userName = jsonData['userName']
+            pwd      = jsonData['pwd']
+            portId   = jsonData['portId']
+    except Exception as e:
+        logging.error(f"Error loading pgAdmin credentials: {e}")
+        return
 
     # Postgresql - Web Scraping / Beautiful Soup - Json Manager
     dataManager      = PostgreSQLProcessor(hostName, dataBase,userName,pwd,portId)
@@ -284,12 +389,18 @@ def main():
     runCycle          = 0
     productsProcessed = 0
     
+    ###############
     # Set how many in a row you want to match
     targetMatch = 1000
+    ###############
 
     # Opening the JSON file containing website specific selectors
-    with open(selectorJson,'r') as userFile:
-        jsonData = json.load(userFile)
+    try:
+        with open(selectorJson,'r') as userFile:
+            jsonData = json.load(userFile)
+    except Exception as e:
+        logging.error(f'Error loading JSON selector file: {e}')
+        return
 
     # Main Loop
     while True:
@@ -341,10 +452,11 @@ def main():
                     except Exception as e:
                         logging.debug(f"Error extracting product URL: {e}")
                         continue
+
                     # Fetch the individual product page and check if it loads
-                    productSoup = webScrapeManager.scrapePage(productUrl)
+                    productSoup = webScrapeManager.fetch_with_retries(webScrapeManager.scrapePage,productUrl,max_retries=3,backoff_factor=2)
                     if productSoup is None:
-                        logging.warning(f"DEBUG: Failed to load product page: {productUrl}")
+                        logging.warning(f"Skipping product due to failed fetch: {productUrl}")
                         continue
                     
                     # Confirm title, description, price, and availability extraction
@@ -385,6 +497,9 @@ def main():
                         if available == False:
                             cellValue = dataManager.sqlFetch(soldDateExists)
 
+                            ##############################
+                            # Work on putting this SQL stuff into there own functions / class
+                            ##############################
                             match = [tup[0] for tup in cellValue]
                             if match != False:
                                 updateStatus = f''' UPDATE militaria
@@ -398,6 +513,7 @@ def main():
                                 dataManager.sqlExecute(updateStatus)
                                 # COMMENT THIS APPENDQUERY LINE OUT IF YOU WANT TO TEST BEFORE WRITING TO DATABASE 
                                 dataManager.sqlExecute(updateSoldDate)
+                            #############################
 
                                 prints.sysUpdate(page,urlCount,consecutiveMatches,productUrl)
                                 continue
