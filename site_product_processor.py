@@ -127,7 +127,7 @@ def update_or_insert_product(dataManager, prints, productUrl, title, description
                 logging.info(f"No updates required for product '{productUrl}'.")
 
             consecutiveMatches += 1
-            prints.sysUpdate(page, urlCount, consecutiveMatches, productUrl)
+            prints.sysUpdate(page, urlCount, consecutiveMatches, productUrl, updated)
         else:
             # Insert the product if it doesn't exist
             todayDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -139,12 +139,6 @@ def update_or_insert_product(dataManager, prints, productUrl, title, description
             logging.info(f"New product inserted: URL='{productUrl}', Title='{title}', Price={price}, Available={available}")
             prints.newProduct(page, urlCount, title, productUrl, description, price, available)
             consecutiveMatches = 0
-
-        # Log only if an update or new insert occurred
-        if updated:
-            logging.info("------------------------------------------------------------")
-            logging.info("                      PRODUCT UPDATED")
-            logging.info("------------------------------------------------------------")
 
     except Exception as e:
         logging.error(f"Error updating or inserting product: {e}")

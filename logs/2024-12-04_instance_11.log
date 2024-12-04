@@ -1,0 +1,494 @@
+2024-12-04 11:12:22,778 - INFO - Logging initialized. Log file: logs\2024-12-04_instance_11.log
+2024-12-04 11:12:29,159 - INFO - 
+------------------------------------------------------------
+                     PROGRAM INITIALIZED
+                     2024-12-04 11:12:29.159783          
+------------------------------------------------------------
+2024-12-04 11:12:30,164 - DEBUG - Navigating to products page: https://www.csmilitaria.co.uk/shop.php?pg=0
+2024-12-04 11:12:30,166 - DEBUG - Starting new HTTPS connection (1): www.csmilitaria.co.uk:443
+2024-12-04 11:12:31,284 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?pg=0 HTTP/1.1" 200 5644
+2024-12-04 11:12:31,297 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 11:12:31,297 - INFO - MILITARIA SITE      : CS_MILITARIA
+2024-12-04 11:12:31,297 - INFO - PRODUCTS URL        : https://www.csmilitaria.co.uk/shop.php?pg=0
+2024-12-04 11:12:31,298 - INFO - CYCLES RUN          : 0
+2024-12-04 11:12:31,298 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 11:12:31,298 - INFO - TIMESTAMP           : 2024-12-04 11:12:31.297335
+2024-12-04 11:12:31,298 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14741
+2024-12-04 11:12:31,582 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14741 HTTP/1.1" 200 3751
+2024-12-04 11:12:31,587 - DEBUG - Scraped data - Title: WW1 French 73rd Infantry Regiment Kepi, Price: 745.00, Available: True
+2024-12-04 11:12:31,904 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14741'.
+2024-12-04 11:12:31,904 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:31,904 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:31,904 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 11:12:31,904 - INFO - CONSECUTIVE MATCHES : 1
+2024-12-04 11:12:31,905 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14741
+2024-12-04 11:12:31,905 - INFO - TIMESTAMP           : 2024-12-04 11:12:31.904698
+2024-12-04 11:12:31,905 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14741'.
+2024-12-04 11:12:31,905 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14728
+2024-12-04 11:12:32,194 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14728 HTTP/1.1" 200 2881
+2024-12-04 11:12:32,200 - DEBUG - Scraped data - Title: WW2 Canadian Undershirt, Price: 75.00, Available: True
+2024-12-04 11:12:32,369 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14728'.
+2024-12-04 11:12:32,370 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:32,370 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:32,370 - INFO - PRODUCTS PROCESSED  : 1
+2024-12-04 11:12:32,370 - INFO - CONSECUTIVE MATCHES : 2
+2024-12-04 11:12:32,371 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14728
+2024-12-04 11:12:32,371 - INFO - TIMESTAMP           : 2024-12-04 11:12:32.370197
+2024-12-04 11:12:32,371 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14728'.
+2024-12-04 11:12:32,371 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14729
+2024-12-04 11:12:32,657 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14729 HTTP/1.1" 200 2940
+2024-12-04 11:12:32,662 - DEBUG - Scraped data - Title: WW2 Canadian Long Johns, Price: 75.00, Available: True
+2024-12-04 11:12:32,831 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14729'.
+2024-12-04 11:12:32,832 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:32,832 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:32,832 - INFO - PRODUCTS PROCESSED  : 2
+2024-12-04 11:12:32,833 - INFO - CONSECUTIVE MATCHES : 3
+2024-12-04 11:12:32,833 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14729
+2024-12-04 11:12:32,833 - INFO - TIMESTAMP           : 2024-12-04 11:12:32.832861
+2024-12-04 11:12:32,833 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14729'.
+2024-12-04 11:12:32,834 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14730
+2024-12-04 11:12:33,119 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14730 HTTP/1.1" 200 2889
+2024-12-04 11:12:33,124 - DEBUG - Scraped data - Title: WW2 Canadian Wool Socks, Price: 55.00, Available: True
+2024-12-04 11:12:33,296 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14730'.
+2024-12-04 11:12:33,297 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:33,297 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:33,298 - INFO - PRODUCTS PROCESSED  : 3
+2024-12-04 11:12:33,298 - INFO - CONSECUTIVE MATCHES : 4
+2024-12-04 11:12:33,298 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14730
+2024-12-04 11:12:33,298 - INFO - TIMESTAMP           : 2024-12-04 11:12:33.297066
+2024-12-04 11:12:33,298 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14730'.
+2024-12-04 11:12:33,298 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14739
+2024-12-04 11:12:33,588 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14739 HTTP/1.1" 200 3184
+2024-12-04 11:12:33,594 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 11:12:33,595 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 11:12:33,595 - DEBUG - Scraped data - Title: French WW1 Model M1893 Field Pack - 1917 Dated, Price: 0, Available: False
+2024-12-04 11:12:34,087 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14739' sold date updated: 2024-12-04 11:08:54 → 2024-12-04 11:12:33
+2024-12-04 11:12:34,087 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14739' updated successfully.
+2024-12-04 11:12:34,087 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 11:12:34,088 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:34,088 - INFO - PRODUCTS PROCESSED  : 4
+2024-12-04 11:12:34,088 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 11:12:34,088 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14739
+2024-12-04 11:12:34,089 - INFO - TIMESTAMP           : 2024-12-04 11:12:34.087061
+2024-12-04 11:12:34,089 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14739' was updated or inserted successfully.
+2024-12-04 11:12:34,089 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14744
+2024-12-04 11:12:34,376 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14744 HTTP/1.1" 200 2913
+2024-12-04 11:12:34,381 - DEBUG - Scraped data - Title: WW2 Canadian MkI Pouches With Ballasite Cartridge Loops, Price: 60.00, Available: True
+2024-12-04 11:12:34,681 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14744'.
+2024-12-04 11:12:34,682 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:34,682 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:34,682 - INFO - PRODUCTS PROCESSED  : 5
+2024-12-04 11:12:34,682 - INFO - CONSECUTIVE MATCHES : 6
+2024-12-04 11:12:34,682 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14744
+2024-12-04 11:12:34,683 - INFO - TIMESTAMP           : 2024-12-04 11:12:34.682144
+2024-12-04 11:12:34,683 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14744'.
+2024-12-04 11:12:34,683 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14726
+2024-12-04 11:12:34,966 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14726 HTTP/1.1" 200 2864
+2024-12-04 11:12:34,971 - DEBUG - Scraped data - Title: WW2 Canadian Webbing Anklets 1945, Price: 45.00, Available: True
+2024-12-04 11:12:35,141 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14726'.
+2024-12-04 11:12:35,141 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:35,141 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:35,141 - INFO - PRODUCTS PROCESSED  : 6
+2024-12-04 11:12:35,141 - INFO - CONSECUTIVE MATCHES : 7
+2024-12-04 11:12:35,141 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14726
+2024-12-04 11:12:35,142 - INFO - TIMESTAMP           : 2024-12-04 11:12:35.141454
+2024-12-04 11:12:35,142 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14726'.
+2024-12-04 11:12:35,142 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14731
+2024-12-04 11:12:35,426 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14731 HTTP/1.1" 200 2912
+2024-12-04 11:12:35,431 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 11:12:35,431 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 11:12:35,432 - DEBUG - Scraped data - Title: WW2 Canadian Cold Weather Rubber Boots 1944, Price: 0, Available: False
+2024-12-04 11:12:35,898 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14731' sold date updated: 2024-12-04 11:08:56 → 2024-12-04 11:12:35
+2024-12-04 11:12:35,898 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14731' updated successfully.
+2024-12-04 11:12:35,898 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 11:12:35,898 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:35,899 - INFO - PRODUCTS PROCESSED  : 7
+2024-12-04 11:12:35,899 - INFO - CONSECUTIVE MATCHES : 8
+2024-12-04 11:12:35,899 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14731
+2024-12-04 11:12:35,899 - INFO - TIMESTAMP           : 2024-12-04 11:12:35.898878
+2024-12-04 11:12:35,899 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14731' was updated or inserted successfully.
+2024-12-04 11:12:35,899 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14732
+2024-12-04 11:12:36,186 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14732 HTTP/1.1" 200 2969
+2024-12-04 11:12:36,191 - DEBUG - Scraped data - Title: WW2 Canadian Entrenching Tool Set, Price: 150.00, Available: True
+2024-12-04 11:12:36,499 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14732'.
+2024-12-04 11:12:36,500 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:36,500 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:36,500 - INFO - PRODUCTS PROCESSED  : 8
+2024-12-04 11:12:36,500 - INFO - CONSECUTIVE MATCHES : 9
+2024-12-04 11:12:36,500 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14732
+2024-12-04 11:12:36,500 - INFO - TIMESTAMP           : 2024-12-04 11:12:36.500810
+2024-12-04 11:12:36,500 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14732'.
+2024-12-04 11:12:36,500 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14727
+2024-12-04 11:12:36,797 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14727 HTTP/1.1" 200 2866
+2024-12-04 11:12:36,801 - DEBUG - Scraped data - Title: WW2 British Army PT Shorts 1940, Price: 65.00, Available: True
+2024-12-04 11:12:36,970 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14727'.
+2024-12-04 11:12:36,970 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:36,971 - INFO - CURRENT PAGE        : 0
+2024-12-04 11:12:36,971 - INFO - PRODUCTS PROCESSED  : 9
+2024-12-04 11:12:36,971 - INFO - CONSECUTIVE MATCHES : 10
+2024-12-04 11:12:36,971 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14727
+2024-12-04 11:12:36,971 - INFO - TIMESTAMP           : 2024-12-04 11:12:36.970062
+2024-12-04 11:12:36,971 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14727'.
+2024-12-04 11:12:36,972 - DEBUG - Navigating to products page: https://www.csmilitaria.co.uk/shop.php?pg=1
+2024-12-04 11:12:37,273 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?pg=1 HTTP/1.1" 200 5644
+2024-12-04 11:12:37,287 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 11:12:37,287 - INFO - MILITARIA SITE      : CS_MILITARIA
+2024-12-04 11:12:37,287 - INFO - PRODUCTS URL        : https://www.csmilitaria.co.uk/shop.php?pg=1
+2024-12-04 11:12:37,287 - INFO - CYCLES RUN          : 0
+2024-12-04 11:12:37,287 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 11:12:37,287 - INFO - TIMESTAMP           : 2024-12-04 11:12:37.287828
+2024-12-04 11:12:37,288 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14741
+2024-12-04 11:12:37,575 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14741 HTTP/1.1" 200 3751
+2024-12-04 11:12:37,580 - DEBUG - Scraped data - Title: WW1 French 73rd Infantry Regiment Kepi, Price: 745.00, Available: True
+2024-12-04 11:12:37,748 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14741'.
+2024-12-04 11:12:37,748 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:37,749 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:37,749 - INFO - PRODUCTS PROCESSED  : 10
+2024-12-04 11:12:37,749 - INFO - CONSECUTIVE MATCHES : 11
+2024-12-04 11:12:37,749 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14741
+2024-12-04 11:12:37,749 - INFO - TIMESTAMP           : 2024-12-04 11:12:37.748498
+2024-12-04 11:12:37,749 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14741'.
+2024-12-04 11:12:37,749 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14728
+2024-12-04 11:12:38,037 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14728 HTTP/1.1" 200 2881
+2024-12-04 11:12:38,042 - DEBUG - Scraped data - Title: WW2 Canadian Undershirt, Price: 75.00, Available: True
+2024-12-04 11:12:38,213 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14728'.
+2024-12-04 11:12:38,213 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:38,213 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:38,214 - INFO - PRODUCTS PROCESSED  : 11
+2024-12-04 11:12:38,214 - INFO - CONSECUTIVE MATCHES : 12
+2024-12-04 11:12:38,214 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14728
+2024-12-04 11:12:38,214 - INFO - TIMESTAMP           : 2024-12-04 11:12:38.213299
+2024-12-04 11:12:38,214 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14728'.
+2024-12-04 11:12:38,214 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14729
+2024-12-04 11:12:38,499 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14729 HTTP/1.1" 200 2940
+2024-12-04 11:12:38,504 - DEBUG - Scraped data - Title: WW2 Canadian Long Johns, Price: 75.00, Available: True
+2024-12-04 11:12:38,673 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14729'.
+2024-12-04 11:12:38,673 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:38,674 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:38,674 - INFO - PRODUCTS PROCESSED  : 12
+2024-12-04 11:12:38,674 - INFO - CONSECUTIVE MATCHES : 13
+2024-12-04 11:12:38,674 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14729
+2024-12-04 11:12:38,675 - INFO - TIMESTAMP           : 2024-12-04 11:12:38.673409
+2024-12-04 11:12:38,675 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14729'.
+2024-12-04 11:12:38,675 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14730
+2024-12-04 11:12:38,959 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14730 HTTP/1.1" 200 2889
+2024-12-04 11:12:38,964 - DEBUG - Scraped data - Title: WW2 Canadian Wool Socks, Price: 55.00, Available: True
+2024-12-04 11:12:39,134 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14730'.
+2024-12-04 11:12:39,134 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:39,135 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:39,135 - INFO - PRODUCTS PROCESSED  : 13
+2024-12-04 11:12:39,135 - INFO - CONSECUTIVE MATCHES : 14
+2024-12-04 11:12:39,135 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14730
+2024-12-04 11:12:39,135 - INFO - TIMESTAMP           : 2024-12-04 11:12:39.134340
+2024-12-04 11:12:39,136 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14730'.
+2024-12-04 11:12:39,136 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14739
+2024-12-04 11:12:39,420 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14739 HTTP/1.1" 200 3184
+2024-12-04 11:12:39,425 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 11:12:39,425 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 11:12:39,425 - DEBUG - Scraped data - Title: French WW1 Model M1893 Field Pack - 1917 Dated, Price: 0, Available: False
+2024-12-04 11:12:39,911 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14739' sold date updated: 2024-12-04 11:12:33 → 2024-12-04 11:12:39
+2024-12-04 11:12:39,911 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14739' updated successfully.
+2024-12-04 11:12:39,911 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 11:12:39,912 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:39,912 - INFO - PRODUCTS PROCESSED  : 14
+2024-12-04 11:12:39,912 - INFO - CONSECUTIVE MATCHES : 15
+2024-12-04 11:12:39,912 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14739
+2024-12-04 11:12:39,912 - INFO - TIMESTAMP           : 2024-12-04 11:12:39.911830
+2024-12-04 11:12:39,912 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14739' was updated or inserted successfully.
+2024-12-04 11:12:39,913 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14744
+2024-12-04 11:12:40,197 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14744 HTTP/1.1" 200 2913
+2024-12-04 11:12:40,203 - DEBUG - Scraped data - Title: WW2 Canadian MkI Pouches With Ballasite Cartridge Loops, Price: 60.00, Available: True
+2024-12-04 11:12:40,511 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14744'.
+2024-12-04 11:12:40,511 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:40,511 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:40,512 - INFO - PRODUCTS PROCESSED  : 15
+2024-12-04 11:12:40,512 - INFO - CONSECUTIVE MATCHES : 16
+2024-12-04 11:12:40,512 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14744
+2024-12-04 11:12:40,512 - INFO - TIMESTAMP           : 2024-12-04 11:12:40.511436
+2024-12-04 11:12:40,512 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14744'.
+2024-12-04 11:12:40,512 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14726
+2024-12-04 11:12:40,797 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14726 HTTP/1.1" 200 2864
+2024-12-04 11:12:40,802 - DEBUG - Scraped data - Title: WW2 Canadian Webbing Anklets 1945, Price: 45.00, Available: True
+2024-12-04 11:12:40,985 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14726'.
+2024-12-04 11:12:40,986 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:40,986 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:40,986 - INFO - PRODUCTS PROCESSED  : 16
+2024-12-04 11:12:40,987 - INFO - CONSECUTIVE MATCHES : 17
+2024-12-04 11:12:40,987 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14726
+2024-12-04 11:12:40,987 - INFO - TIMESTAMP           : 2024-12-04 11:12:40.986568
+2024-12-04 11:12:40,987 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14726'.
+2024-12-04 11:12:40,987 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14731
+2024-12-04 11:12:41,272 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14731 HTTP/1.1" 200 2912
+2024-12-04 11:12:41,277 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 11:12:41,277 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 11:12:41,277 - DEBUG - Scraped data - Title: WW2 Canadian Cold Weather Rubber Boots 1944, Price: 0, Available: False
+2024-12-04 11:12:41,754 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14731' sold date updated: 2024-12-04 11:12:35 → 2024-12-04 11:12:41
+2024-12-04 11:12:41,754 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14731' updated successfully.
+2024-12-04 11:12:41,754 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 11:12:41,755 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:41,755 - INFO - PRODUCTS PROCESSED  : 17
+2024-12-04 11:12:41,755 - INFO - CONSECUTIVE MATCHES : 18
+2024-12-04 11:12:41,755 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14731
+2024-12-04 11:12:41,755 - INFO - TIMESTAMP           : 2024-12-04 11:12:41.754872
+2024-12-04 11:12:41,755 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14731' was updated or inserted successfully.
+2024-12-04 11:12:41,756 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14732
+2024-12-04 11:12:42,040 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14732 HTTP/1.1" 200 2969
+2024-12-04 11:12:42,045 - DEBUG - Scraped data - Title: WW2 Canadian Entrenching Tool Set, Price: 150.00, Available: True
+2024-12-04 11:12:42,380 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14732'.
+2024-12-04 11:12:42,380 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:42,381 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:42,381 - INFO - PRODUCTS PROCESSED  : 18
+2024-12-04 11:12:42,381 - INFO - CONSECUTIVE MATCHES : 19
+2024-12-04 11:12:42,381 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14732
+2024-12-04 11:12:42,381 - INFO - TIMESTAMP           : 2024-12-04 11:12:42.380519
+2024-12-04 11:12:42,381 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14732'.
+2024-12-04 11:12:42,382 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14727
+2024-12-04 11:12:42,669 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14727 HTTP/1.1" 200 2866
+2024-12-04 11:12:42,673 - DEBUG - Scraped data - Title: WW2 British Army PT Shorts 1940, Price: 65.00, Available: True
+2024-12-04 11:12:42,844 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14727'.
+2024-12-04 11:12:42,844 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:42,844 - INFO - CURRENT PAGE        : 1
+2024-12-04 11:12:42,845 - INFO - PRODUCTS PROCESSED  : 19
+2024-12-04 11:12:42,845 - INFO - CONSECUTIVE MATCHES : 20
+2024-12-04 11:12:42,845 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14727
+2024-12-04 11:12:42,845 - INFO - TIMESTAMP           : 2024-12-04 11:12:42.844057
+2024-12-04 11:12:42,845 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14727'.
+2024-12-04 11:12:42,845 - DEBUG - Navigating to products page: https://www.csmilitaria.co.uk/shop.php?pg=2
+2024-12-04 11:12:43,144 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?pg=2 HTTP/1.1" 200 6143
+2024-12-04 11:12:43,156 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 11:12:43,157 - INFO - MILITARIA SITE      : CS_MILITARIA
+2024-12-04 11:12:43,157 - INFO - PRODUCTS URL        : https://www.csmilitaria.co.uk/shop.php?pg=2
+2024-12-04 11:12:43,157 - INFO - CYCLES RUN          : 0
+2024-12-04 11:12:43,157 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 11:12:43,158 - INFO - TIMESTAMP           : 2024-12-04 11:12:43.156773
+2024-12-04 11:12:43,158 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14725
+2024-12-04 11:12:43,444 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14725 HTTP/1.1" 200 2908
+2024-12-04 11:12:43,450 - DEBUG - Scraped data - Title: WW2 Canadian Webbing Anklets  1943 - Size 3, Price: 45.00, Available: True
+2024-12-04 11:12:43,618 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14725'.
+2024-12-04 11:12:43,618 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:43,619 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:43,619 - INFO - PRODUCTS PROCESSED  : 20
+2024-12-04 11:12:43,619 - INFO - CONSECUTIVE MATCHES : 21
+2024-12-04 11:12:43,619 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14725
+2024-12-04 11:12:43,619 - INFO - TIMESTAMP           : 2024-12-04 11:12:43.618280
+2024-12-04 11:12:43,620 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14725'.
+2024-12-04 11:12:43,620 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14736
+2024-12-04 11:12:43,905 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14736 HTTP/1.1" 200 2868
+2024-12-04 11:12:43,909 - DEBUG - Scraped data - Title: WW2 Canadian Pistol Holster 1941, Price: 75.00, Available: True
+2024-12-04 11:12:44,077 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14736'.
+2024-12-04 11:12:44,078 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:44,078 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:44,078 - INFO - PRODUCTS PROCESSED  : 21
+2024-12-04 11:12:44,079 - INFO - CONSECUTIVE MATCHES : 22
+2024-12-04 11:12:44,079 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14736
+2024-12-04 11:12:44,079 - INFO - TIMESTAMP           : 2024-12-04 11:12:44.078218
+2024-12-04 11:12:44,079 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14736'.
+2024-12-04 11:12:44,079 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14743
+2024-12-04 11:12:44,364 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14743 HTTP/1.1" 200 2965
+2024-12-04 11:12:44,369 - DEBUG - Scraped data - Title: No.77 Phos  - Dated June 1944, Price: 275.00, Available: True
+2024-12-04 11:12:44,538 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14743'.
+2024-12-04 11:12:44,538 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:44,538 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:44,539 - INFO - PRODUCTS PROCESSED  : 22
+2024-12-04 11:12:44,539 - INFO - CONSECUTIVE MATCHES : 23
+2024-12-04 11:12:44,539 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14743
+2024-12-04 11:12:44,539 - INFO - TIMESTAMP           : 2024-12-04 11:12:44.538955
+2024-12-04 11:12:44,539 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14743'.
+2024-12-04 11:12:44,539 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14745
+2024-12-04 11:12:44,825 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14745 HTTP/1.1" 200 2871
+2024-12-04 11:12:44,829 - DEBUG - Scraped data - Title: WW2 Canadian Basic Pouches 1943, Price: 45.00, Available: True
+2024-12-04 11:12:44,997 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14745'.
+2024-12-04 11:12:44,998 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:44,998 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:44,998 - INFO - PRODUCTS PROCESSED  : 23
+2024-12-04 11:12:44,998 - INFO - CONSECUTIVE MATCHES : 24
+2024-12-04 11:12:44,999 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14745
+2024-12-04 11:12:44,999 - INFO - TIMESTAMP           : 2024-12-04 11:12:44.998574
+2024-12-04 11:12:44,999 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14745'.
+2024-12-04 11:12:44,999 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14746
+2024-12-04 11:12:45,287 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14746 HTTP/1.1" 200 2866
+2024-12-04 11:12:45,291 - DEBUG - Scraped data - Title: WW2 Canadian Waterbucket, Price: 45.00, Available: True
+2024-12-04 11:12:45,492 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14746'.
+2024-12-04 11:12:45,493 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:45,493 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:45,493 - INFO - PRODUCTS PROCESSED  : 24
+2024-12-04 11:12:45,493 - INFO - CONSECUTIVE MATCHES : 25
+2024-12-04 11:12:45,494 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14746
+2024-12-04 11:12:45,494 - INFO - TIMESTAMP           : 2024-12-04 11:12:45.493570
+2024-12-04 11:12:45,494 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14746'.
+2024-12-04 11:12:45,494 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14710
+2024-12-04 11:12:45,779 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14710 HTTP/1.1" 200 3242
+2024-12-04 11:12:45,784 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 11:12:45,784 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 11:12:45,785 - DEBUG - Scraped data - Title: ***Rare** WW2 Canadian Ankle Boots - Dated 1942, Price: 0, Available: False
+2024-12-04 11:12:46,268 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14710' sold date updated: 2024-12-04 11:09:01 → 2024-12-04 11:12:45
+2024-12-04 11:12:46,268 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14710' updated successfully.
+2024-12-04 11:12:46,268 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 11:12:46,269 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:46,269 - INFO - PRODUCTS PROCESSED  : 25
+2024-12-04 11:12:46,269 - INFO - CONSECUTIVE MATCHES : 26
+2024-12-04 11:12:46,269 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14710
+2024-12-04 11:12:46,269 - INFO - TIMESTAMP           : 2024-12-04 11:12:46.268967
+2024-12-04 11:12:46,270 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14710' was updated or inserted successfully.
+2024-12-04 11:12:46,270 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14699
+2024-12-04 11:12:46,557 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14699 HTTP/1.1" 200 3111
+2024-12-04 11:12:46,562 - DEBUG - Scraped data - Title: WW2 Canadian Helmet With Anti-Gas Cover 1942, Price: 375.00, Available: True
+2024-12-04 11:12:46,870 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14699'.
+2024-12-04 11:12:46,870 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:46,871 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:46,871 - INFO - PRODUCTS PROCESSED  : 26
+2024-12-04 11:12:46,871 - INFO - CONSECUTIVE MATCHES : 27
+2024-12-04 11:12:46,871 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14699
+2024-12-04 11:12:46,871 - INFO - TIMESTAMP           : 2024-12-04 11:12:46.870896
+2024-12-04 11:12:46,872 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14699'.
+2024-12-04 11:12:46,872 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14698
+2024-12-04 11:12:47,161 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14698 HTTP/1.1" 200 3305
+2024-12-04 11:12:47,166 - DEBUG - Scraped data - Title: WW2 Silk Map * Zones of France * & Normandy Coastline March 1944, Price: 245.00, Available: True
+2024-12-04 11:12:47,335 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14698'.
+2024-12-04 11:12:47,335 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:47,336 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:47,336 - INFO - PRODUCTS PROCESSED  : 27
+2024-12-04 11:12:47,336 - INFO - CONSECUTIVE MATCHES : 28
+2024-12-04 11:12:47,337 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14698
+2024-12-04 11:12:47,337 - INFO - TIMESTAMP           : 2024-12-04 11:12:47.335315
+2024-12-04 11:12:47,337 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14698'.
+2024-12-04 11:12:47,337 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14701
+2024-12-04 11:12:47,622 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14701 HTTP/1.1" 200 3290
+2024-12-04 11:12:47,629 - DEBUG - Scraped data - Title: WW1 British Officers 1902 Pattern Cuff Rank Tunic - West Kent Regiment, Price: 1350.00, Available: True
+2024-12-04 11:12:47,801 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14701'.
+2024-12-04 11:12:47,801 - INFO - 
+------------------------------------------------------------
+                     NO PRODUCT UPDATE                      
+------------------------------------------------------------
+2024-12-04 11:12:47,801 - INFO - CURRENT PAGE        : 2
+2024-12-04 11:12:47,801 - INFO - PRODUCTS PROCESSED  : 28
+2024-12-04 11:12:47,802 - INFO - CONSECUTIVE MATCHES : 29
+2024-12-04 11:12:47,802 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14701
+2024-12-04 11:12:47,802 - INFO - TIMESTAMP           : 2024-12-04 11:12:47.801514
+2024-12-04 11:12:47,802 - INFO - No changes made for product 'https://www.csmilitaria.co.uk/shop.php?code=14701'.
+2024-12-04 11:12:47,802 - DEBUG - Navigating to products page: https://www.csmilitaria.co.uk/shop.php?pg=3
+2024-12-04 11:12:48,112 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?pg=3 HTTP/1.1" 200 6115
+2024-12-04 11:12:48,132 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 11:12:48,132 - INFO - MILITARIA SITE      : CS_MILITARIA
+2024-12-04 11:12:48,133 - INFO - PRODUCTS URL        : https://www.csmilitaria.co.uk/shop.php?pg=3
+2024-12-04 11:12:48,133 - INFO - CYCLES RUN          : 0
+2024-12-04 11:12:48,133 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 11:12:48,133 - INFO - TIMESTAMP           : 2024-12-04 11:12:48.132007
+2024-12-04 11:12:48,133 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14702
+2024-12-04 11:12:48,418 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14702 HTTP/1.1" 200 2862
+2024-12-04 11:12:48,422 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 11:12:48,422 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 11:12:48,423 - DEBUG - Scraped data - Title: WW2 Canadian Mapcase 1942, Price: 0, Available: False
+2024-12-04 11:12:48,892 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14702' sold date updated: 2024-12-04 11:06:26 → 2024-12-04 11:12:48
+2024-12-04 11:12:48,892 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14702' updated successfully.
+2024-12-04 11:12:48,892 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 11:12:48,893 - INFO - CURRENT PAGE        : 3
+2024-12-04 11:12:48,893 - INFO - PRODUCTS PROCESSED  : 29
+2024-12-04 11:12:48,893 - INFO - CONSECUTIVE MATCHES : 30
+2024-12-04 11:12:48,893 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14702
+2024-12-04 11:12:48,894 - INFO - TIMESTAMP           : 2024-12-04 11:12:48.892130
+2024-12-04 11:12:48,894 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14702' was updated or inserted successfully.
+2024-12-04 11:12:48,894 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14704
+2024-12-04 11:12:49,177 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14704 HTTP/1.1" 200 2936
+2024-12-04 11:12:49,183 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 11:12:49,183 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 11:12:49,184 - DEBUG - Scraped data - Title: WW2 Canadian Trouser Braces, Price: 0, Available: False
