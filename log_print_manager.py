@@ -1,5 +1,10 @@
 from datetime import datetime
 import logging
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+import time
+import os
+import subprocess
 
 class log_print:
     def create_log_header(self, message, width=60):
@@ -59,3 +64,24 @@ class log_print:
         logging.info(self.create_log_header("CYCLE COMPLETED"))
         logging.info(f"PROCESS COMPLETED AT: {current_datetime}")
         logging.info("STANDING BY FOR NEXT CYCLE...")
+
+class WatchdogHandler(FileSystemEventHandler):
+    def on_modified(self, event):
+        # Restart the program if a crash is detected
+        if "crash.log" in event.src_path:
+            logging.info("Crash detected. Restarting program...")
+            subprocess.Popen(["python", "/home/ec2-user/projects/AWS-Militaria-Scraper/AWS_MILITARIA_SCRAPER_JSON.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+if __name__ == "__main__":
+    logging.basicConfig(filename="scraper.log", level=logging.INFO)
+    event_handler = WatchdogHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path=".", recursive=False)
+    observer.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
