@@ -115,7 +115,7 @@ def update_or_insert_product(dataManager, prints, productUrl, title, description
             # Update 'date_sold' if applicable and 'available' is False
             if not available:
                 todayDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Format for timestamp
-                if original_date_sold != todayDate:
+                if original_date_sold is None or original_date_sold != todayDate:
                     updateSoldDateQuery = f"UPDATE militaria SET date_sold = '{todayDate}' WHERE url = '{productUrl}';"
                     dataManager.sqlExecute(updateSoldDateQuery)
                     logging.info(f"Product '{productUrl}' sold date updated: {original_date_sold} → {todayDate}")
@@ -140,10 +140,17 @@ def update_or_insert_product(dataManager, prints, productUrl, title, description
             prints.newProduct(page, urlCount, title, productUrl, description, price, available)
             consecutiveMatches = 0
 
+        # Log only if an update or new insert occurred
+        if updated:
+            logging.info("------------------------------------------------------------")
+            logging.info("                      PRODUCT UPDATED")
+            logging.info("------------------------------------------------------------")
+
     except Exception as e:
         logging.error(f"Error updating or inserting product: {e}")
 
     return urlCount + 1, consecutiveMatches, updated
+
 
 
 
