@@ -5,6 +5,7 @@
 import os
 import json
 import logging
+import sys
 from datetime import datetime, date
 from time import sleep
 from tqdm import trange
@@ -17,14 +18,33 @@ from site_product_processor import process_site  # Modified: Added to handle sit
 
 # Modified: Moved logging configuration into a reusable function
 def initialize_logging():
+    # Define the log directory
+    log_dir = "logs"
+    
+    # Ensure the log directory exists
+    os.makedirs(log_dir, exist_ok=True)
+    
+    # Get the current date for the log file name
+    current_date = datetime.now().strftime("%Y-%m-%d")
+    
+    # Count existing log files for the current date to determine instance number
+    existing_logs = [f for f in os.listdir(log_dir) if f.startswith(current_date)]
+    instance_number = len(existing_logs) + 1
+    
+    # Define the log file name
+    log_file_name = f"{current_date}_instance_{instance_number}.log"
+    log_file_path = os.path.join(log_dir, log_file_name)
+    
+    # Configure logging with utf-8 encoding
     logging.basicConfig(
         level=logging.DEBUG,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler("AWS_militaria_scraper.log"),  # File logging unchanged
-            logging.StreamHandler()  # Console logging unchanged
+            logging.FileHandler(log_file_path, encoding='utf-8'),  # File logging with utf-8 encoding
+            logging.StreamHandler(sys.stdout)  # Console logging explicitly set to stdout
         ]
     )
+    logging.info(f"Logging initialized. Log file: {log_file_path}")
 
 def main():
     print('INITIALIZING. PLEASE WAIT...')

@@ -1,5 +1,5 @@
+from datetime import datetime, date
 import logging
-from datetime import date
 
 
 # Process a single product
@@ -8,6 +8,9 @@ def process_product(
     conflict, nation, item_type, page, urlCount, consecutiveMatches, targetMatch,
     productUrlElement, titleElement, descElement, priceElement, availableElement
 ):
+    """
+    Process a single product by constructing its URL, scraping details, and updating/inserting into the database.
+    """
     try:
         # Dynamically evaluate the product URL element
         productUrl = construct_product_url(productUrlElement, base_url, product)
@@ -24,13 +27,20 @@ def process_product(
             return urlCount, consecutiveMatches
 
         # Update or insert product in the database
-        urlCount, consecutiveMatches = update_or_insert_product(
+        urlCount, consecutiveMatches, updated = update_or_insert_product(
             dataManager, prints, productUrl, title, description, price, available,
             source, currency, conflict, nation, item_type, page, urlCount, consecutiveMatches, targetMatch
         )
+
+        # Log based on whether the product was updated or not
+        if updated:
+            logging.info(f"Product '{productUrl}' was updated or inserted successfully.")
+        else:
+            logging.info(f"No changes made for product '{productUrl}'.")
     except Exception as e:
         logging.error(f"Error processing product: {e}")
     return urlCount, consecutiveMatches
+
 
 def fetch_products_from_page(webScrapeManager, productsPage, productsSelector):
     """Fetch the product list from a site page using the provided selector."""
@@ -85,33 +95,70 @@ def fetch_and_scrape_product(webScrapeManager, productUrl, titleElement, descEle
 def update_or_insert_product(dataManager, prints, productUrl, title, description, price, available, source, currency, conflict, nation, item_type, page, urlCount, consecutiveMatches, targetMatch):
     """Update or insert product details into the database."""
     try:
-        searchQuery = f"SELECT url FROM militaria WHERE url LIKE '{productUrl}'"
-        existingUrls = dataManager.sqlFetch(searchQuery)
+        searchQuery = f"SELECT url, available, date_sold FROM militaria WHERE url LIKE '{productUrl}'"
+        existingProducts = dataManager.sqlFetch(searchQuery)
 
-        if productUrl in [url[0] for url in existingUrls]:
+        updated = False  # Track if any update is performed
+
+        if productUrl in [product[0] for product in existingProducts]:
+            # Fetch the existing product details
+            existingProduct = next(product for product in existingProducts if product[0] == productUrl)
+            original_available, original_date_sold = existingProduct[1:]
+
+            # Update 'available' if it changes
+            if available != original_available:
+                updateAvailabilityQuery = f"UPDATE militaria SET available = {available} WHERE url = '{productUrl}';"
+                dataManager.sqlExecute(updateAvailabilityQuery)
+                logging.info(f"Product '{productUrl}' availability updated: {original_available} → {available}")
+                updated = True
+
+            # Update 'date_sold' if applicable and 'available' is False
             if not available:
-                updateStatus = f"UPDATE militaria SET available = False WHERE url = '{productUrl}';"
-                dataManager.sqlExecute(updateStatus)
+                todayDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Format for timestamp
+                if original_date_sold != todayDate:
+                    updateSoldDateQuery = f"UPDATE militaria SET date_sold = '{todayDate}' WHERE url = '{productUrl}';"
+                    dataManager.sqlExecute(updateSoldDateQuery)
+                    logging.info(f"Product '{productUrl}' sold date updated: {original_date_sold} → {todayDate}")
+                    updated = True
+
+            if updated:
+                logging.info(f"Product '{productUrl}' updated successfully.")
+            else:
+                logging.info(f"No updates required for product '{productUrl}'.")
+
             consecutiveMatches += 1
             prints.sysUpdate(page, urlCount, consecutiveMatches, productUrl)
         else:
-            todayDate = date.today()
+            # Insert the product if it doesn't exist
+            todayDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             insertQuery = f"""
                 INSERT INTO militaria (url, title, description, price, available, date, site, currency, conflict, nation, item_type)
                 VALUES ('{productUrl}', '{title}', '{description}', {price}, {available}, '{todayDate}', '{source}', '{currency}', '{conflict}', '{nation}', '{item_type}')
             """
             dataManager.sqlExecute(insertQuery)
+            logging.info(f"New product inserted: URL='{productUrl}', Title='{title}', Price={price}, Available={available}")
             prints.newProduct(page, urlCount, title, productUrl, description, price, available)
             consecutiveMatches = 0
+
+        # Log only if an update or new insert occurred
+        if updated:
+            logging.info("------------------------------------------------------------")
+            logging.info("                      PRODUCT UPDATED")
+            logging.info("------------------------------------------------------------")
+
     except Exception as e:
         logging.error(f"Error updating or inserting product: {e}")
 
-    return urlCount + 1, consecutiveMatches
+    return urlCount + 1, consecutiveMatches, updated
+
+
 
 
 # Process a site
 def process_site(webScrapeManager, dataManager, jsonManager, prints, militariaSite, targetMatch, runCycle, productsProcessed):
-    """Processes a single site based on the JSON selector configuration."""
+    """
+    Processes a single site based on the JSON selector configuration, scraping and updating/inserting products.
+    """
     (
         conflict, nation, item_type, grade, source, pageIncrement, currency, products,
         productUrlElement, titleElement, descElement, priceElement, availableElement,
@@ -138,16 +185,20 @@ def process_site(webScrapeManager, dataManager, jsonManager, prints, militariaSi
                 logging.info("Empty product element found, skipping.")
                 continue
 
+            # Process each product and track updates
             urlCount, consecutiveMatches = process_product(
                 webScrapeManager, dataManager, prints, product, source, base_url, currency,
                 conflict, nation, item_type, page, urlCount, consecutiveMatches, targetMatch,
                 productUrlElement, titleElement, descElement, priceElement, availableElement
             )
 
+            # Stop if the target match count is reached
             if consecutiveMatches == targetMatch:
+                logging.info(f"Target match count ({targetMatch}) reached. Terminating site processing.")
                 prints.terminating(source, consecutiveMatches, runCycle, productsProcessed)
                 return
 
+        # Increment to the next page
         page += int(pageIncrement)
 
     logging.info(f"Finished processing site: {source}")

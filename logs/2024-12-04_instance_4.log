@@ -1,0 +1,499 @@
+2024-12-04 10:44:54,204 - INFO - Logging initialized. Log file: logs\2024-12-04_instance_4.log
+2024-12-04 10:45:01,699 - INFO - 
+------------------------------------------------------------
+                     PROGRAM INITIALIZED
+                     2024-12-04 10:45:01.699617          
+------------------------------------------------------------
+2024-12-04 10:45:03,495 - DEBUG - Navigating to products page: https://www.csmilitaria.co.uk/shop.php?pg=0
+2024-12-04 10:45:03,497 - DEBUG - Starting new HTTPS connection (1): www.csmilitaria.co.uk:443
+2024-12-04 10:45:04,618 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?pg=0 HTTP/1.1" 200 5644
+2024-12-04 10:45:04,631 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 10:45:04,632 - INFO - MILITARIA SITE      : CS_MILITARIA
+2024-12-04 10:45:04,632 - INFO - PRODUCTS URL        : https://www.csmilitaria.co.uk/shop.php?pg=0
+2024-12-04 10:45:04,632 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:04,632 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:04,632 - INFO - TIMESTAMP           : 2024-12-04 10:45:04.631545
+2024-12-04 10:45:04,633 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14741
+2024-12-04 10:45:04,924 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14741 HTTP/1.1" 200 3751
+2024-12-04 10:45:04,929 - DEBUG - Scraped data - Title: WW1 French 73rd Infantry Regiment Kepi, Price: 745.00, Available: True
+2024-12-04 10:45:05,520 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14741'.
+2024-12-04 10:45:05,521 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:05,521 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:05,521 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:05,521 - INFO - CONSECUTIVE MATCHES : 1
+2024-12-04 10:45:05,521 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14741
+2024-12-04 10:45:05,522 - INFO - TIMESTAMP           : 2024-12-04 10:45:05.521531
+2024-12-04 10:45:05,522 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14728
+2024-12-04 10:45:05,813 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14728 HTTP/1.1" 200 2881
+2024-12-04 10:45:05,818 - DEBUG - Scraped data - Title: WW2 Canadian Undershirt, Price: 75.00, Available: True
+2024-12-04 10:45:06,155 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14728'.
+2024-12-04 10:45:06,155 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:06,156 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:06,156 - INFO - PRODUCTS PROCESSED  : 1
+2024-12-04 10:45:06,156 - INFO - CONSECUTIVE MATCHES : 2
+2024-12-04 10:45:06,156 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14728
+2024-12-04 10:45:06,157 - INFO - TIMESTAMP           : 2024-12-04 10:45:06.155983
+2024-12-04 10:45:06,157 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14729
+2024-12-04 10:45:06,449 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14729 HTTP/1.1" 200 2940
+2024-12-04 10:45:06,454 - DEBUG - Scraped data - Title: WW2 Canadian Long Johns, Price: 75.00, Available: True
+2024-12-04 10:45:06,824 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14729'.
+2024-12-04 10:45:06,825 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:06,825 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:06,825 - INFO - PRODUCTS PROCESSED  : 2
+2024-12-04 10:45:06,826 - INFO - CONSECUTIVE MATCHES : 3
+2024-12-04 10:45:06,826 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14729
+2024-12-04 10:45:06,826 - INFO - TIMESTAMP           : 2024-12-04 10:45:06.825932
+2024-12-04 10:45:06,826 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14730
+2024-12-04 10:45:07,118 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14730 HTTP/1.1" 200 2889
+2024-12-04 10:45:07,123 - DEBUG - Scraped data - Title: WW2 Canadian Wool Socks, Price: 55.00, Available: True
+2024-12-04 10:45:07,485 - INFO - No updates required for product 'https://www.csmilitaria.co.uk/shop.php?code=14730'.
+2024-12-04 10:45:07,485 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:07,486 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:07,486 - INFO - PRODUCTS PROCESSED  : 3
+2024-12-04 10:45:07,486 - INFO - CONSECUTIVE MATCHES : 4
+2024-12-04 10:45:07,486 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14730
+2024-12-04 10:45:07,486 - INFO - TIMESTAMP           : 2024-12-04 10:45:07.485005
+2024-12-04 10:45:07,486 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14739
+2024-12-04 10:45:07,776 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14739 HTTP/1.1" 200 3184
+2024-12-04 10:45:07,782 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 10:45:07,782 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 10:45:07,782 - DEBUG - Scraped data - Title: French WW1 Model M1893 Field Pack - 1917 Dated, Price: 0, Available: False
+2024-12-04 10:45:08,709 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14739' sold date updated: 2024-12-04 10:42:46 → 2024-12-04 10:45:08
+2024-12-04 10:45:08,709 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14739' updated successfully.
+2024-12-04 10:45:08,709 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:08,710 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:08,710 - INFO - PRODUCTS PROCESSED  : 4
+2024-12-04 10:45:08,710 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:08,710 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14739
+2024-12-04 10:45:08,710 - INFO - TIMESTAMP           : 2024-12-04 10:45:08.709094
+2024-12-04 10:45:08,710 - INFO - 
+------------------------------------------------------------
+                    INSTANCE TERMINATED                     
+------------------------------------------------------------
+2024-12-04 10:45:08,711 - INFO - MILITARIA SITE      : CS_MILITARIA
+2024-12-04 10:45:08,711 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:08,711 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:08,711 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:08,711 - INFO - TIMESTAMP           : 2024-12-04 10:45:08.710093
+2024-12-04 10:45:08,711 - DEBUG - Navigating to products page: https://www.csmilitaria.co.uk/archive.php?pg=0
+2024-12-04 10:45:09,016 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /archive.php?pg=0 HTTP/1.1" 200 6414
+2024-12-04 10:45:09,026 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 10:45:09,027 - INFO - MILITARIA SITE      : CS_MILITARIA
+2024-12-04 10:45:09,027 - INFO - PRODUCTS URL        : https://www.csmilitaria.co.uk/archive.php?pg=0
+2024-12-04 10:45:09,027 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:09,027 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:09,028 - INFO - TIMESTAMP           : 2024-12-04 10:45:09.026445
+2024-12-04 10:45:09,028 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14431
+2024-12-04 10:45:09,318 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14431 HTTP/1.1" 200 3173
+2024-12-04 10:45:09,323 - DEBUG - Scraped data - Title: WW2 British Turtle Helmet With Camouflage Net 1944, Price: 345.00, Available: False
+2024-12-04 10:45:10,277 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14431' sold date updated: 2024-12-04 10:42:48 → 2024-12-04 10:45:09
+2024-12-04 10:45:10,277 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14431' updated successfully.
+2024-12-04 10:45:10,277 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:10,277 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:10,277 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:10,277 - INFO - CONSECUTIVE MATCHES : 1
+2024-12-04 10:45:10,278 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14431
+2024-12-04 10:45:10,278 - INFO - TIMESTAMP           : 2024-12-04 10:45:10.277763
+2024-12-04 10:45:10,278 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14597
+2024-12-04 10:45:10,570 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14597 HTTP/1.1" 200 2998
+2024-12-04 10:45:10,574 - DEBUG - Scraped data - Title: WW1 British 1st Battalion Manchester Regiment Wolseley Sun Helmet, Price: 565.00, Available: False
+2024-12-04 10:45:11,574 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14597' sold date updated: 2024-12-04 10:42:49 → 2024-12-04 10:45:11
+2024-12-04 10:45:11,575 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14597' updated successfully.
+2024-12-04 10:45:11,575 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:11,575 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:11,575 - INFO - PRODUCTS PROCESSED  : 1
+2024-12-04 10:45:11,575 - INFO - CONSECUTIVE MATCHES : 2
+2024-12-04 10:45:11,576 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14597
+2024-12-04 10:45:11,576 - INFO - TIMESTAMP           : 2024-12-04 10:45:11.575298
+2024-12-04 10:45:11,576 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14598
+2024-12-04 10:45:11,876 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14598 HTTP/1.1" 200 3031
+2024-12-04 10:45:11,881 - DEBUG - Scraped data - Title: WW2 British Home Front NFS Helmet - Ransome & Rapier Fire Brigade, Price: 245.00, Available: False
+2024-12-04 10:45:12,892 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14598' sold date updated: 2024-12-04 10:37:49 → 2024-12-04 10:45:12
+2024-12-04 10:45:12,893 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14598' updated successfully.
+2024-12-04 10:45:12,893 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:12,893 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:12,893 - INFO - PRODUCTS PROCESSED  : 2
+2024-12-04 10:45:12,894 - INFO - CONSECUTIVE MATCHES : 3
+2024-12-04 10:45:12,894 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14598
+2024-12-04 10:45:12,894 - INFO - TIMESTAMP           : 2024-12-04 10:45:12.893432
+2024-12-04 10:45:12,894 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14584
+2024-12-04 10:45:13,185 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14584 HTTP/1.1" 200 3375
+2024-12-04 10:45:13,191 - DEBUG - Scraped data - Title: WW1 German Fur Felt Ersatz M95 Prussian Pickelhaube, Price: 2200.00, Available: False
+2024-12-04 10:45:14,201 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14584' sold date updated: 2024-12-04 10:37:51 → 2024-12-04 10:45:13
+2024-12-04 10:45:14,202 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14584' updated successfully.
+2024-12-04 10:45:14,202 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:14,202 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:14,202 - INFO - PRODUCTS PROCESSED  : 3
+2024-12-04 10:45:14,203 - INFO - CONSECUTIVE MATCHES : 4
+2024-12-04 10:45:14,203 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14584
+2024-12-04 10:45:14,203 - INFO - TIMESTAMP           : 2024-12-04 10:45:14.202284
+2024-12-04 10:45:14,203 - DEBUG - Product URL constructed: https://www.csmilitaria.co.uk/shop.php?code=14580
+2024-12-04 10:45:14,494 - DEBUG - https://www.csmilitaria.co.uk:443 "GET /shop.php?code=14580 HTTP/1.1" 200 3365
+2024-12-04 10:45:14,499 - DEBUG - Scraped data - Title: WW2 British Fresh To The Market Fibre Rimmed Paratrooper Helmet 1942 - Completely Untouched  Example, Price: 3450.00, Available: False
+2024-12-04 10:45:15,496 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14580' sold date updated: 2024-12-04 10:37:52 → 2024-12-04 10:45:14
+2024-12-04 10:45:15,496 - INFO - Product 'https://www.csmilitaria.co.uk/shop.php?code=14580' updated successfully.
+2024-12-04 10:45:15,496 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:15,497 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:15,497 - INFO - PRODUCTS PROCESSED  : 4
+2024-12-04 10:45:15,497 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:15,497 - INFO - PRODUCT URL         : https://www.csmilitaria.co.uk/shop.php?code=14580
+2024-12-04 10:45:15,497 - INFO - TIMESTAMP           : 2024-12-04 10:45:15.496448
+2024-12-04 10:45:15,498 - INFO - 
+------------------------------------------------------------
+                    INSTANCE TERMINATED                     
+------------------------------------------------------------
+2024-12-04 10:45:15,498 - INFO - MILITARIA SITE      : CS_MILITARIA
+2024-12-04 10:45:15,498 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:15,498 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:15,498 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:15,498 - INFO - TIMESTAMP           : 2024-12-04 10:45:15.498939
+2024-12-04 10:45:15,498 - DEBUG - Navigating to products page: https://mv40-45.com/shop.php?pg=0
+2024-12-04 10:45:15,499 - DEBUG - Starting new HTTPS connection (1): mv40-45.com:443
+2024-12-04 10:45:16,657 - DEBUG - https://mv40-45.com:443 "GET /shop.php?pg=0 HTTP/1.1" 200 5591
+2024-12-04 10:45:16,668 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 10:45:16,669 - INFO - MILITARIA SITE      : MV40_45
+2024-12-04 10:45:16,669 - INFO - PRODUCTS URL        : https://mv40-45.com/shop.php?pg=0
+2024-12-04 10:45:16,669 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:16,669 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:16,669 - INFO - TIMESTAMP           : 2024-12-04 10:45:16.668402
+2024-12-04 10:45:16,670 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=54649
+2024-12-04 10:45:16,991 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=54649 HTTP/1.1" 200 3149
+2024-12-04 10:45:16,996 - DEBUG - Scraped data - Title: Kriegsmarine ships clock by Kieninger & Obergfell, Price: 2450.00, Available: True
+2024-12-04 10:45:17,495 - INFO - No updates required for product 'https://mv40-45.com/shop.php?code=54649'.
+2024-12-04 10:45:17,496 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:17,496 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:17,497 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:17,497 - INFO - CONSECUTIVE MATCHES : 1
+2024-12-04 10:45:17,497 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=54649
+2024-12-04 10:45:17,497 - INFO - TIMESTAMP           : 2024-12-04 10:45:17.496440
+2024-12-04 10:45:17,497 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=55260
+2024-12-04 10:45:17,820 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=55260 HTTP/1.1" 200 2999
+2024-12-04 10:45:17,825 - DEBUG - Scraped data - Title: KVK 1.klasse (Kriegsverdienstkreuz 1. klasse mit Schwertern) Marked *21*, Price: 85.00, Available: True
+2024-12-04 10:45:18,188 - INFO - No updates required for product 'https://mv40-45.com/shop.php?code=55260'.
+2024-12-04 10:45:18,188 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:18,188 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:18,189 - INFO - PRODUCTS PROCESSED  : 1
+2024-12-04 10:45:18,189 - INFO - CONSECUTIVE MATCHES : 2
+2024-12-04 10:45:18,189 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=55260
+2024-12-04 10:45:18,189 - INFO - TIMESTAMP           : 2024-12-04 10:45:18.188690
+2024-12-04 10:45:18,189 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=55259
+2024-12-04 10:45:18,509 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=55259 HTTP/1.1" 200 3076
+2024-12-04 10:45:18,515 - DEBUG - Scraped data - Title: Late War German M31 Canteen and Cup HRE 43, Price: 150.00, Available: True
+2024-12-04 10:45:18,859 - INFO - No updates required for product 'https://mv40-45.com/shop.php?code=55259'.
+2024-12-04 10:45:18,859 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:18,860 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:18,860 - INFO - PRODUCTS PROCESSED  : 2
+2024-12-04 10:45:18,860 - INFO - CONSECUTIVE MATCHES : 3
+2024-12-04 10:45:18,860 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=55259
+2024-12-04 10:45:18,860 - INFO - TIMESTAMP           : 2024-12-04 10:45:18.859308
+2024-12-04 10:45:18,861 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=55258
+2024-12-04 10:45:19,181 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=55258 HTTP/1.1" 200 3077
+2024-12-04 10:45:19,186 - DEBUG - Scraped data - Title: SS EM-NCO ( Unterführer ) Degen ( Sword ) Alcoso Solingen, Price: 600.00, Available: True
+2024-12-04 10:45:19,530 - INFO - No updates required for product 'https://mv40-45.com/shop.php?code=55258'.
+2024-12-04 10:45:19,530 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:19,531 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:19,531 - INFO - PRODUCTS PROCESSED  : 3
+2024-12-04 10:45:19,531 - INFO - CONSECUTIVE MATCHES : 4
+2024-12-04 10:45:19,531 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=55258
+2024-12-04 10:45:19,531 - INFO - TIMESTAMP           : 2024-12-04 10:45:19.530525
+2024-12-04 10:45:19,532 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=55257
+2024-12-04 10:45:19,853 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=55257 HTTP/1.1" 200 2944
+2024-12-04 10:45:19,858 - DEBUG - Scraped data - Title: German War Merit Cross with Swords Marked *11*, Price: 60.00, Available: True
+2024-12-04 10:45:20,208 - INFO - No updates required for product 'https://mv40-45.com/shop.php?code=55257'.
+2024-12-04 10:45:20,208 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:20,208 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:20,209 - INFO - PRODUCTS PROCESSED  : 4
+2024-12-04 10:45:20,209 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:20,209 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=55257
+2024-12-04 10:45:20,209 - INFO - TIMESTAMP           : 2024-12-04 10:45:20.208349
+2024-12-04 10:45:20,209 - INFO - 
+------------------------------------------------------------
+                    INSTANCE TERMINATED                     
+------------------------------------------------------------
+2024-12-04 10:45:20,209 - INFO - MILITARIA SITE      : MV40_45
+2024-12-04 10:45:20,209 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:20,210 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:20,210 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:20,210 - INFO - TIMESTAMP           : 2024-12-04 10:45:20.209378
+2024-12-04 10:45:20,210 - DEBUG - Navigating to products page: https://mv40-45.com/archive.php?pg=0
+2024-12-04 10:45:20,537 - DEBUG - https://mv40-45.com:443 "GET /archive.php?pg=0 HTTP/1.1" 200 5012
+2024-12-04 10:45:20,547 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 10:45:20,548 - INFO - MILITARIA SITE      : MV40_45
+2024-12-04 10:45:20,548 - INFO - PRODUCTS URL        : https://mv40-45.com/archive.php?pg=0
+2024-12-04 10:45:20,548 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:20,548 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:20,548 - INFO - TIMESTAMP           : 2024-12-04 10:45:20.547593
+2024-12-04 10:45:20,548 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=55002
+2024-12-04 10:45:20,869 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=55002 HTTP/1.1" 200 2907
+2024-12-04 10:45:20,874 - DEBUG - Scraped data - Title: WW2 Era Green Necktie for Police, Price: 55.00, Available: False
+2024-12-04 10:45:21,710 - INFO - Product 'https://mv40-45.com/shop.php?code=55002' sold date updated: 2024-12-04 10:37:59 → 2024-12-04 10:45:21
+2024-12-04 10:45:21,710 - INFO - Product 'https://mv40-45.com/shop.php?code=55002' updated successfully.
+2024-12-04 10:45:21,710 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:21,711 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:21,711 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:21,711 - INFO - CONSECUTIVE MATCHES : 1
+2024-12-04 10:45:21,711 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=55002
+2024-12-04 10:45:21,712 - INFO - TIMESTAMP           : 2024-12-04 10:45:21.710143
+2024-12-04 10:45:21,712 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=54975
+2024-12-04 10:45:22,032 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=54975 HTTP/1.1" 200 2924
+2024-12-04 10:45:22,037 - DEBUG - Scraped data - Title: US WWII M1 Carbine Ammo box *Spam Can* 1944, Price: 75.00, Available: False
+2024-12-04 10:45:23,010 - INFO - Product 'https://mv40-45.com/shop.php?code=54975' sold date updated: 2024-12-04 10:38:00 → 2024-12-04 10:45:22
+2024-12-04 10:45:23,011 - INFO - Product 'https://mv40-45.com/shop.php?code=54975' updated successfully.
+2024-12-04 10:45:23,011 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:23,011 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:23,011 - INFO - PRODUCTS PROCESSED  : 1
+2024-12-04 10:45:23,011 - INFO - CONSECUTIVE MATCHES : 2
+2024-12-04 10:45:23,012 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=54975
+2024-12-04 10:45:23,012 - INFO - TIMESTAMP           : 2024-12-04 10:45:23.011939
+2024-12-04 10:45:23,012 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=54969
+2024-12-04 10:45:23,335 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=54969 HTTP/1.1" 200 2906
+2024-12-04 10:45:23,340 - DEBUG - Scraped data - Title: US WWII M1 Rifle Ammo Bandoleer .30 Cal, Price: 35.00, Available: False
+2024-12-04 10:45:24,287 - INFO - Product 'https://mv40-45.com/shop.php?code=54969' sold date updated: 2024-12-04 10:38:02 → 2024-12-04 10:45:23
+2024-12-04 10:45:24,287 - INFO - Product 'https://mv40-45.com/shop.php?code=54969' updated successfully.
+2024-12-04 10:45:24,288 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:24,288 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:24,288 - INFO - PRODUCTS PROCESSED  : 2
+2024-12-04 10:45:24,288 - INFO - CONSECUTIVE MATCHES : 3
+2024-12-04 10:45:24,288 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=54969
+2024-12-04 10:45:24,288 - INFO - TIMESTAMP           : 2024-12-04 10:45:24.288686
+2024-12-04 10:45:24,289 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=54947
+2024-12-04 10:45:24,613 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=54947 HTTP/1.1" 200 2927
+2024-12-04 10:45:24,618 - DEBUG - Scraped data - Title: US WWII M2 Jungle First Aid Kit 1944, Price: 175.00, Available: False
+2024-12-04 10:45:25,569 - INFO - Product 'https://mv40-45.com/shop.php?code=54947' sold date updated: 2024-12-04 10:38:03 → 2024-12-04 10:45:25
+2024-12-04 10:45:25,569 - INFO - Product 'https://mv40-45.com/shop.php?code=54947' updated successfully.
+2024-12-04 10:45:25,569 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:25,570 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:25,570 - INFO - PRODUCTS PROCESSED  : 3
+2024-12-04 10:45:25,570 - INFO - CONSECUTIVE MATCHES : 4
+2024-12-04 10:45:25,570 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=54947
+2024-12-04 10:45:25,570 - INFO - TIMESTAMP           : 2024-12-04 10:45:25.569069
+2024-12-04 10:45:25,571 - DEBUG - Product URL constructed: https://mv40-45.com/shop.php?code=54946
+2024-12-04 10:45:25,893 - DEBUG - https://mv40-45.com:443 "GET /shop.php?code=54946 HTTP/1.1" 200 3138
+2024-12-04 10:45:25,898 - DEBUG - Scraped data - Title: US WWII 1942 Pattern USMC *Okinawa* Jungle Boots 1943, Price: 250.00, Available: False
+2024-12-04 10:45:26,842 - INFO - Product 'https://mv40-45.com/shop.php?code=54946' sold date updated: 2024-12-04 10:38:05 → 2024-12-04 10:45:26
+2024-12-04 10:45:26,842 - INFO - Product 'https://mv40-45.com/shop.php?code=54946' updated successfully.
+2024-12-04 10:45:26,842 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:26,843 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:26,843 - INFO - PRODUCTS PROCESSED  : 4
+2024-12-04 10:45:26,843 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:26,843 - INFO - PRODUCT URL         : https://mv40-45.com/shop.php?code=54946
+2024-12-04 10:45:26,843 - INFO - TIMESTAMP           : 2024-12-04 10:45:26.842107
+2024-12-04 10:45:26,843 - INFO - 
+------------------------------------------------------------
+                    INSTANCE TERMINATED                     
+------------------------------------------------------------
+2024-12-04 10:45:26,844 - INFO - MILITARIA SITE      : MV40_45
+2024-12-04 10:45:26,844 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:26,844 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:26,844 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:26,844 - INFO - TIMESTAMP           : 2024-12-04 10:45:26.843107
+2024-12-04 10:45:26,844 - DEBUG - Navigating to products page: https://worldwarcollectibles.com/shop.php?pg=0
+2024-12-04 10:45:26,845 - DEBUG - Starting new HTTPS connection (1): worldwarcollectibles.com:443
+2024-12-04 10:45:28,011 - DEBUG - https://worldwarcollectibles.com:443 "GET /shop.php?pg=0 HTTP/1.1" 200 7930
+2024-12-04 10:45:28,029 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 10:45:28,029 - INFO - MILITARIA SITE      : WORLDWAR_COLLECTIBLES
+2024-12-04 10:45:28,030 - INFO - PRODUCTS URL        : https://worldwarcollectibles.com/shop.php?pg=0
+2024-12-04 10:45:28,030 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:28,030 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:28,030 - INFO - TIMESTAMP           : 2024-12-04 10:45:28.029456
+2024-12-04 10:45:28,030 - DEBUG - Product URL constructed: https://worldwarcollectibles.com/shop.php?code=79090
+2024-12-04 10:45:28,329 - DEBUG - https://worldwarcollectibles.com:443 "GET /shop.php?code=79090 HTTP/1.1" 200 2927
+2024-12-04 10:45:28,334 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 10:45:28,334 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 10:45:28,334 - DEBUG - Scraped data - Title: Houten Militaria Show December 8, 2024, Price: 0, Available: False
+2024-12-04 10:45:29,278 - INFO - Product 'https://worldwarcollectibles.com/shop.php?code=79090' sold date updated: 2024-12-04 10:38:07 → 2024-12-04 10:45:28
+2024-12-04 10:45:29,279 - INFO - Product 'https://worldwarcollectibles.com/shop.php?code=79090' updated successfully.
+2024-12-04 10:45:29,279 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:29,280 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:29,280 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:29,280 - INFO - CONSECUTIVE MATCHES : 1
+2024-12-04 10:45:29,280 - INFO - PRODUCT URL         : https://worldwarcollectibles.com/shop.php?code=79090
+2024-12-04 10:45:29,280 - INFO - TIMESTAMP           : 2024-12-04 10:45:29.279589
+2024-12-04 10:45:29,281 - DEBUG - Product URL constructed: https://worldwarcollectibles.com/shop.php?code=77621
+2024-12-04 10:45:29,580 - DEBUG - https://worldwarcollectibles.com:443 "GET /shop.php?code=77621 HTTP/1.1" 200 3100
+2024-12-04 10:45:29,592 - DEBUG - Scraped data - Title: German Waffen-SS Knight*s Cross Recipient Portait Picture with Signature *Franz Riedel*, Price: 125.00, Available: True
+2024-12-04 10:45:30,059 - INFO - No updates required for product 'https://worldwarcollectibles.com/shop.php?code=77621'.
+2024-12-04 10:45:30,059 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:30,060 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:30,060 - INFO - PRODUCTS PROCESSED  : 1
+2024-12-04 10:45:30,060 - INFO - CONSECUTIVE MATCHES : 2
+2024-12-04 10:45:30,061 - INFO - PRODUCT URL         : https://worldwarcollectibles.com/shop.php?code=77621
+2024-12-04 10:45:30,061 - INFO - TIMESTAMP           : 2024-12-04 10:45:30.059571
+2024-12-04 10:45:30,061 - DEBUG - Product URL constructed: https://worldwarcollectibles.com/shop.php?code=77781
+2024-12-04 10:45:30,360 - DEBUG - https://worldwarcollectibles.com:443 "GET /shop.php?code=77781 HTTP/1.1" 200 2952
+2024-12-04 10:45:30,365 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 10:45:30,365 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 10:45:30,365 - DEBUG - Scraped data - Title: German WH Panzer Grenade Ammo Box, Price: 0, Available: False
+2024-12-04 10:45:31,168 - INFO - Product 'https://worldwarcollectibles.com/shop.php?code=77781' sold date updated: 2024-12-04 10:38:09 → 2024-12-04 10:45:30
+2024-12-04 10:45:31,169 - INFO - Product 'https://worldwarcollectibles.com/shop.php?code=77781' updated successfully.
+2024-12-04 10:45:31,169 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:31,169 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:31,169 - INFO - PRODUCTS PROCESSED  : 2
+2024-12-04 10:45:31,170 - INFO - CONSECUTIVE MATCHES : 3
+2024-12-04 10:45:31,170 - INFO - PRODUCT URL         : https://worldwarcollectibles.com/shop.php?code=77781
+2024-12-04 10:45:31,170 - INFO - TIMESTAMP           : 2024-12-04 10:45:31.169568
+2024-12-04 10:45:31,170 - DEBUG - Product URL constructed: https://worldwarcollectibles.com/shop.php?code=78157
+2024-12-04 10:45:31,468 - DEBUG - https://worldwarcollectibles.com:443 "GET /shop.php?code=78157 HTTP/1.1" 200 3082
+2024-12-04 10:45:31,473 - DEBUG - Scraped data - Title: German WH Panzer Headphone *Dfh.b*, Price: 695.00, Available: True
+2024-12-04 10:45:31,948 - INFO - No updates required for product 'https://worldwarcollectibles.com/shop.php?code=78157'.
+2024-12-04 10:45:31,948 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:31,948 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:31,948 - INFO - PRODUCTS PROCESSED  : 3
+2024-12-04 10:45:31,949 - INFO - CONSECUTIVE MATCHES : 4
+2024-12-04 10:45:31,949 - INFO - PRODUCT URL         : https://worldwarcollectibles.com/shop.php?code=78157
+2024-12-04 10:45:31,949 - INFO - TIMESTAMP           : 2024-12-04 10:45:31.948865
+2024-12-04 10:45:31,949 - DEBUG - Product URL constructed: https://worldwarcollectibles.com/shop.php?code=78158
+2024-12-04 10:45:32,248 - DEBUG - https://worldwarcollectibles.com:443 "GET /shop.php?code=78158 HTTP/1.1" 200 3181
+2024-12-04 10:45:32,254 - DEBUG - Scraped data - Title: German WH Panzer Officer Visor Cap, Price: 1650.00, Available: True
+2024-12-04 10:45:32,582 - INFO - No updates required for product 'https://worldwarcollectibles.com/shop.php?code=78158'.
+2024-12-04 10:45:32,582 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:32,582 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:32,582 - INFO - PRODUCTS PROCESSED  : 4
+2024-12-04 10:45:32,583 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:32,583 - INFO - PRODUCT URL         : https://worldwarcollectibles.com/shop.php?code=78158
+2024-12-04 10:45:32,583 - INFO - TIMESTAMP           : 2024-12-04 10:45:32.582925
+2024-12-04 10:45:32,583 - INFO - 
+------------------------------------------------------------
+                    INSTANCE TERMINATED                     
+------------------------------------------------------------
+2024-12-04 10:45:32,583 - INFO - MILITARIA SITE      : WORLDWAR_COLLECTIBLES
+2024-12-04 10:45:32,583 - INFO - CONSECUTIVE MATCHES : 5
+2024-12-04 10:45:32,583 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:32,584 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:32,584 - INFO - TIMESTAMP           : 2024-12-04 10:45:32.583924
+2024-12-04 10:45:32,584 - DEBUG - Navigating to products page: https://www.hiscoll.com/shop.php?pg=0
+2024-12-04 10:45:32,585 - DEBUG - Starting new HTTPS connection (1): www.hiscoll.com:443
+2024-12-04 10:45:33,837 - DEBUG - https://www.hiscoll.com:443 "GET /shop.php?pg=0 HTTP/1.1" 200 15244
+2024-12-04 10:45:33,870 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-04 10:45:33,870 - INFO - MILITARIA SITE      : HISCOLL_MILITARY_ANTIQUES
+2024-12-04 10:45:33,870 - INFO - PRODUCTS URL        : https://www.hiscoll.com/shop.php?pg=0
+2024-12-04 10:45:33,870 - INFO - CYCLES RUN          : 0
+2024-12-04 10:45:33,871 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:33,871 - INFO - TIMESTAMP           : 2024-12-04 10:45:33.870225
+2024-12-04 10:45:33,871 - DEBUG - Product URL constructed: https://www.hiscoll.com/shop.php?code=67186
+2024-12-04 10:45:34,157 - DEBUG - https://www.hiscoll.com:443 "GET /shop.php?code=67186 HTTP/1.1" 200 3451
+2024-12-04 10:45:34,161 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 10:45:34,162 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 10:45:34,162 - DEBUG - Scraped data - Title: Superb - and truly scarcely encountered! - HJ- (ie. Hitlerjugend) day-badge (ie. *tinnie* or: *Veranstaltungsabzeichen*): *Tag der Hitler-Jugend - Bann 254 Wetterau - Bad Nauheim - 29. u. 30. 8. 1936*, Price: 0, Available: False
+2024-12-04 10:45:34,957 - INFO - Product 'https://www.hiscoll.com/shop.php?code=67186' sold date updated: 2024-12-03 00:00:00 → 2024-12-04 10:45:34
+2024-12-04 10:45:34,958 - INFO - Product 'https://www.hiscoll.com/shop.php?code=67186' updated successfully.
+2024-12-04 10:45:34,958 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:34,958 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:34,958 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-04 10:45:34,958 - INFO - CONSECUTIVE MATCHES : 1
+2024-12-04 10:45:34,958 - INFO - PRODUCT URL         : https://www.hiscoll.com/shop.php?code=67186
+2024-12-04 10:45:34,958 - INFO - TIMESTAMP           : 2024-12-04 10:45:34.958097
+2024-12-04 10:45:34,959 - DEBUG - Product URL constructed: https://www.hiscoll.com/shop.php?code=67185
+2024-12-04 10:45:35,244 - DEBUG - https://www.hiscoll.com:443 "GET /shop.php?code=67185 HTTP/1.1" 200 3469
+2024-12-04 10:45:35,249 - DEBUG - Scraped data - Title: Superb - truly used and carefully cap-removed! - mid- (ie. later-) war-pattern *Waffen-SS*-type, *BeVo*-pattern, EM- (ie. NCO-) type side-cap eagle that comes in a moderately used- (ie. neatly confectioned and *trapezoid-shaped*-), condition, Price: 625.00, Available: True
+2024-12-04 10:45:35,711 - INFO - No updates required for product 'https://www.hiscoll.com/shop.php?code=67185'.
+2024-12-04 10:45:35,711 - INFO - 
+------------------------------------------------------------
+                      PRODUCT UPDATED                       
+------------------------------------------------------------
+2024-12-04 10:45:35,712 - INFO - CURRENT PAGE        : 0
+2024-12-04 10:45:35,712 - INFO - PRODUCTS PROCESSED  : 1
+2024-12-04 10:45:35,712 - INFO - CONSECUTIVE MATCHES : 2
+2024-12-04 10:45:35,712 - INFO - PRODUCT URL         : https://www.hiscoll.com/shop.php?code=67185
+2024-12-04 10:45:35,712 - INFO - TIMESTAMP           : 2024-12-04 10:45:35.711606
+2024-12-04 10:45:35,713 - DEBUG - Product URL constructed: https://www.hiscoll.com/shop.php?code=67184
+2024-12-04 10:45:35,998 - DEBUG - https://www.hiscoll.com:443 "GET /shop.php?code=67184 HTTP/1.1" 200 3379
+2024-12-04 10:45:36,002 - WARNING - Unable to retrieve product PRICE.
+2024-12-04 10:45:36,002 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-04 10:45:36,002 - DEBUG - Scraped data - Title: Commemorative, golden-bronze-toned N.S.D.A.P.-related day-badge (ie. *tinnie* or: *Veranstaltungsabzeichen*) as was issued to commemorate participation within an event named: *Kreisappell der N.S.D.A.P. - Moers - 13./14. - 6. - 1936*, Price: 0, Available: False
