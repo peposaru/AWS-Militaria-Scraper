@@ -9,7 +9,7 @@
         "product_url_element": "product['href']",
         "title_element": "productSoup.find('h1', class_='product_title entry-title').text.strip()",
         "desc_element": "productSoup.find('p', class_=None).text.strip()",
-        "price_element": "productSoup.find('span', class_='woocommerce-Price-amount amount').get_text(strip=True).split()[0].replace(',', '').strip()",
+        "price_element": "''.join(c for c in productSoup.find('span', class_='woocommerce-Price-amount amount').get_text(strip=True) if c.isdigit())",
         "available_element": "True if productSoup.find('button', class_='single_add_to_cart_button') else False",
         "quantity_element": "productSoup.find('input', class_='input-text qty text')['max'] if productSoup.find('input', class_='input-text qty text') else '1'",
         "conflict_element": "",
