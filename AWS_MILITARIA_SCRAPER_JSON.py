@@ -6,7 +6,7 @@ import os
 import json
 import logging
 import sys
-from datetime import datetime, date
+from datetime import datetime
 from time import sleep
 from tqdm import trange
 from aws_postgresql_manager import PostgreSQLProcessor  # Imported unchanged
@@ -15,6 +15,7 @@ from militaria_json_manager import JsonManager  # Imported unchanged
 from log_print_manager import log_print  # Imported unchanged
 from settings_manager import get_user_settings  # Modified: Added for settings management
 from site_product_processor import process_site  # Modified: Added to handle site processing
+from check_availability_module import check_availability  # Importing check_availability
 
 # Modified: Moved logging configuration into a reusable function
 def initialize_logging():
@@ -51,10 +52,14 @@ def main():
     initialize_logging()
 
     # Get user settings
-    targetMatch, user_settings = get_user_settings()
-    infoLocation = user_settings["infoLocation"]
-    pgAdminCred = user_settings["pgAdminCred"]
-    selectorJson = user_settings["selectorJson"]
+    try:
+        targetMatch, user_settings, run_availability_check = get_user_settings()
+        infoLocation = user_settings["infoLocation"]
+        pgAdminCred = user_settings["pgAdminCred"]
+        selectorJson = user_settings["selectorJson"]
+    except KeyError as e:
+        logging.error(f"Error accessing user settings: {e}")
+        return
 
     # Change to the directory containing settings and credentials
     try:
@@ -71,18 +76,32 @@ def main():
 ------------------------------------------------------------""")
 
     # Initialize PostgreSQL manager and other components
-    dataManager = PostgreSQLProcessor(credFile=pgAdminCred)
-    webScrapeManager = ProductScraper(dataManager)
-    jsonManager = JsonManager()
-    prints = log_print()
+    try:
+        dataManager = PostgreSQLProcessor(credFile=pgAdminCred)
+        webScrapeManager = ProductScraper(dataManager)
+        jsonManager = JsonManager()
+        prints = log_print()
+    except Exception as e:
+        logging.error(f"Error initializing components: {e}")
+        return
 
     # Load JSON selectors
     try:
         with open(selectorJson, 'r') as userFile:
             jsonData = json.load(userFile)
-    except Exception as e:
-        logging.error(f'Error loading JSON selector file: {e}')
+    except FileNotFoundError:
+        logging.error(f'JSON selector file not found: {selectorJson}')
         return
+    except json.JSONDecodeError as e:
+        logging.error(f'Error decoding JSON selector file: {e}')
+        return
+
+    # Run availability check if selected by user
+    if run_availability_check:
+        try:
+            check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
+        except Exception as e:
+            logging.error(f"Error running availability check: {e}")
 
     # Main loop for processing sites
     runCycle = 0
@@ -90,10 +109,13 @@ def main():
 
     while True:
         for militariaSite in jsonData:
-            process_site(
-                webScrapeManager, dataManager, jsonManager, prints, militariaSite,
-                targetMatch, runCycle, productsProcessed
-            )
+            try:
+                process_site(
+                    webScrapeManager, dataManager, jsonManager, prints, militariaSite,
+                    targetMatch, runCycle, productsProcessed
+                )
+            except Exception as e:
+                logging.error(f"Error processing site {militariaSite.get('source', 'Unknown')}: {e}")
 
         # Pause between cycles
         sleepTime = int(os.getenv('CYCLE_PAUSE_SECONDS', 300))  # Default: 300 seconds

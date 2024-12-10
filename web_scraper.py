@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from requests.exceptions import RequestException, Timeout, ChunkedEncodingError
+from time import sleep
 
 class ProductScraper:
     def __init__(self, spreadSheetManager):
@@ -18,6 +19,49 @@ class ProductScraper:
         adapter = HTTPAdapter(max_retries=retry)
         self.session.mount("http://", adapter)
         self.session.mount("https://", adapter)
+
+    def fetch_and_scrape_product(self, product_url, availableElement, source):
+        # Fetch the product page
+        ############################
+        try:
+            headers = {
+                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
+            }
+            response = self.session.get(product_url, headers=headers, timeout=10)
+            response.raise_for_status()
+
+            page = BeautifulSoup(response.content, 'html.parser')
+
+            # Extract availability status
+            available = False
+            available_element = page.select_one(availableElement)
+            if available_element:
+                available_text = available_element.text.lower()
+                available = "sold" not in available_text and "unavailable" not in available_text
+            
+            return available
+            #######################
+        except Timeout:
+            logging.info(f"Timeout occurred while accessing {product_url}.")
+            return False
+        except RequestException as e:
+            logging.error(f"Error occurred while accessing {product_url} - {e}")
+            return False
+
+    def fetch_page(self, url):
+        headers = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
+        }
+        try:
+            response = self.session.get(url, headers=headers, timeout=10)
+            response.raise_for_status()
+            return BeautifulSoup(response.content, 'html.parser')
+        except Timeout:
+            logging.info(f"Timeout occurred while accessing {url}.")
+            return None
+        except RequestException as e:
+            logging.error(f"Error occurred while accessing {url} - {e}")
+            return None
 
     # Adding a retry system when getting productSoup
     def fetch_with_retries(self, fetch_function, *args, max_retries=3, backoff_factor=2, **kwargs):

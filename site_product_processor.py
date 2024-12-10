@@ -126,7 +126,7 @@ def update_or_insert_product(dataManager, prints, productUrl, title, description
                 logging.info(f"No updates required for product '{productUrl}'.")
 
             consecutiveMatches += 1
-            prints.sysUpdate(page, urlCount, consecutiveMatches, productUrl, updated)
+            prints.sysUpdate(page, urlCount, consecutiveMatches, targetMatch, productUrl, updated)
         else:
             # Insert the product if it doesn't exist
             todayDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -195,7 +195,7 @@ def process_site(webScrapeManager, dataManager, jsonManager, prints, militariaSi
             # Stop if the target match count is reached
             if consecutiveMatches == targetMatch:
                 logging.info(f"Target match count ({targetMatch}) reached. Terminating site processing.")
-                prints.terminating(source, consecutiveMatches, runCycle, productsProcessed)
+                prints.terminating(source, consecutiveMatches, targetMatch, runCycle, productsProcessed)
                 return
 
         # Increment to the next page

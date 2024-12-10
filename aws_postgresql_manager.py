@@ -57,9 +57,12 @@ class PostgreSQLProcessor:
         self.cur.execute(query)
         self.conn.commit()
 
-    def sqlFetch(self, query):
-        """Fetch results from an SQL query."""
-        self.cur.execute(query)
+    def sqlFetch(self, query, params=None):
+        """Fetch results from an SQL query, optionally with parameters."""
+        if params:
+            self.cur.execute(query, params)
+        else:
+            self.cur.execute(query)
         return self.cur.fetchall()
 
     def sqlClose(self):

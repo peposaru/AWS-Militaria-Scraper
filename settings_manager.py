@@ -1,6 +1,9 @@
 import os
 import logging
 
+import os
+import logging
+
 # Default Settings
 DEFAULT_RDS_SETTINGS = {
     "infoLocation": r'/home/ec2-user/projects/AWS-Militaria-Scraper/',
@@ -18,9 +21,11 @@ def get_user_settings():
     """
     Prompt user to select settings for infoLocation, pgAdmin credentials, and selector JSON file.
     Returns:
-        - targetMatch (int): The number of target matches.
+        - targetMatch (int or None): The number of target matches (if applicable).
         - settings (dict): A dictionary with keys 'infoLocation', 'pgAdminCred', 'selectorJson'.
+        - run_availability_check (bool): Indicates whether the user wants to run the availability check.
     """
+    # First question: Choose settings
     print("""
 Choose your settings:
 1. Amazon RDS Settings
@@ -55,25 +60,38 @@ Choose your settings:
         print("Invalid choice. Exiting program.")
         exit()
 
+    # Second question: Run availability check
     print("""
+Would you like to run the product availability check?
+1. Yes
+2. No
+""")
+    availability_choice = input("Enter your choice (1/2): ").strip()
+    run_availability_check = availability_choice == '1'
+
+    # Third question: Choose targetMatch setting (only if not running availability check)
+    targetMatch = None
+    if not run_availability_check:
+        print("""
 Choose your targetMatch setting:
-1. Default (250)
-2. New JSON (1000)
+1. Quick Site Check (25)
+2. All Products (99999)
 3. Custom (enter your own value)
 """)
-    try:
-        choice = input("Enter the number corresponding to your choice (1/2/3): ").strip()
-        if choice == '1':
-            targetMatch = 250
-        elif choice == '2':
-            targetMatch = 1000
-        elif choice == '3':
-            targetMatch = int(input("Enter your desired targetMatch value: ").strip())
-        else:
-            raise ValueError
-    except ValueError:
-        print("Invalid input. Defaulting TargetMatch to 250.")
-        logging.warning("Invalid targetMatch input. Defaulting to 250.")
-        targetMatch = 250
+        try:
+            choice = input("Enter the number corresponding to your choice (1/2/3): ").strip()
+            if choice == '1':
+                targetMatch = 25
+            elif choice == '2':
+                targetMatch = 99999
+            elif choice == '3':
+                targetMatch = int(input("Enter your desired targetMatch value: ").strip())
+            else:
+                raise ValueError
+        except ValueError:
+            print("Invalid input. Defaulting TargetMatch to 25.")
+            logging.warning("Invalid targetMatch input. Defaulting to 25.")
+            targetMatch = 25
 
-    return targetMatch, settings
+    return targetMatch, settings, run_availability_check
+

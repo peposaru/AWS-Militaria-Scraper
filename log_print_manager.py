@@ -22,17 +22,17 @@ class log_print:
         logging.info(f"PRODUCTS PROCESSED  : {productsProcessed}")
         logging.info(f"TIMESTAMP           : {current_datetime}")
 
-    def terminating(self, source, consecutiveMatches, runCycle, productsProcessed):
+    def terminating(self, source, consecutiveMatches, targetMatch, runCycle, productsProcessed):
         # Log the termination of a scraping instance.
         current_datetime = datetime.now()
         logging.info(self.create_log_header("INSTANCE TERMINATED"))
         logging.info(f"MILITARIA SITE      : {source}")
-        logging.info(f"CONSECUTIVE MATCHES : {consecutiveMatches}")
+        logging.info(f"CONSECUTIVE MATCHES : {consecutiveMatches} / {targetMatch}")
         logging.info(f"CYCLES RUN          : {runCycle}")
         logging.info(f"PRODUCTS PROCESSED  : {productsProcessed}")
         logging.info(f"TIMESTAMP           : {current_datetime}")
 
-    def sysUpdate(self, page, urlCount, consecutiveMatches, productUrl, updated):
+    def sysUpdate(self, page, urlCount, consecutiveMatches, targetMatch, productUrl, updated):
         # Log product update status conditionally.
         current_datetime = datetime.now()
         if updated:
@@ -41,7 +41,7 @@ class log_print:
             logging.info(self.create_log_header("NO PRODUCT UPDATE"))
         logging.info(f"CURRENT PAGE        : {page}")
         logging.info(f"PRODUCTS PROCESSED  : {urlCount}")
-        logging.info(f"CONSECUTIVE MATCHES : {consecutiveMatches}")
+        logging.info(f"CONSECUTIVE MATCHES : {consecutiveMatches} / {targetMatch}")
         logging.info(f"PRODUCT URL         : {productUrl}")
         logging.info(f"TIMESTAMP           : {current_datetime}")
 
