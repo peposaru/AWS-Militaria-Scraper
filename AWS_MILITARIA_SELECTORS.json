@@ -13,8 +13,8 @@
         "available_element": "True if productSoup.find('button', class_='single_add_to_cart_button') else False",
         "quantity_element": "productSoup.find('input', class_='input-text qty text')['max'] if productSoup.find('input', class_='input-text qty text') else '1'",
         "conflict_element": "",
-        "nation_element": "productSoup.find('a', href=lambda href: 'product-category' in href).text.split('-')[0].strip() if productSoup.find('a', href=lambda href: 'product-category' in href) else ''",
-        "item_type_element": "productSoup.find('a', href=lambda href: 'product-category' in href).text.split('-')[1].strip() if '-' in productSoup.find('a', href=lambda href: 'product-category' in href).text else ''",
+        "nation_element": "",
+        "item_type_element": "",
         "grade_element": ""
     },        
     {
