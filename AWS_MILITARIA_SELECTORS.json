@@ -538,7 +538,7 @@
         "title_element": "productSoup.find('h1', class_='shopitemTitle').text.strip()",
         "desc_element": "productSoup.find('p', class_='itemDescription').get_text(separator=' ', strip=True)",
         "price_element": "None if 'Price on Request' in productSoup.find('p', class_='price').text else productSoup.find('p', class_='price').text.strip()",
-        "available_element": "True if productSoup.find('button', class_='btn cta add2cart') else False if productSoup.find('p', class_='btn-alert') and 'SOLD' in productSoup.find('p', class_='btn-alert').text else None",
+        "available_element": "True if productSoup.find('button', class_='btn cta add2cart') else False",
         "conflict_element": "",
         "nation_element": "",
         "item_type_element": "",
