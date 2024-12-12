@@ -95,10 +95,11 @@ def fetch_and_scrape_product(webScrapeManager, productUrl, titleElement, descEle
 def update_or_insert_product(dataManager, prints, productUrl, title, description, price, available, source, currency, conflict, nation, item_type, page, urlCount, consecutiveMatches, targetMatch):
     """Update or insert product details into the database."""
     try:
+        # Fetch existing product details
         searchQuery = f"SELECT url, available, date_sold FROM militaria WHERE url LIKE '{productUrl}'"
         existingProducts = dataManager.sqlFetch(searchQuery)
 
-        updated = False  # Track if any update is performed
+        updated = False  # Ensure 'updated' is always initialized
 
         if productUrl in [product[0] for product in existingProducts]:
             # Fetch the existing product details
@@ -146,9 +147,12 @@ def update_or_insert_product(dataManager, prints, productUrl, title, description
             logging.info("------------------------------------------------------------")
 
     except Exception as e:
+        # Catch all errors and ensure 'updated' is handled safely
+        updated = False
         logging.error(f"Error updating or inserting product: {e}")
 
     return urlCount + 1, consecutiveMatches, updated
+
 
 
 
