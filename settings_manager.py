@@ -21,7 +21,8 @@ def get_user_settings():
     """
     Prompt user to select settings for infoLocation, pgAdmin credentials, and selector JSON file.
     Returns:
-        - targetMatch (int or None): The number of target matches (if applicable).
+        - targetMatch (int or None): The number of target matches.
+        - sleeptime (int): The sleep time between cycles (in seconds).
         - settings (dict): A dictionary with keys 'infoLocation', 'pgAdminCred', 'selectorJson'.
         - run_availability_check (bool): Indicates whether the user wants to run the availability check.
     """
@@ -60,38 +61,32 @@ Choose your settings:
         print("Invalid choice. Exiting program.")
         exit()
 
-    # Second question: Run availability check
+    # Second question: Select check type
     print("""
-Would you like to run the product availability check?
-1. Yes
-2. No
+Choose the type of inventory check:
+1. New Inventory Check (targetMatch = 25, sleeptime = 15 minutes)
+2. Whole Inventory Check (targetMatch = 99999, sleeptime = 0 seconds)
+3. Custom Check (Enter your own targetMatch and sleeptime)
 """)
-    availability_choice = input("Enter your choice (1/2): ").strip()
-    run_availability_check = availability_choice == '1'
+    check_choice = input("Enter your choice (1/2/3): ").strip()
 
-    # Third question: Choose targetMatch setting (only if not running availability check)
-    targetMatch = None
-    if not run_availability_check:
-        print("""
-Choose your targetMatch setting:
-1. Quick Site Check (25)
-2. All Products (99999)
-3. Custom (enter your own value)
-""")
-        try:
-            choice = input("Enter the number corresponding to your choice (1/2/3): ").strip()
-            if choice == '1':
-                targetMatch = 25
-            elif choice == '2':
-                targetMatch = 99999
-            elif choice == '3':
-                targetMatch = int(input("Enter your desired targetMatch value: ").strip())
-            else:
-                raise ValueError
-        except ValueError:
-            print("Invalid input. Defaulting TargetMatch to 25.")
-            logging.warning("Invalid targetMatch input. Defaulting to 25.")
+    try:
+        if check_choice == '1':
             targetMatch = 25
+            sleeptime = 15 * 60  # 15 minutes in seconds
+        elif check_choice == '2':
+            targetMatch = 99999
+            sleeptime = 0
+        elif check_choice == '3':
+            targetMatch = int(input("Enter your desired targetMatch value: ").strip())
+            sleeptime = int(input("Enter your desired sleeptime value (in seconds): ").strip())
+        else:
+            raise ValueError
+    except ValueError:
+        print("Invalid input. Defaulting to New Inventory Check.")
+        logging.warning("Invalid input for inventory check. Defaulting to targetMatch=25, sleeptime=15 minutes.")
+        targetMatch = 25
+        sleeptime = 15 * 60
 
-    return targetMatch, settings, run_availability_check
+    return targetMatch, sleeptime, settings
 
