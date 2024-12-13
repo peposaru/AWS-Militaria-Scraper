@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Function to load database credentials from JSON file
 def load_db_credentials():
     try:
-        info_location = '/home/ec2-user/projects/AWS-Militaria-Scraper/'
+        info_location = r'C:/Users/keena/Desktop/Cloud Militaria Scraper/'
         cred_file = os.path.join(info_location, 'pgadminCredentials.json')
         with open(cred_file, 'r') as file:
             credentials = json.load(file)
