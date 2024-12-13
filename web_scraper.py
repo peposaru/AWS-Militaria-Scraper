@@ -12,8 +12,8 @@ class ProductScraper:
         # Initialize a session with retries
         self.session = requests.Session()
         retry = Retry(
-            total=5,  # Retry up to 5 times
-            backoff_factor=1,  # Wait 1 second between retries, exponentially increasing
+            total=10,  # Retry up to 5 times
+            backoff_factor=5,  # Wait 1 second between retries, exponentially increasing
             status_forcelist=[500, 502, 503, 504],  # Retry on these HTTP errors
         )
         adapter = HTTPAdapter(max_retries=retry)
@@ -25,8 +25,9 @@ class ProductScraper:
         ############################
         try:
             headers = {
-                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
-            }
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+}
+
             response = self.session.get(product_url, headers=headers, timeout=10)
             response.raise_for_status()
 
@@ -53,7 +54,7 @@ class ProductScraper:
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
         }
         try:
-            response = self.session.get(url, headers=headers, timeout=10)
+            response = self.session.get(url, headers=headers, timeout=30)
             response.raise_for_status()
             return BeautifulSoup(response.content, 'html.parser')
         except Timeout:

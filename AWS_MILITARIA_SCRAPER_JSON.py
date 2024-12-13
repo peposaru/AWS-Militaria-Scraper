@@ -101,23 +101,28 @@ def main():
     runCycle = 0
     productsProcessed = 0
 
-    for site in selected_sites:
-        try:
-            process_site(
-                webScrapeManager, dataManager, jsonManager, prints, site,
-                targetMatch, runCycle, productsProcessed
-            )
-            logging.info(f"Successfully processed site: {site['source']}")
-        except Exception as e:
-            logging.error(f"Error processing site {site['source']}: {e}")
+    while True:  # Infinite loop to keep cycling through the selected sites
+        for site in selected_sites:
+            try:
+                process_site(
+                    webScrapeManager, dataManager, jsonManager, prints, site,
+                    targetMatch, runCycle, productsProcessed
+                )
+                logging.info(f"Successfully processed site: {site['source']}")
+            except Exception as e:
+                logging.error(f"Error processing site {site['source']}: {e}")
 
-    # Use the user-defined sleeptime for pausing
-    if sleeptime > 0:
-        logging.info(f"Pausing for {sleeptime} seconds before exiting...")
-        for _ in range(sleeptime):
-            sleep(1)
-    else:
-        logging.info("No pause configured (sleeptime = 0). Exiting immediately.")
+        # Use the user-defined sleeptime between cycles
+        if sleeptime > 0:
+            logging.info(f"Pausing for {sleeptime} seconds before starting the next cycle...")
+            try:
+                for _ in range(sleeptime):
+                    sleep(1)
+            except Exception as e:
+                logging.error(f"Error during sleep: {e}")
+        else:
+            logging.info("No pause configured (sleeptime = 0). Starting the next cycle immediately.")
+
 
 if __name__ == "__main__":
     main()
