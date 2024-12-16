@@ -1,9 +1,13 @@
 import os
 import json
 from flask import Flask, jsonify
+from flask_cors import CORS  # Import Flask-CORS to handle cross-origin requests
 import psycopg2
 
 app = Flask(__name__)
+
+# Enable CORS for requests coming from Squarespace
+CORS(app, origins=["https://www.keenannilson.com"])  # Restrict to your Squarespace domain
 
 # Function to load database credentials from JSON file
 def load_db_credentials():
