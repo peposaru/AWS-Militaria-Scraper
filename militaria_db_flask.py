@@ -37,7 +37,7 @@ def latest_products():
 
         # Execute the query to fetch the latest 100 products
         query = """
-            SELECT title, description, price, url, date_collected
+            SELECT title, description, price, url, date_collected, site
             FROM militaria
             ORDER BY date_collected DESC
             LIMIT 100;
@@ -47,7 +47,14 @@ def latest_products():
 
         # Format the data into a list of dictionaries
         products = [
-            {"title": row[0], "description": row[1], "price": row[2], "url": row[3], "date_added": row[4]} 
+            {
+                "title": row[0], 
+                "description": row[1], 
+                "price": row[2], 
+                "url": row[3], 
+                "date_added": row[4],
+                "source": row[5]  # Include the source site field
+            } 
             for row in rows
         ]
 
