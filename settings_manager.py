@@ -65,18 +65,20 @@ Choose your settings:
     print("""
 Choose the type of inventory check:
 1. New Inventory Check (targetMatch = 25, sleeptime = 15 minutes)
-2. Whole Inventory Check (targetMatch = 99999, sleeptime = 0 seconds)
+2. Run Availability Check (Check and update product availability)
 3. Custom Check (Enter your own targetMatch and sleeptime)
 """)
     check_choice = input("Enter your choice (1/2/3): ").strip()
 
+    run_availability_check = False
     try:
         if check_choice == '1':
             targetMatch = 25
             sleeptime = 15 * 60  # 15 minutes in seconds
         elif check_choice == '2':
-            targetMatch = 99999
-            sleeptime = 0
+            targetMatch = None
+            sleeptime = None
+            run_availability_check = True
         elif check_choice == '3':
             targetMatch = int(input("Enter your desired targetMatch value: ").strip())
             sleeptime = int(input("Enter your desired sleeptime value (in seconds): ").strip())
@@ -88,5 +90,6 @@ Choose the type of inventory check:
         targetMatch = 25
         sleeptime = 15 * 60
 
-    return targetMatch, sleeptime, settings
+    return targetMatch, sleeptime, settings, run_availability_check
+
 

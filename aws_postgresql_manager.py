@@ -52,10 +52,18 @@ class PostgreSQLProcessor:
             logging.error(f"Error connecting to the database: {e}")
             raise
 
-    def sqlExecute(self, query):
-        """Execute an SQL query without returning results."""
-        self.cur.execute(query)
-        self.conn.commit()
+    def sqlExecute(self, query, params=None):
+        """Execute an SQL query with optional parameters."""
+        try:
+            if params:  # Check if parameters are provided
+                self.cur.execute(query, params)
+            else:
+                self.cur.execute(query)
+            self.conn.commit()
+        except Exception as e:
+            logging.error(f"Error executing query: {e}")
+            self.conn.rollback()
+
 
     def sqlFetch(self, query, params=None):
         """Fetch results from an SQL query, optionally with parameters."""

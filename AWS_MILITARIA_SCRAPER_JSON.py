@@ -1,7 +1,3 @@
-# This is the AWS Cloud version of this program designed to be used with EC2 and RDS
-
-# Making a more universal scraper which just takes a json library as input
-
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import json
@@ -14,6 +10,7 @@ from militaria_json_manager import JsonManager
 from log_print_manager import log_print
 from settings_manager import get_user_settings
 from site_product_processor import process_site
+
 
 def initialize_logging():
     log_dir = "logs"
@@ -34,12 +31,13 @@ def initialize_logging():
     )
     logging.info(f"Logging initialized. Log file: {log_file_path}")
 
+
 def main():
     print('INITIALIZING. PLEASE WAIT...')
     initialize_logging()
 
     try:
-        targetMatch, sleeptime, user_settings = get_user_settings()
+        targetMatch, sleeptime, user_settings, run_availability_check = get_user_settings()
         infoLocation = user_settings["infoLocation"]
         pgAdminCred = user_settings["pgAdminCred"]
         selectorJson = user_settings["selectorJson"]
@@ -65,6 +63,14 @@ def main():
         logging.error(f"Error initializing components: {e}")
         return
 
+    # Run Availability Check if selected
+    if run_availability_check:
+        from check_availability_module import check_availability
+        check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
+        print("Availability check completed. Exiting...")
+        return
+
+    # Load JSON selectors
     try:
         with open(selectorJson, 'r') as userFile:
             jsonData = json.load(userFile)
@@ -126,4 +132,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
