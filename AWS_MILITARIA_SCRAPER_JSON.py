@@ -2,6 +2,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import json
 import logging
+import time
 from datetime import datetime
 from time import sleep
 from aws_postgresql_manager import PostgreSQLProcessor
@@ -65,10 +66,20 @@ def main():
 
     # Run Availability Check if selected
     if run_availability_check:
-        from check_availability_module import check_availability
-        check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
-        print("Availability check completed. Exiting...")
-        return
+        try:
+            sleep_minutes = int(input("Enter the number of minutes to sleep between checks: "))
+        except ValueError:
+            print("Invalid input. Defaulting to 480 minutes (8 hours).")
+            sleep_minutes = 480
+
+        # Convert minutes to seconds
+        sleep_seconds = sleep_minutes * 60
+
+        while run_availability_check:
+            from check_availability_module import check_availability
+            check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
+            print(f"Availability check completed. Sleeping for {sleep_minutes} minutes...")
+            time.sleep(sleep_seconds)  # Sleep for user-defined minutes before the next run
 
     # Load JSON selectors
     try:
