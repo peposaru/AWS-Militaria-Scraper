@@ -1,79 +1,51 @@
 import psycopg2
-import json
+from psycopg2 import pool
+import json  # Missing import
 import logging
 
 
 class PostgreSQLProcessor:
-    def __init__(self, hostName=None, dataBase=None, userName=None, pwd=None, portId=None, credFile=None):
-        """
-        Initialize the PostgreSQLProcessor class.
-        Accepts either direct credentials or a JSON credential file path.
-        """
-        if credFile:
-            self._load_credentials_from_file(credFile)
-        else:
-            self.hostName = hostName
-            self.dataBase = dataBase
-            self.userName = userName
-            self.pwd = pwd
-            self.portId = portId
-
-        self._connect_to_database()
-
-    def _load_credentials_from_file(self, credFile):
-        """Load credentials from a JSON file."""
+    def __init__(self, credFile):
+        # Load credentials
+        with open(credFile, 'r') as f:
+            creds = json.load(f)
+        
         try:
-            with open(credFile, 'r') as file:
-                data = json.load(file)
-                self.hostName = data['hostName']
-                self.dataBase = data['dataBase']
-                self.userName = data['userName']
-                self.pwd = data['pwd']
-                self.portId = data['portId']
-        except FileNotFoundError:
-            logging.error(f"Credentials file not found: {credFile}")
-            raise
-        except json.JSONDecodeError:
-            logging.error(f"Invalid JSON in credentials file: {credFile}")
-            raise
-
-    def _connect_to_database(self):
-        """Establish a connection to the PostgreSQL database."""
-        try:
-            self.conn = psycopg2.connect(
-                host=self.hostName,
-                dbname=self.dataBase,
-                user=self.userName,
-                password=self.pwd,
-                port=self.portId
+            # Initialize a connection pool with 5-10 connections
+            self.pool = pool.SimpleConnectionPool(
+                5, 10,
+                user=creds["userName"],       # Change to match your JSON file
+                password=creds["pwd"],        # Change to match your JSON file
+                host=creds["hostName"],       # Change to match your JSON file
+                database=creds["dataBase"],   # Change to match your JSON file
+                port=creds["portId"]          # Change to match your JSON file
             )
-            self.cur = self.conn.cursor()
+
+            logging.info("PostgreSQL connection pool initialized.")
         except Exception as e:
-            logging.error(f"Error connecting to the database: {e}")
+            logging.error(f"Error initializing connection pool: {e}")
             raise
-
-    def sqlExecute(self, query, params=None):
-        """Execute an SQL query with optional parameters."""
-        try:
-            if params:  # Check if parameters are provided
-                self.cur.execute(query, params)
-            else:
-                self.cur.execute(query)
-            self.conn.commit()
-        except Exception as e:
-            logging.error(f"Error executing query: {e}")
-            self.conn.rollback()
-
 
     def sqlFetch(self, query, params=None):
-        """Fetch results from an SQL query, optionally with parameters."""
-        if params:
-            self.cur.execute(query, params)
-        else:
-            self.cur.execute(query)
-        return self.cur.fetchall()
+        conn = self.pool.getconn()
+        try:
+            with conn.cursor() as cur:
+                cur.execute(query, params)
+                return cur.fetchall()
+        except Exception as e:
+            logging.error(f"Error executing fetch query: {e}")
+            return []
+        finally:
+            self.pool.putconn(conn)  # Return the connection to the pool
 
-    def sqlClose(self):
-        """Close the database connection."""
-        self.cur.close()
-        self.conn.close()
+    def sqlExecute(self, query, params=None):
+        conn = self.pool.getconn()
+        try:
+            with conn.cursor() as cur:
+                cur.execute(query, params)
+                conn.commit()
+        except Exception as e:
+            logging.error(f"Error executing update query: {e}")
+            conn.rollback()
+        finally:
+            self.pool.putconn(conn)  # Return the connection to the pool

@@ -521,7 +521,6 @@
         "desc_element": "productSoup.find('p', class_=None).text.strip()",
         "price_element": "''.join(c for c in productSoup.find('span', class_='woocommerce-Price-amount amount').get_text(strip=True) if c.isdigit())",
         "available_element": "True if productSoup.find('button', class_='single_add_to_cart_button') else False",
-        "quantity_element": "productSoup.find('input', class_='input-text qty text')['max'] if productSoup.find('input', class_='input-text qty text') else '1'",
         "conflict_element": "",
         "nation_element": "",
         "item_type_element": "",

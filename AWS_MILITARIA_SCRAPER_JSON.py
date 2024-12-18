@@ -22,7 +22,7 @@ def initialize_logging():
     log_file_path = os.path.join(log_dir, log_file_name)
 
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.DEBUG,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler(log_file_path, encoding='utf-8'),

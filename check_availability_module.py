@@ -2,10 +2,16 @@ from datetime import datetime
 import logging
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from threading import Semaphore
 
+def validate_json_profile(militariaSite):
+    """Validate required keys in JSON profile."""
+    required_keys = {"source", "product_url_element", "productsPageUrl", "base_url"}
+    missing_keys = required_keys - set(militariaSite.keys())
+    if missing_keys:
+        raise ValueError(f"Missing required keys in JSON profile: {missing_keys}")
 
 def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson):
+    """Main availability check function."""
     current_datetime = datetime.now()
     logging.info(f"""
 ------------------------------------------------------------
@@ -21,106 +27,121 @@ def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
         logging.error(f"Error loading JSON selector file: {e}")
         return
 
-    # Semaphore for per-site limits
-    site_semaphores = {}
-
-    # Thread pool with 6 total workers
+    # Thread pool for concurrent processing
     with ThreadPoolExecutor(max_workers=6) as executor:
-        future_to_url = {}
+        future_to_site = {}
 
         for militariaSite in jsonData:
-            (
-                conflict, nation, item_type, grade, source, pageIncrement, currency, products,
-                productUrlElement, titleElement, descElement, priceElement, availableElement,
-                productsPageUrl, base_url
-            ) = jsonManager.jsonSelectors(militariaSite)
+            source = militariaSite.get("source", "Unknown")
 
-            if source not in site_semaphores:
-                site_semaphores[source] = Semaphore(3)  # Max 3 workers per site
+            # Log the JSON for debugging
+            logging.debug(f"Processing site '{source}' JSON data: {militariaSite}")
 
-            # Fetch all products for the site
-            query = "SELECT url, title, description, price, available FROM militaria WHERE site = %s"
+            # Validate JSON profile
             try:
-                all_products = dataManager.sqlFetch(query, (source,))
-            except Exception as e:
-                logging.error(f"Error fetching data for site {source}: {e}")
+                validate_json_profile(militariaSite)
+            except ValueError as e:
+                logging.error(f"Validation error for site '{source}': {e}")
                 continue
 
-            # Submit tasks
-            for product_record in all_products:
-                product_url, db_title, db_desc, db_price, db_available = product_record
-                future = executor.submit(
-                    process_product, webScrapeManager, dataManager, product_url, db_title, db_desc, db_price,
-                    db_available, titleElement, descElement, priceElement, availableElement, site_semaphores[source]
-                )
-                future_to_url[future] = product_url
+            availableElement = militariaSite.get("available_element")
 
-        # Process results
-        for future in as_completed(future_to_url):
-            url = future_to_url[future]
+            if availableElement in ["True", "False"]:
+                # Skip sites with hardcoded availableElement
+                logging.info(f"Skipping site '{source}' as availableElement is set to '{availableElement}'")
+                continue
+
+            try:
+                # Determine whether to use full scraping or availableElement logic
+                if availableElement:
+                    future = executor.submit(process_site_with_available_element, webScrapeManager, dataManager, militariaSite)
+                else:
+                    future = executor.submit(process_site_full_scrape, webScrapeManager, dataManager, militariaSite)
+                future_to_site[future] = source
+            except Exception as e:
+                logging.error(f"Error submitting task for site '{source}': {e}")
+
+        # Collect results
+        for future in as_completed(future_to_site):
+            site = future_to_site[future]
             try:
                 future.result()
+                logging.info(f"Finished processing site: {site}")
             except Exception as e:
-                logging.error(f"Error processing URL {url}: {e}")
+                logging.error(f"Error processing site {site}: {e}")
 
+def process_site_with_available_element(webScrapeManager, dataManager, militariaSite):
+    """Check product availability using the availableElement."""
+    source = militariaSite["source"]
+    availableElement = militariaSite["available_element"]
 
-def process_product(webScrapeManager, dataManager, product_url, db_title, db_desc, db_price, db_available,
-                    titleElement, descElement, priceElement, availableElement, semaphore):
-    with semaphore:
+    logging.info(f"Processing site '{source}' using availableElement logic...")
+
+    # Fetch products from database
+    query = "SELECT url, available FROM militaria WHERE site = %s"
+    products = dataManager.sqlFetch(query, (source,))
+
+    for url, db_available in products:
         try:
-            productSoup = webScrapeManager.fetch_page(product_url)
+            productSoup = webScrapeManager.fetch_page(url)
             if not productSoup:
-                logging.warning(f"Failed to fetch product: {product_url}")
-                return
+                logging.warning(f"Failed to fetch product: {url}")
+                continue
 
-            # Use eval() safely with fallbacks
-            try:
-                scraped_title = eval(titleElement) if titleElement else "N/A"
-            except Exception:
-                scraped_title = "N/A"
-                logging.warning(f"Failed to extract title for {product_url}")
-
-            try:
-                scraped_desc = eval(descElement) if descElement else "N/A"
-            except Exception:
-                scraped_desc = "N/A"
-                logging.warning(f"Failed to extract description for {product_url}")
-
-            try:
-                price_text = eval(priceElement) if priceElement else "0"
-                scraped_price = float(price_text.replace("GBP", "").replace(",", "").strip())
-            except Exception:
-                scraped_price = 0
-                logging.warning(f"Failed to extract price for {product_url}")
-
-            try:
-                scraped_available = eval(availableElement) if availableElement else False
-                scraped_available = bool(scraped_available)  # Ensure boolean result
-            except Exception:
-                scraped_available = False
-                logging.warning(f"Failed to extract availability for {product_url}")
-
-            # Compare values and prepare updates
-            updates = {}
-            if scraped_title != db_title:
-                updates['new_title'] = scraped_title
-            if scraped_desc != db_desc:
-                updates['new_description'] = scraped_desc
-            if scraped_price != db_price:
-                updates['new_price'] = scraped_price
+            # Evaluate availableElement
+            scraped_available = bool(eval(availableElement))
             if scraped_available != db_available:
-                updates['available'] = scraped_available
-                updates['date_sold'] = None if scraped_available else datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
-            # If there are updates, execute the query
-            if updates:
-                updates['date_modified'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                set_clause = ", ".join([f"{key} = %s" for key in updates.keys()])
-                update_query = f"UPDATE militaria SET {set_clause} WHERE url = %s"
-                dataManager.sqlExecute(update_query, (*updates.values(), product_url))
-                logging.info(f"Updated product: {product_url}")
-            else:
-                logging.info(f"No changes for product: {product_url}")
-
+                update_query = "UPDATE militaria SET available = %s, date_modified = %s WHERE url = %s"
+                dataManager.sqlExecute(update_query, (scraped_available, datetime.now(), url))
+                logging.info(f"Product {url} availability updated to {scraped_available}")
         except Exception as e:
-            logging.error(f"Error processing product {product_url}: {e}")
+            logging.error(f"Error processing product {url}: {e}")
+
+def process_site_full_scrape(webScrapeManager, dataManager, militariaSite):
+    """Perform full-site scraping and compare product URLs with the database."""
+    source = militariaSite["source"]
+    logging.info(f"Processing site '{source}' using full-site scraping...")
+
+    try:
+        productUrlElement = militariaSite["product_url_element"]
+        productsPageUrl = militariaSite["productsPageUrl"]
+        base_url = militariaSite["base_url"]
+    except KeyError as e:
+        logging.error(f"Missing required JSON key {e} for site '{source}'")
+        return
+
+    scraped_urls = set()
+    page = 0  # Start scraping from page 0
+    while True:
+        try:
+            page_url = productsPageUrl.format(page=page)
+            productSoup = webScrapeManager.fetch_page(page_url)
+            if not productSoup:
+                break
+
+            products_on_page = productSoup.select(productUrlElement)
+            if not products_on_page:
+                break
+
+            for product in products_on_page:
+                scraped_urls.add(base_url + product["href"])
+
+            page += 1
+        except Exception as e:
+            logging.error(f"Error scraping page {page} for site '{source}': {e}")
+            break
+
+    # Fetch product URLs from the database
+    query = "SELECT url FROM militaria WHERE site = %s"
+    db_products = dataManager.sqlFetch(query, (source,))
+    db_urls = {row[0] for row in db_products}
+
+    # Compare scraped URLs with database URLs
+    unavailable_urls = db_urls - scraped_urls
+    for url in unavailable_urls:
+        try:
+            update_query = "UPDATE militaria SET available = FALSE, date_modified = %s WHERE url = %s"
+            dataManager.sqlExecute(update_query, (datetime.now(), url))
+            logging.info(f"Marked product as unavailable: {url}")
+        except Exception as e:
+            logging.error(f"Error marking product {url} as unavailable: {e}")
