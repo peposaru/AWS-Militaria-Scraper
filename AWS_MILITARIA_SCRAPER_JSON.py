@@ -11,7 +11,7 @@ from militaria_json_manager import JsonManager
 from log_print_manager import log_print
 from settings_manager import get_user_settings
 from site_product_processor import process_site
-
+from aws_s3_manager import S3Manager
 
 def initialize_logging():
     log_dir = "logs"
@@ -40,8 +40,9 @@ def main():
     try:
         targetMatch, sleeptime, user_settings, run_availability_check = get_user_settings()
         infoLocation = user_settings["infoLocation"]
-        pgAdminCred = user_settings["pgAdminCred"]
+        pgAdminCred  = user_settings["pgAdminCred"]
         selectorJson = user_settings["selectorJson"]
+        s3Cred       = user_settings["s3Cred"]
     except KeyError as e:
         logging.error(f"Error accessing user settings: {e}")
         return
@@ -56,12 +57,17 @@ def main():
     logging.info(f"\n{'-'*60}\nPROGRAM INITIALIZED {current_datetime}\n{'-'*60}")
 
     try:
-        dataManager = PostgreSQLProcessor(credFile=pgAdminCred)
+        dataManager      = PostgreSQLProcessor(credFile=pgAdminCred)
+        s3_manager       = S3Manager(s3Cred)
         webScrapeManager = ProductScraper(dataManager)
-        jsonManager = JsonManager()
-        prints = log_print()
-    except Exception as e:
-        logging.error(f"Error initializing components: {e}")
+        jsonManager      = JsonManager()
+        prints           = log_print()
+
+    except KeyError as e:
+        logging.error(f"Error accessing user settings: {e}")
+        return
+    except RuntimeError as e:
+        logging.error(f"Error loading S3 credentials: {e}")
         return
 
     # Run Availability Check if selected
@@ -92,6 +98,7 @@ def main():
         logging.error(f'Error decoding JSON selector file: {e}')
         return
 
+    # Site choice
     print("Available sites:")
     for idx, site in enumerate(jsonData):
         print(f"{idx + 1}. {site['source']}")
@@ -118,12 +125,13 @@ def main():
     runCycle = 0
     productsProcessed = 0
 
-    while True:  # Infinite loop to keep cycling through the selected sites
+    # This is the main loop which keeps everything going.
+    while True:  
         for site in selected_sites:
             try:
                 process_site(
-                    webScrapeManager, dataManager, jsonManager, prints, site,
-                    targetMatch, runCycle, productsProcessed
+                webScrapeManager, dataManager, jsonManager, prints, site,
+                targetMatch, runCycle, productsProcessed, s3_manager
                 )
                 logging.info(f"Successfully processed site: {site['source']}")
             except Exception as e:

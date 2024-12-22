@@ -19,12 +19,13 @@ class JsonManager:
             item_type = militariaSite['item_type_element']
             grade = militariaSite['grade_element']
             productsPageUrl = militariaSite['productsPageUrl']
+            imageElement = militariaSite['image_element']
 
             # Only include these 14 fields
             return (
                 conflict, nation, item_type, grade, source, pageIncrement, currency, products,
                 productUrlElement, titleElement, descElement, priceElement, availableElement,
-                productsPageUrl, base_url
+                productsPageUrl, base_url, imageElement
             )
         except KeyError as e:
             logging.error(f"Missing key in JSON selectors: {e}")

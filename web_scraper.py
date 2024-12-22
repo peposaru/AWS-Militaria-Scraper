@@ -4,6 +4,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from requests.exceptions import RequestException, Timeout, ChunkedEncodingError
 from time import sleep
+from image_extractor import fetch_images
 
 class ProductScraper:
     def __init__(self, spreadSheetManager):
@@ -122,7 +123,7 @@ class ProductScraper:
                 logging.error(f"RequestException for {product} - {e}")
                 return None
     
-    def scrapeData(self,productSoup,titleElement,descElement,priceElement,availableElement,currency,source):
+    def scrapeData(self, productSoup, titleElement, descElement, priceElement, availableElement, imageElement, currency, source):
             
         # Scrape Title
             try:
@@ -192,6 +193,13 @@ class ProductScraper:
                 logging.warning('Unable to retrieve product AVAILABLE.')
                 logging.warning(f"AttributeError while evaluating available element: {err}")
 
+            # Scrape Image
+            try:
+                image_urls = fetch_images(productSoup, imageElement)
+                logging.debug(f"Extracted image URLs: {image_urls}")
+            except Exception as e:
+                logging.error(f"Error extracting images using {imageElement}: {e}")
+                image_urls = []
 
         # Return all values
-            return ([title,description,price,available])
+            return [title, description, price, available, image_urls]

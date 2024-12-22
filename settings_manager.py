@@ -1,20 +1,19 @@
 import os
 import logging
 
-import os
-import logging
-
 # Default Settings
 DEFAULT_RDS_SETTINGS = {
-    "infoLocation": r'/home/ec2-user/projects/AWS-Militaria-Scraper/',
-    "pgAdminCred": 'pgadminCredentials.json',
-    "selectorJson": 'AWS_MILITARIA_SELECTORS.json'
+    "infoLocation"  : r'/home/ec2-user/projects/AWS-Militaria-Scraper/',
+    "pgAdminCred"   : 'pgadminCredentials.json',
+    "selectorJson"  : 'AWS_MILITARIA_SELECTORS.json',
+    "s3Cred"        : 's3_credentials.json'
 }
 
 DEFAULT_PC_SETTINGS = {
-    "infoLocation": r'C:/Users/keena/Desktop/Cloud Militaria Scraper/Github Folder',
-    "pgAdminCred": r'C:/Users/keena/Desktop/Cloud Militaria Scraper/pgadminCredentials.json',
-    "selectorJson": r'C:/Users/keena/Desktop/Cloud Militaria Scraper/Github Folder/AWS_MILITARIA_SELECTORS.json'
+    "infoLocation" : r'C:/Users/keena/Desktop/Cloud Militaria Scraper/Github Folder',
+    "pgAdminCred"  : r'C:/Users/keena/Desktop/Cloud Militaria Scraper/pgadminCredentials.json',
+    "selectorJson" : r'C:/Users/keena/Desktop/Cloud Militaria Scraper/Github Folder/AWS_MILITARIA_SELECTORS.json',
+    "s3Cred"       : r'C:/Users/keena/Desktop/Cloud Militaria Scraper/s3_credentials.json'
 }
 
 def get_user_settings():
@@ -47,9 +46,10 @@ Choose your settings:
     elif choice == '3':
         print("Custom settings selected.")
         # Prompt user for custom settings
-        settings["infoLocation"] = input("Enter the directory path for configuration files (e.g., /path/to/config/): ").strip()
-        settings["pgAdminCred"] = input("Enter the name of the pgAdmin credentials file (e.g., pgadminCredentials.json): ").strip()
-        settings["selectorJson"] = input("Enter the name of the JSON selector file (e.g., AWS_MILITARIA_SELECTORS.json): ").strip()
+        settings["infoLocation"]  = input("Enter the directory path for configuration files (e.g., /path/to/config/): ").strip()
+        settings["pgAdminCred"]   = input("Enter the name of the pgAdmin credentials file (e.g., pgadminCredentials.json): ").strip()
+        settings["selectorJson"]  = input("Enter the name of the JSON selector file (e.g., AWS_MILITARIA_SELECTORS.json): ").strip()
+        settings["s3Cred"]        = input("Enter the name of the s3 credentials file (e.g., s3_credentials.json): ").strip()
 
         # Validate the directory exists
         if not os.path.exists(settings["infoLocation"]):
