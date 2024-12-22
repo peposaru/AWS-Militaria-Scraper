@@ -41,33 +41,34 @@ class S3Manager:
         except Exception as e:
             raise RuntimeError(f"Error loading S3 credentials: {e}")
 
-    def upload_image(image_url, object_name, retries=5, initial_delay=2):
-        """
-        Upload an image to S3 with exponential backoff on failure.
+    def upload_image(self, image_url, object_name):
+        try:
+            logging.debug(f"Starting upload: URL={image_url}, Object Name={object_name}")
+            
+            # Fetch image from URL
+            response = requests.get(image_url, stream=True, timeout=10)
+            response.raise_for_status()
+            logging.debug(f"Fetched image: URL={image_url}, Status={response.status_code}")
 
-        Args:
-            image_url (str): URL of the image to upload.
-            object_name (str): Object name in the S3 bucket.
-            retries (int): Number of retry attempts.
-            initial_delay (int): Initial delay between retries, in seconds.
-        """
-        delay = initial_delay
-        for attempt in range(retries):
+            # Upload to S3
+            self.s3.upload_fileobj(response.raw, self.bucket_name, object_name)
+            logging.info(f"Uploaded to S3: Object Name={object_name}")
+        except requests.exceptions.RequestException as e:
+            logging.error(f"Error fetching image {image_url}: {e}")
+        except Exception as e:
+            logging.error(f"Error uploading image to S3: {e}")
+
+    def upload_image_with_retries(self, image_url, object_name, max_retries=3, delay=2):
+        for attempt in range(1, max_retries + 1):
             try:
-                logging.debug(f"Uploading image: {image_url} to {object_name} (Attempt {attempt + 1})")
-                response = requests.get(image_url, stream=True, timeout=10)
-                response.raise_for_status()
-                # Assuming self.s3.upload_fileobj is available for S3 upload
-                self.s3.upload_fileobj(response.raw, self.bucket_name, object_name)
-                logging.info(f"Image uploaded to S3: {object_name}")
+                logging.debug(f"Attempt {attempt} to upload {object_name}")
+                self.upload_image(image_url, object_name)
                 return
             except Exception as e:
-                logging.error(f"Attempt {attempt + 1} failed: {e}")
-                if attempt < retries - 1:
+                logging.error(f"Attempt {attempt} failed: {e}")
+                if attempt < max_retries:
                     time.sleep(delay)
-                    delay *= 2  # Exponential backoff
-        raise RuntimeError(f"Failed to upload image {image_url} after {retries} attempts.")
-
+        logging.warning(f"Failed to upload {object_name} after {max_retries} attempts")
 
     def object_exists(self, object_name):
         """

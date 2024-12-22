@@ -1,5 +1,6 @@
 from datetime import datetime, date
 import logging, json
+import time
 
 # Process a single product
 def process_product(
@@ -81,6 +82,7 @@ def fetch_and_scrape_product(
     Fetch the product page and scrape its details, including uploading images to S3.
     """
     try:
+        # Fetch the product page
         productSoup = webScrapeManager.fetch_with_retries(
             webScrapeManager.scrapePage, productUrl, max_retries=3, backoff_factor=2
         )
@@ -93,10 +95,18 @@ def fetch_and_scrape_product(
             productSoup, titleElement, descElement, priceElement, availableElement,
             imageElement, currency, source
         )
+        logging.debug(f"Scraped data: Title={title}, Price={price}, Available={available}")
+        logging.debug(f"Extracted image URLs: {image_urls}")
+
+        # Validate image_urls
+        if not all(isinstance(url, str) for url in image_urls):
+            logging.error(f"Invalid image URLs detected: {image_urls}")
+            return title, description, price, available, image_urls, []
 
         # Get product ID
         product_id_query = "SELECT id FROM militaria WHERE url = %s;"
         product_id_result = dataManager.sqlFetch(product_id_query, (productUrl,))
+        logging.debug(f"SQL Query Result for Product ID: {product_id_result}")
         if not product_id_result:
             logging.warning(f"Product ID not found for URL: {productUrl}")
             return title, description, price, available, image_urls, []
@@ -104,20 +114,33 @@ def fetch_and_scrape_product(
         product_id = product_id_result[0][0]  # Assign valid product_id
 
         # Upload all images to S3
-        logging.debug(f"Extracted image URLs for product {productUrl}: {image_urls}")
+        logging.debug(f"Uploading images for product ID: {product_id}")
         uploaded_image_urls = []
+        # Add delay between requests in image processing
         for idx, url in enumerate(image_urls, start=1):
-            object_name = f"{source}/{product_id}/{product_id}-{idx}.jpg"  # Construct object name with product ID and image index
+            object_name = f"{source}/{product_id}/{product_id}-{idx}.jpg"
             try:
-                s3_manager.upload_image(url, object_name)
-                uploaded_image_urls.append(f"s3://{s3_manager.bucket_name}/{object_name}")
+                # Retry fetching the image with backoff
+                for attempt in range(3):  # Maximum 3 attempts
+                    try:
+                        s3_manager.upload_image(url, object_name)
+                        uploaded_image_urls.append(f"s3://{s3_manager.bucket_name}/{object_name}")
+                        break  # Break loop on successful upload
+                    except Exception as e:
+                        logging.warning(f"Attempt {attempt + 1} failed for {url}: {e}")
+                        time.sleep(2 ** attempt)  # Exponential backoff
+                else:
+                    logging.error(f"Failed to upload image {url} after 3 attempts")
             except Exception as e:
                 logging.warning(f"Error uploading image {url}: {e}")
+
+
 
         return title, description, price, available, image_urls, uploaded_image_urls
     except Exception as e:
         logging.error(f"Error fetching and scraping product: {e}")
         return None, None, None, None, [], []
+
 
 
 # Update or insert product in database
