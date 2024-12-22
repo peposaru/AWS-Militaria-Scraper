@@ -2,6 +2,7 @@ import boto3
 import requests
 import logging
 import json
+import time
 
 class S3Manager:
     def __init__(self, credentials_file):
@@ -40,24 +41,52 @@ class S3Manager:
         except Exception as e:
             raise RuntimeError(f"Error loading S3 credentials: {e}")
 
-    def upload_image(self, image_url, object_name):
+    def upload_image(image_url, object_name, retries=5, initial_delay=2):
         """
-        Upload an image to the S3 bucket with the specified object name.
+        Upload an image to S3 with exponential backoff on failure.
 
         Args:
             image_url (str): URL of the image to upload.
             object_name (str): Object name in the S3 bucket.
+            retries (int): Number of retry attempts.
+            initial_delay (int): Initial delay between retries, in seconds.
+        """
+        delay = initial_delay
+        for attempt in range(retries):
+            try:
+                logging.debug(f"Uploading image: {image_url} to {object_name} (Attempt {attempt + 1})")
+                response = requests.get(image_url, stream=True, timeout=10)
+                response.raise_for_status()
+                # Assuming self.s3.upload_fileobj is available for S3 upload
+                self.s3.upload_fileobj(response.raw, self.bucket_name, object_name)
+                logging.info(f"Image uploaded to S3: {object_name}")
+                return
+            except Exception as e:
+                logging.error(f"Attempt {attempt + 1} failed: {e}")
+                if attempt < retries - 1:
+                    time.sleep(delay)
+                    delay *= 2  # Exponential backoff
+        raise RuntimeError(f"Failed to upload image {image_url} after {retries} attempts.")
+
+
+    def object_exists(self, object_name):
+        """
+        Check if an object exists in the S3 bucket.
+
+        Args:
+            object_name (str): The object key to check in the S3 bucket.
+
+        Returns:
+            bool: True if the object exists, False otherwise.
         """
         try:
-            logging.debug(f"Uploading image: {image_url} to {object_name}")
-            response = requests.get(image_url, stream=True)
-            response.raise_for_status()
-            self.s3.upload_fileobj(response.raw, self.bucket_name, object_name)
-            logging.info(f"Image uploaded to S3: {object_name}")
-        except Exception as e:
-            logging.error(f"Error uploading image to S3: {e}")
+            self.s3.head_object(Bucket=self.bucket_name, Key=object_name)
+            return True
+        except self.s3.exceptions.ClientError as e:
+            if e.response['Error']['Code'] == "404":
+                return False
+            logging.error(f"Error checking existence of {object_name}: {e}")
             raise
-
 
 
     def list_objects(self, prefix=""):
