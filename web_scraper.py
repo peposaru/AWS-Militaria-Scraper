@@ -194,9 +194,11 @@ class ProductScraper:
                 logging.warning(f"AttributeError while evaluating available element: {err}")
 
             # Scrape Image
+            image_urls = []
             try:
-                image_urls = fetch_images(productSoup, imageElement)
-                logging.debug(f"Extracted image URLs: {image_urls}")
+                if imageElement:
+                    image_urls = fetch_images(productSoup, imageElement)
+                    logging.debug(f"Extracted image URLs: {image_urls}")
             except Exception as e:
                 logging.error(f"Error extracting images using {imageElement}: {e}")
                 image_urls = []

@@ -20,20 +20,30 @@ def process_product(
             return urlCount, consecutiveMatches
 
         # Fetch and scrape the product details
-        title, description, price, available, original_image_urls, uploaded_image_urls = fetch_and_scrape_product(
-            webScrapeManager, productUrl, titleElement, descElement, priceElement,
-            availableElement, imageElement, currency, source, s3_manager, dataManager
-        )
+        try:
+            title, description, price, available, original_image_urls, uploaded_image_urls = fetch_and_scrape_product(
+                webScrapeManager, productUrl, titleElement, descElement, priceElement,
+                availableElement, imageElement, currency, source, s3_manager, dataManager
+            )
+        except Exception as e:
+            logging.warning(f"Error during fetch and scrape for product: {productUrl}, Error: {e}")
+            return urlCount, consecutiveMatches
 
         if not title:
             logging.warning(f"Failed to fetch or scrape product details for {productUrl}. Skipping.")
             return urlCount, consecutiveMatches
 
+        # Handle cases where image extraction was skipped
+        if imageElement is None:
+            logging.debug(f"Image extraction skipped for product: {productUrl}")
+            original_image_urls = []
+            uploaded_image_urls = []
+
         # Update or insert product in the database
         urlCount, consecutiveMatches, updated = update_or_insert_product(
             dataManager, prints, productUrl, title, description, price, available,
             source, currency, conflict, nation, item_type, page, urlCount, consecutiveMatches,
-            targetMatch, original_image_urls, uploaded_image_urls, s3_manager  ########## Added original and uploaded image URLs for clarity
+            targetMatch, original_image_urls, uploaded_image_urls, s3_manager
         )
 
         # Log based on whether the product was updated or not
@@ -44,6 +54,7 @@ def process_product(
     except Exception as e:
         logging.error(f"Error processing product: {e}")
     return urlCount, consecutiveMatches
+
 
 
 def fetch_products_from_page(webScrapeManager, productsPage, productsSelector):
@@ -93,53 +104,35 @@ def fetch_and_scrape_product(
         # Scrape product details
         title, description, price, available, image_urls = webScrapeManager.scrapeData(
             productSoup, titleElement, descElement, priceElement, availableElement,
-            imageElement, currency, source
+            None if not imageElement else imageElement, currency, source
         )
         logging.debug(f"Scraped data: Title={title}, Price={price}, Available={available}")
-        logging.debug(f"Extracted image URLs: {image_urls}")
 
-        # Validate image_urls
+        # Skip image processing if imageElement is None or "skip"
+        if not imageElement or imageElement.lower() == "skip":
+            logging.debug("Image extraction skipped due to missing or placeholder imageElement.")
+            return title, description, price, available, [], []
+
+        # Validate extracted image URLs
         if not all(isinstance(url, str) for url in image_urls):
             logging.error(f"Invalid image URLs detected: {image_urls}")
             return title, description, price, available, image_urls, []
 
-        # Get product ID
-        product_id_query = "SELECT id FROM militaria WHERE url = %s;"
-        product_id_result = dataManager.sqlFetch(product_id_query, (productUrl,))
-        logging.debug(f"SQL Query Result for Product ID: {product_id_result}")
-        if not product_id_result:
-            logging.warning(f"Product ID not found for URL: {productUrl}")
-            return title, description, price, available, image_urls, []
-
-        product_id = product_id_result[0][0]  # Assign valid product_id
-
-        # Upload all images to S3
-        logging.debug(f"Uploading images for product ID: {product_id}")
+        # Upload images to S3
         uploaded_image_urls = []
-        # Add delay between requests in image processing
         for idx, url in enumerate(image_urls, start=1):
-            object_name = f"{source}/{product_id}/{product_id}-{idx}.jpg"
+            object_name = f"{source}/{productUrl}/{productUrl}-{idx}.jpg"
             try:
-                # Retry fetching the image with backoff
-                for attempt in range(3):  # Maximum 3 attempts
-                    try:
-                        s3_manager.upload_image(url, object_name)
-                        uploaded_image_urls.append(f"s3://{s3_manager.bucket_name}/{object_name}")
-                        break  # Break loop on successful upload
-                    except Exception as e:
-                        logging.warning(f"Attempt {attempt + 1} failed for {url}: {e}")
-                        time.sleep(2 ** attempt)  # Exponential backoff
-                else:
-                    logging.error(f"Failed to upload image {url} after 3 attempts")
+                s3_manager.upload_image(url, object_name)
+                uploaded_image_urls.append(f"s3://{s3_manager.bucket_name}/{object_name}")
             except Exception as e:
                 logging.warning(f"Error uploading image {url}: {e}")
-
-
 
         return title, description, price, available, image_urls, uploaded_image_urls
     except Exception as e:
         logging.error(f"Error fetching and scraping product: {e}")
         return None, None, None, None, [], []
+
 
 
 

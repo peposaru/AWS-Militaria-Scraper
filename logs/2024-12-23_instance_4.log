@@ -1,0 +1,367 @@
+2024-12-23 12:40:19,633 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:40:19,634 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:41:04,475 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:41:04,475 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:42:06,786 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:42:06,786 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:44:30,267 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:44:30,268 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:45:06,742 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:45:06,742 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:45:20,959 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:45:20,959 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:45:24,425 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:45:24,426 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:45:39,819 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:45:39,819 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:45:43,393 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:45:43,393 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:45:53,867 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:45:53,868 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:46:15,055 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:46:15,055 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:46:18,451 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:46:18,452 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:46:28,615 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:46:28,616 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:46:57,930 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:46:57,930 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:47:31,028 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:47:31,028 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:48:23,551 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:48:23,551 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:48:57,426 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:48:57,426 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:49:35,068 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:49:35,068 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:50:14,076 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:50:14,077 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:50:48,467 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:50:48,467 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:17,538 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:17,538 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:20,939 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:20,939 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:27,590 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:27,590 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:30,948 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:30,948 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:41,023 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:41,024 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:44,352 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:44,352 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:47,903 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:47,903 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:51,623 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:51,623 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:51:54,921 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:51:54,922 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:01,660 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:01,660 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:05,102 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:05,102 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:15,018 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:15,019 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:18,311 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:18,311 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:21,639 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:21,639 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:25,263 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:25,263 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:28,552 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:28,552 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:49,879 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:49,879 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:52:59,634 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:52:59,634 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:53:03,131 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:53:03,132 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:53:06,324 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:53:06,324 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:53:09,542 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:53:09,542 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:53:22,721 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:53:22,721 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:53:32,276 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:53:32,277 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:53:35,443 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:53:35,443 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:53:38,618 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:53:38,619 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:53:41,775 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:53:41,776 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:01,419 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:01,419 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:09,276 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:09,276 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:12,460 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:12,460 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:25,438 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:25,439 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:28,612 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:28,612 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:31,792 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:31,793 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:41,517 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:41,518 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:44,698 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:44,699 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:54:57,397 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:54:57,397 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:55:00,495 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:55:00,495 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:55:03,837 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:55:03,837 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:55:10,274 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:55:10,275 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:55:22,611 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:55:22,612 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:55:44,100 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:55:44,101 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:56:15,600 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:56:15,601 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:56:37,541 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:56:37,542 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:58:14,463 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:58:14,464 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:58:23,615 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:58:23,615 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:58:26,639 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:58:26,639 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:58:45,226 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:58:45,226 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:58:54,330 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:58:54,330 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:58:57,445 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:58:57,445 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 12:59:51,207 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 12:59:51,208 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:00:21,763 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:00:21,763 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:00:30,888 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:00:30,888 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:00:53,059 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:00:53,060 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:00:55,986 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:00:55,986 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:00:55,987 - WARNING - Failed to fetch or scrape product details for https://amasupply.co.uk/shop.php?code=52497. Skipping.
+2024-12-23 13:00:56,315 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:00:56,315 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:00:59,190 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:00:59,191 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:01:20,373 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:01:20,374 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:01:23,284 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:01:23,284 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:01:23,284 - WARNING - Failed to fetch or scrape product details for https://amasupply.co.uk/shop.php?code=52497. Skipping.
+2024-12-23 13:01:23,613 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:01:23,614 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:01:26,508 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:01:26,508 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:01:56,252 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:01:56,253 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:02:14,885 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:02:14,885 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:02:26,523 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:02:26,524 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:02:44,252 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:02:44,253 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:02:55,870 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:02:55,871 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:03:27,338 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:03:27,338 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:03:56,984 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:03:56,984 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:04:21,690 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:04:21,690 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:04:24,557 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:04:24,557 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:04:27,453 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:04:27,454 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:04:34,891 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:04:34,891 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:04:52,765 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:04:52,765 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:04:55,671 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:04:55,671 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:05:05,113 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:05:05,113 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:05:22,889 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:05:22,889 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:05:25,781 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:05:25,781 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:06:22,553 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:06:22,553 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:07:06,373 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:07:06,373 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:07:18,029 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:07:18,030 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:07:36,086 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:07:36,087 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:07:48,022 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:07:48,022 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:08:09,429 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:08:09,429 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:08:28,759 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:08:28,759 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:08:31,688 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:08:31,688 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:08:34,742 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:08:34,743 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:08:40,654 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:08:40,655 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:08:46,833 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:08:46,833 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:08:49,861 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:08:49,861 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:08:59,090 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:08:59,090 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:02,213 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:02,214 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:05,267 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:05,267 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:11,164 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:11,164 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:17,077 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:17,077 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:20,112 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:20,112 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:26,872 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:26,873 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:29,823 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:29,824 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:49,553 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:49,553 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:09:52,538 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:09:52,538 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:10:19,865 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:10:19,866 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:10:22,780 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:10:22,780 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:10:46,936 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:10:46,936 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:10:57,606 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:10:57,606 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:11:28,371 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:11:28,372 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:12:29,664 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:12:29,664 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:12:41,300 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:12:41,301 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:12:59,201 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:12:59,201 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:13:10,991 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:13:10,992 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:18:32,173 - WARNING - Unable to retrieve product DESCRIPTION.
+2024-12-23 13:18:32,174 - WARNING - AttributeError while evaluating description element: 'NoneType' object has no attribute 'get_text'
+2024-12-23 13:18:52,968 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:18:52,968 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:19:13,532 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:19:13,532 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:19:26,432 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:19:26,432 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:19:44,255 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:19:44,255 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:19:56,526 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:19:56,526 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:19:59,498 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:19:59,498 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:20:13,274 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:20:13,275 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:20:16,208 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:20:16,209 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:20:27,349 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:20:27,350 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:20:36,036 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:20:36,036 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:20:38,972 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:20:38,972 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:20:53,835 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:20:53,835 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:21:23,412 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:21:23,412 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:21:26,365 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:21:26,366 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:21:44,248 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:21:44,248 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:21:59,519 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:21:59,519 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:22:23,729 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:22:23,729 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:22:26,662 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:22:26,662 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:31:30,950 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:31:30,950 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:31:34,038 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:31:34,038 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:32:01,661 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:32:01,662 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:32:04,796 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:32:04,797 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:32:31,999 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:32:31,999 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:32:35,103 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:32:35,103 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:32:38,127 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:32:38,127 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:33:09,984 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:33:09,984 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:33:40,169 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:33:40,169 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:33:58,579 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:33:58,580 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:34:01,683 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:34:01,683 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:35:47,317 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:35:47,318 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:36:18,833 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:36:18,833 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:38:02,797 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:38:02,798 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:38:14,866 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:38:14,867 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:38:28,106 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:38:28,106 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:38:34,254 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:38:34,255 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:38:49,222 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:38:49,222 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:38:52,201 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:38:52,201 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:01,537 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:01,537 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:13,567 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:13,567 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:19,209 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:19,210 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:25,849 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:25,849 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:27,874 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:27,874 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:32,045 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:32,045 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:46,895 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:46,895 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:53,138 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:53,138 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:39:57,318 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:39:57,318 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:40:05,247 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:40:05,247 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:40:08,390 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:40:08,390 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:40:14,359 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:40:14,359 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:41:51,784 - WARNING - No products found on page: https://militariaplaza.nl/archive-38/results,0
+2024-12-23 13:43:11,114 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:43:11,115 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:43:25,742 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:43:25,743 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:43:28,648 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:43:28,648 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:43:40,793 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:43:40,794 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:43:55,854 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:43:55,854 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'
+2024-12-23 13:43:58,881 - WARNING - Unable to retrieve product PRICE.
+2024-12-23 13:43:58,881 - WARNING - AttributeError while evaluating price element: 'NoneType' object has no attribute 'group'

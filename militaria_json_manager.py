@@ -19,9 +19,13 @@ class JsonManager:
             item_type = militariaSite['item_type_element']
             grade = militariaSite['grade_element']
             productsPageUrl = militariaSite['productsPageUrl']
-            imageElement = militariaSite['image_element']
+            
+            # Handle image_element: Treat empty string or placeholder as None
+            imageElement = militariaSite.get('image_element', None)
+            if imageElement in ["", "skip", "none"]:  # Add any placeholders here
+                imageElement = None
 
-            # Only include these 14 fields
+            # Return only the required fields
             return (
                 conflict, nation, item_type, grade, source, pageIncrement, currency, products,
                 productUrlElement, titleElement, descElement, priceElement, availableElement,

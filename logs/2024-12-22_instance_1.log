@@ -1,7 +1,0 @@
-2024-12-22 17:57:41,010 - ERROR - Error constructing product URL: 'href'
-2024-12-22 17:57:41,010 - WARNING - Product URL is invalid. Skipping this product.
-2024-12-22 17:57:45,978 - WARNING - Error uploading image https://www.ea-militaria.com/media/catalog/product/cache/9b0b3b8cd6d61af269ad4888103f835d/e/a/eam_9446_1.jpeg: 'str' object cannot be interpreted as an integer
-2024-12-22 17:57:45,979 - WARNING - Error uploading image https://www.ea-militaria.com/media/catalog/product/cache/9b0b3b8cd6d61af269ad4888103f835d/e/a/eam_9444_1.jpeg: 'str' object cannot be interpreted as an integer
-2024-12-22 17:57:45,980 - WARNING - Error uploading image https://www.ea-militaria.com/media/catalog/product/cache/9b0b3b8cd6d61af269ad4888103f835d/e/a/eam_9445.jpeg: 'str' object cannot be interpreted as an integer
-2024-12-22 17:57:53,414 - WARNING - Error uploading image https://www.ea-militaria.com/media/catalog/product/cache/9b0b3b8cd6d61af269ad4888103f835d/e/a/eam_9477.jpg: 'str' object cannot be interpreted as an integer
-2024-12-22 17:57:53,414 - WARNING - Error uploading image https://www.ea-militaria.com/media/catalog/product/cache/9b0b3b8cd6d61af269ad4888103f835d/e/a/eam_9478.jpg: 'str' object cannot be interpreted as an integer
