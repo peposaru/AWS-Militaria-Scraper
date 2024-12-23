@@ -35,7 +35,7 @@ def latest_products():
         
         cursor = connection.cursor()
 
-        # Execute the query to fetch the latest 100 products with currency and image URLs
+        # Execute the query to fetch the latest 100 products
         query = """
             SELECT title, description, price, url, date_collected, site, currency, original_image_urls
             FROM militaria
@@ -46,19 +46,26 @@ def latest_products():
         rows = cursor.fetchall()
 
         # Format the data into a list of dictionaries
-        products = [
-            {
+        products = []
+        for row in rows:
+            # Handle empty or NULL original_image_urls
+            if row[7]:
+                try:
+                    image_urls = json.loads(row[7])  # Parse JSON string into list
+                except Exception:
+                    image_urls = []  # Fallback to empty list if parsing fails
+            else:
+                image_urls = []  # Empty list for NULL or missing data
+
+            products.append({
                 "title": row[0],
-                "description": row[1],  # Still fetched but not displayed in the frontend
                 "price": row[2],
                 "url": row[3],
                 "date_added": row[4],
                 "source": row[5],
                 "currency": row[6],
-                "original_image_urls": json.loads(row[7]) if row[7] else []  # Assuming URLs are stored as JSON strings
-            }
-            for row in rows
-        ]
+                "original_image_urls": image_urls
+            })
 
         # Close connections
         cursor.close()
@@ -67,6 +74,7 @@ def latest_products():
         return jsonify(products)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 
 if __name__ == "__main__":
