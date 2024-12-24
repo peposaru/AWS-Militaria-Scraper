@@ -59,7 +59,7 @@ def latest_products():
             SELECT title, description, price, url, date_collected, site, currency, original_image_urls
             FROM militaria
             ORDER BY date_collected DESC
-            LIMIT 100;
+            LIMIT 250;
         """
         cursor.execute(query)
         rows = cursor.fetchall()
