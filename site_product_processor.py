@@ -1,6 +1,7 @@
 from datetime import datetime, date
 import logging, json
 import time
+from urllib.parse import urlparse
 
 # Process a single product
 def process_product(
@@ -118,12 +119,23 @@ def fetch_and_scrape_product(
             logging.error(f"Invalid image URLs detected: {image_urls}")
             return title, description, price, available, image_urls, []
 
+        # Get product ID from the database
+        product_id = dataManager.get_product_id(productUrl)
+        if product_id is None:
+            logging.error(f"Failed to find product ID for URL: {productUrl}")
+            return title, description, price, available, image_urls, []
+
         # Upload images to S3
         uploaded_image_urls = []
         for idx, url in enumerate(image_urls, start=1):
-            object_name = f"{source}/{productUrl}/{productUrl}-{idx}.jpg"
             try:
-                s3_manager.upload_image(url, object_name)
+                # Construct the S3 object name
+                parsed_url = urlparse(url)
+                extension = parsed_url.path.split('.')[-1] or "jpg"
+                object_name = f"{source}/{product_id}/{product_id}-{idx}.{extension}"
+
+                # Upload image to S3
+                s3_manager.upload_image(url, productUrl, source)
                 uploaded_image_urls.append(f"s3://{s3_manager.bucket_name}/{object_name}")
             except Exception as e:
                 logging.warning(f"Error uploading image {url}: {e}")
@@ -132,6 +144,7 @@ def fetch_and_scrape_product(
     except Exception as e:
         logging.error(f"Error fetching and scraping product: {e}")
         return None, None, None, None, [], []
+
 
 
 

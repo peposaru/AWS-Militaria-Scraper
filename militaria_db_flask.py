@@ -1,15 +1,14 @@
 import os
 import json
 from flask import Flask, jsonify
-from flask_cors import CORS  # Import Flask-CORS to handle cross-origin requests
+from flask_cors import CORS
+from datetime import datetime, timezone
 import psycopg2
 
 app = Flask(__name__)
+CORS(app, origins=["https://www.keenannilson.com"])
 
-# Enable CORS for requests coming from Squarespace
-CORS(app, origins=["https://www.keenannilson.com"])  # Restrict to your Squarespace domain
-
-# Function to load database credentials from JSON file
+# Function to load database credentials
 def load_db_credentials():
     try:
         info_location = r'/home/ec2-user/projects/AWS-Militaria-Scraper/'
@@ -19,6 +18,26 @@ def load_db_credentials():
         return credentials
     except Exception as e:
         raise RuntimeError(f"Error loading database credentials: {e}")
+
+def time_ago(date_collected):
+    """Calculate the time difference between now and `date_collected`."""
+    try:
+        collected_time = datetime.fromisoformat(str(date_collected)).replace(tzinfo=timezone.utc)
+        now = datetime.now(timezone.utc)
+        delta = now - collected_time
+
+        if delta.days > 0:
+            return f"{delta.days} day{'s' if delta.days > 1 else ''} ago"
+        elif delta.seconds >= 3600:
+            hours = delta.seconds // 3600
+            return f"{hours} hour{'s' if hours > 1 else ''} ago"
+        elif delta.seconds >= 60:
+            minutes = delta.seconds // 60
+            return f"{minutes} minute{'s' if minutes > 1 else ''} ago"
+        else:
+            return f"{delta.seconds} second{'s' if delta.seconds != 1 else ''} ago"
+    except Exception as e:
+        return "Unknown time"
 
 @app.route('/latest-products', methods=['GET'])
 def latest_products():
@@ -48,23 +67,27 @@ def latest_products():
         # Format the data into a list of dictionaries
         products = []
         for row in rows:
-            # Handle empty or NULL original_image_urls
-            if row[7]:
-                try:
-                    image_urls = json.loads(row[7])  # Parse JSON string into list
-                except Exception:
-                    image_urls = []  # Fallback to empty list if parsing fails
-            else:
-                image_urls = []  # Empty list for NULL or missing data
+            first_image = None
+            if row[7]:  # original_image_urls column
+                if isinstance(row[7], list):  # If it's already a list
+                    image_urls = row[7]
+                    first_image = image_urls[0] if image_urls else None
+                else:  # If it's a string, parse it as JSON
+                    try:
+                        image_urls = json.loads(row[7])
+                        first_image = image_urls[0] if image_urls else None
+                    except json.JSONDecodeError:
+                        print(f"Error parsing image URLs: {row[7]}")
+                        first_image = None
 
             products.append({
                 "title": row[0],
                 "price": row[2],
                 "url": row[3],
-                "date_added": row[4],
+                "time_ago": time_ago(row[4]),
                 "source": row[5],
                 "currency": row[6],
-                "original_image_urls": image_urls
+                "image_url": first_image,
             })
 
         # Close connections
@@ -74,7 +97,6 @@ def latest_products():
         return jsonify(products)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
 
 
 if __name__ == "__main__":

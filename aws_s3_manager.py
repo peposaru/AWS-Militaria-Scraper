@@ -3,9 +3,10 @@ import requests
 import logging
 import json
 import time
+from urllib.parse import urlparse
 
 class S3Manager:
-    def __init__(self, credentials_file):
+    def __init__(self, credentials_file, dataManager):
         """
         Initialize the S3 Manager with provided credentials.
 
@@ -20,6 +21,7 @@ class S3Manager:
             aws_secret_access_key=credentials["secretKey"],
             region_name=credentials["region"]
         )
+        self.dataManager = dataManager
 
     @staticmethod
     def load_s3_credentials(file_path):
@@ -41,22 +43,52 @@ class S3Manager:
         except Exception as e:
             raise RuntimeError(f"Error loading S3 credentials: {e}")
 
-    def upload_image(self, image_url, object_name):
+    def upload_image(self, image_url, product_url, site_name):
+        """
+        Upload an image to S3 with structured naming.
+
+        Args:
+            image_url (str): URL of the image to upload.
+            product_url (str): URL of the product associated with the image.
+            site_name (str): Name of the site being scraped.
+
+        Raises:
+            ValueError: If the product ID or file extension is invalid.
+        """
         try:
-            logging.debug(f"Starting upload: URL={image_url}, Object Name={object_name}")
-            
-            # Fetch image from URL
+            # Retrieve the product ID from the database
+            product_id = self.dataManager.get_product_id(product_url)
+            if product_id is None:
+                raise ValueError(f"Product ID not found for URL: {product_url}")
+
+            # Fetch the list of existing images to determine the next index
+            existing_images = self.list_objects(f"{site_name}/{product_id}/")
+            image_index = len(existing_images) + 1
+
+            # Extract clean filename from URL
+            parsed_url = urlparse(image_url)
+            extension = parsed_url.path.split('.')[-1]  # Get the file extension
+            if not extension:
+                raise ValueError(f"Invalid image URL: {image_url} (no extension found)")
+
+            # Construct the S3 object name
+            object_name = f"{site_name}/{product_id}/{product_id}-{image_index}.{extension}"
+
+            logging.debug(f"Uploading to S3: {object_name}")
+
+            # Fetch the image data
             response = requests.get(image_url, stream=True, timeout=10)
             response.raise_for_status()
-            logging.debug(f"Fetched image: URL={image_url}, Status={response.status_code}")
 
             # Upload to S3
             self.s3.upload_fileobj(response.raw, self.bucket_name, object_name)
-            logging.info(f"Uploaded to S3: Object Name={object_name}")
+            logging.info(f"Uploaded to S3: {object_name}")
         except requests.exceptions.RequestException as e:
             logging.error(f"Error fetching image {image_url}: {e}")
         except Exception as e:
             logging.error(f"Error uploading image to S3: {e}")
+
+
 
     def upload_image_with_retries(self, image_url, object_name, max_retries=3, delay=2):
         for attempt in range(1, max_retries + 1):
@@ -88,7 +120,6 @@ class S3Manager:
                 return False
             logging.error(f"Error checking existence of {object_name}: {e}")
             raise
-
 
     def list_objects(self, prefix=""):
         """

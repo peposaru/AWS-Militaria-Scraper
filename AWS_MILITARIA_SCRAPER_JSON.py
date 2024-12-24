@@ -23,7 +23,7 @@ def initialize_logging():
     log_file_path = os.path.join(log_dir, log_file_name)
 
     logging.basicConfig(
-        level=logging.WARNING,
+        level=logging.DEBUG,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler(log_file_path, encoding='utf-8'),
@@ -58,7 +58,7 @@ def main():
 
     try:
         dataManager      = PostgreSQLProcessor(credFile=pgAdminCred)
-        s3_manager       = S3Manager(s3Cred)
+        s3_manager       = S3Manager(s3Cred,dataManager)
         webScrapeManager = ProductScraper(dataManager)
         jsonManager      = JsonManager()
         prints           = log_print()
