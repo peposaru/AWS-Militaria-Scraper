@@ -20,6 +20,11 @@ def process_product(
             logging.warning("Product URL is invalid. Skipping this product.")
             return urlCount, consecutiveMatches
 
+        # Check if the product's images have already been uploaded
+        if dataManager.should_skip_image_upload(productUrl):
+            logging.info(f"Skipping image upload for product: {productUrl} as images are already uploaded.")
+            return urlCount, consecutiveMatches
+
         # Fetch and scrape the product details
         try:
             title, description, price, available, original_image_urls, uploaded_image_urls = fetch_and_scrape_product(
@@ -55,7 +60,6 @@ def process_product(
     except Exception as e:
         logging.error(f"Error processing product: {e}")
     return urlCount, consecutiveMatches
-
 
 
 def fetch_products_from_page(webScrapeManager, productsPage, productsSelector):
@@ -135,7 +139,7 @@ def fetch_and_scrape_product(
                 object_name = f"{source}/{product_id}/{product_id}-{idx}.{extension}"
 
                 # Upload image to S3
-                s3_manager.upload_image(url, productUrl, source)
+                s3_manager.upload_image(url, object_name)  # Pass only two arguments
                 uploaded_image_urls.append(f"s3://{s3_manager.bucket_name}/{object_name}")
             except Exception as e:
                 logging.warning(f"Error uploading image {url}: {e}")
@@ -144,10 +148,6 @@ def fetch_and_scrape_product(
     except Exception as e:
         logging.error(f"Error fetching and scraping product: {e}")
         return None, None, None, None, [], []
-
-
-
-
 
 # Update or insert product in database
 def update_or_insert_product(
@@ -159,7 +159,7 @@ def update_or_insert_product(
     Update or insert product details into the database, including handling image URLs.
     """
     try:
-        searchQuery = "SELECT url, available, date_sold, original_image_urls, s3_image_urls FROM militaria WHERE url = %s"  ########## Adjusted for original and S3 URLs
+        searchQuery = "SELECT url, available, date_sold, original_image_urls, s3_image_urls FROM militaria WHERE url = %s"
         existingProducts = dataManager.sqlFetch(searchQuery, (productUrl,))
 
         updated = False
@@ -196,7 +196,7 @@ def update_or_insert_product(
                 INSERT INTO militaria (url, title, description, price, available, date, 
                 site, currency, conflict, nation, item_type, s3_image_urls, original_image_urls)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-            """  ########## Insert now handles both original and S3 image URLs
+            """
             dataManager.sqlExecute(insertQuery, (
                 productUrl, title, description, price, available, todayDate,
                 source, currency, conflict, nation, item_type, s3_image_urls_json, original_image_urls_json
@@ -257,3 +257,4 @@ def process_site(webScrapeManager, dataManager, jsonManager, prints, site, targe
         page += int(pageIncrement)
 
     logging.info(f"Finished processing site: {source}")
+

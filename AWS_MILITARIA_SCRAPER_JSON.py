@@ -58,7 +58,7 @@ def main():
 
     try:
         dataManager      = PostgreSQLProcessor(credFile=pgAdminCred)
-        s3_manager       = S3Manager(s3Cred,dataManager)
+        s3_manager       = S3Manager(s3Cred)
         webScrapeManager = ProductScraper(dataManager)
         jsonManager      = JsonManager()
         prints           = log_print()
