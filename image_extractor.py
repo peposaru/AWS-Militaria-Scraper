@@ -74,6 +74,42 @@ def woo_commerce2(product_soup):
         logging.error(f"Error in woo_commerce2: {e}")
         return []
 
+def concept500(product_soup):
+    """
+    Extracts high-quality image URLs from HTML structured with 'content-part block-image' divs.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: List of absolute URLs for the largest images.
+    """
+    try:
+        image_urls = [
+            tag['href']
+            for tag in product_soup.select("div.content-part.block-image a")
+            if 'href' in tag.attrs
+        ]
+
+        # If image URLs are relative, prepend the inferred base URL
+        if image_urls and not image_urls[0].startswith("http"):
+            base_tag = product_soup.find('base')
+            inferred_base_url = (
+                base_tag['href'].rstrip('/')
+                if base_tag and 'href' in base_tag.attrs
+                else product_soup.select_one("link[rel='canonical']")['href'].rstrip('/')
+            )
+
+            image_urls = [
+                inferred_base_url + '/' + url.lstrip('/') if not url.startswith("http") else url
+                for url in image_urls
+            ]
+
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error in concept500: {e}")
+        return []
+
 
     
 def extract_default_gallery(product_soup):

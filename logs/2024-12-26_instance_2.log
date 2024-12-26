@@ -1,0 +1,75 @@
+2024-12-26 15:56:36,409 - INFO - Logging initialized. Log file: logs\2024-12-26_instance_2.log
+2024-12-26 15:56:39,533 - INFO - 
+------------------------------------------------------------
+PROGRAM INITIALIZED 2024-12-26 15:56:39.533115
+------------------------------------------------------------
+2024-12-26 15:56:44,466 - INFO - PostgreSQL connection pool initialized.
+2024-12-26 15:56:44,467 - DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2024-12-26 15:56:44,469 - DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+2024-12-26 15:56:44,470 - DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2024-12-26 15:56:44,471 - DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2024-12-26 15:56:44,472 - DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2024-12-26 15:56:44,472 - DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2024-12-26 15:56:44,473 - DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2024-12-26 15:56:44,475 - DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2024-12-26 15:56:44,475 - DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2024-12-26 15:56:44,475 - DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2024-12-26 15:56:44,475 - DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2024-12-26 15:56:44,518 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\endpoints.json
+2024-12-26 15:56:44,528 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\sdk-default-configuration.json
+2024-12-26 15:56:44,528 - DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000022DC3635F80>
+2024-12-26 15:56:44,577 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\service-2.json.gz
+2024-12-26 15:56:44,585 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\service-2.sdk-extras.json
+2024-12-26 15:56:44,631 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\endpoint-rule-set-1.json.gz
+2024-12-26 15:56:44,634 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\partitions.json
+2024-12-26 15:56:44,635 - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x0000022DC357ADE0>
+2024-12-26 15:56:44,635 - DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x0000022DC36DD940>
+2024-12-26 15:56:44,669 - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x0000022DC357AB60>
+2024-12-26 15:56:44,669 - DEBUG - Looking for endpoint for s3 via: environment_service
+2024-12-26 15:56:44,669 - DEBUG - Looking for endpoint for s3 via: environment_global
+2024-12-26 15:56:44,669 - DEBUG - Looking for endpoint for s3 via: config_service
+2024-12-26 15:56:44,669 - DEBUG - Looking for endpoint for s3 via: config_global
+2024-12-26 15:56:44,670 - DEBUG - No configured endpoint found.
+2024-12-26 15:56:44,671 - DEBUG - Setting s3 timeout as (60, 60)
+2024-12-26 15:56:44,674 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\_retry.json
+2024-12-26 15:56:44,674 - DEBUG - Registering retry handlers for service: s3
+2024-12-26 15:56:44,675 - DEBUG - Registering S3 region redirector handler
+2024-12-26 15:56:44,675 - DEBUG - Registering S3Express Identity Resolver
+2024-12-26 15:56:44,676 - INFO - S3Manager initialized for bucket militaria-images
+2024-12-26 15:56:47,367 - DEBUG - Navigating to products page: https://awcmilitaria.com/shop.php?pg=0
+2024-12-26 15:56:47,369 - DEBUG - Starting new HTTPS connection (1): awcmilitaria.com:443
+2024-12-26 15:56:48,489 - DEBUG - https://awcmilitaria.com:443 "GET /shop.php?pg=0 HTTP/1.1" 200 5429
+2024-12-26 15:56:48,501 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-26 15:56:48,501 - INFO - MILITARIA SITE      : AWC_MILITARIA
+2024-12-26 15:56:48,502 - INFO - PRODUCTS URL        : https://awcmilitaria.com/shop.php?pg=0
+2024-12-26 15:56:48,502 - INFO - CYCLES RUN          : 0
+2024-12-26 15:56:48,502 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-26 15:56:48,502 - INFO - TIMESTAMP           : 2024-12-26 15:56:48.501965
+2024-12-26 15:56:48,502 - DEBUG - Product URL constructed: https://awcmilitaria.com/shop.php?code=53751
+2024-12-26 15:56:49,893 - DEBUG - Image upload already completed for product URL: https://awcmilitaria.com/shop.php?code=53751.
+2024-12-26 15:56:49,893 - INFO - Skipping image upload for product: https://awcmilitaria.com/shop.php?code=53751 as images are already uploaded.
+2024-12-26 15:56:49,894 - DEBUG - Product URL constructed: https://awcmilitaria.com/shop.php?code=53750
+2024-12-26 15:56:51,223 - DEBUG - Image upload needed for product URL: https://awcmilitaria.com/shop.php?code=53750.
+2024-12-26 15:56:51,506 - DEBUG - https://awcmilitaria.com:443 "GET /shop.php?code=53750 HTTP/1.1" 200 3026
+2024-12-26 15:56:51,511 - ERROR - Error fetching images: concept500() missing 1 required positional argument: 'base_url'
+2024-12-26 15:56:51,511 - DEBUG - Extracted image URLs: []
+2024-12-26 15:56:51,511 - DEBUG - Scraped data: Title=WW2 8th Armoured Division Pair of Un-issued Machine-woven Shoulder-flashes., Price=18.00, Available=True
+2024-12-26 15:56:52,845 - DEBUG - Product ID for URL 'https://awcmilitaria.com/shop.php?code=53750' is 227948
+2024-12-26 15:56:55,637 - INFO - Product 'https://awcmilitaria.com/shop.php?code=53750' was updated or inserted successfully.
+2024-12-26 15:56:55,637 - DEBUG - Product URL constructed: https://awcmilitaria.com/shop.php?code=53749
+2024-12-26 15:56:56,964 - DEBUG - Image upload needed for product URL: https://awcmilitaria.com/shop.php?code=53749.
+2024-12-26 15:56:57,248 - DEBUG - https://awcmilitaria.com:443 "GET /shop.php?code=53749 HTTP/1.1" 200 2854
+2024-12-26 15:56:57,253 - ERROR - Error fetching images: concept500() missing 1 required positional argument: 'base_url'
+2024-12-26 15:56:57,253 - DEBUG - Extracted image URLs: []
+2024-12-26 15:56:57,253 - DEBUG - Scraped data: Title=Royal Flying Corps / RAF Observers Padded Brevet., Price=60.00, Available=True
+2024-12-26 15:56:58,579 - DEBUG - Product ID for URL 'https://awcmilitaria.com/shop.php?code=53749' is 227949
+2024-12-26 15:57:01,345 - INFO - Product 'https://awcmilitaria.com/shop.php?code=53749' was updated or inserted successfully.
+2024-12-26 15:57:01,345 - DEBUG - Product URL constructed: https://awcmilitaria.com/shop.php?code=53748
+2024-12-26 15:57:02,692 - DEBUG - Image upload needed for product URL: https://awcmilitaria.com/shop.php?code=53748.
+2024-12-26 15:57:02,979 - DEBUG - https://awcmilitaria.com:443 "GET /shop.php?code=53748 HTTP/1.1" 200 2816
+2024-12-26 15:57:02,983 - ERROR - Error fetching images: concept500() missing 1 required positional argument: 'base_url'
+2024-12-26 15:57:02,983 - DEBUG - Extracted image URLs: []
+2024-12-26 15:57:02,984 - DEBUG - Scraped data: Title=1953 Queen*s Coronation Medal., Price=50.00, Available=True
