@@ -172,3 +172,180 @@ def fetch_images(product_soup, function_name):
     except Exception as e:
         logging.error(f"Error fetching images: {e}")
         return []
+
+def ea_militaria(product_soup):
+    """
+    Extracts the largest image URLs from EA Militaria product pages.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: List of URLs for the largest images.
+    """
+    try:
+        # Find all elements with 'data-zoom' attribute (largest images)
+        image_elements = product_soup.select('div.product.item-image.imgzoom')
+        large_image_urls = [
+            img['data-zoom']
+            for img in image_elements
+            if 'data-zoom' in img.attrs
+        ]
+        return large_image_urls
+    except Exception as e:
+        logging.error(f"Error in ea_militaria: {e}")
+        return []
+
+def rg_militaria(product_soup):
+    """
+    Extracts the URLs of the largest images from the gallery on the product page.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: List of URLs for the largest images.
+    """
+    try:
+        # Select all the gallery items with high-resolution images
+        high_res_images = [
+            a_tag['href']
+            for a_tag in product_soup.select("a.image-gallery__slide-item")
+            if 'href' in a_tag.attrs
+        ]
+        return high_res_images
+    except Exception as e:
+        print(f"Error extracting images: {e}")
+        return []
+    
+def militaria_plaza(product_soup):
+    """
+    Extracts high-resolution images from Militaria Plaza product pages.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: List of URLs for the largest images.
+    """
+    try:
+        # Collect high-resolution image URLs from the `href` attribute of links with `rel="vm-additional-images"`
+        image_urls = [
+            tag['href']
+            for tag in product_soup.select("a[rel='vm-additional-images']")
+            if 'href' in tag.attrs
+        ]
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error in militaria_plaza: {e}")
+        return []
+
+def circa1941(product_soup):
+    """
+    Extracts high-resolution image URLs from Circa1941 product pages.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: High-resolution image URLs.
+    """
+    try:
+        # Select all image containers
+        image_containers = product_soup.select('[data-hook="main-media-image-wrapper"] div.media-wrapper-hook')
+        
+        # Extract image URLs
+        image_urls = []
+        for container in image_containers:
+            image = container.get('href')  # The `href` attribute contains the high-resolution image URL
+            if image:
+                image_urls.append(image)
+        
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error extracting images: {e}")
+        return []
+    
+def frontkampfer45(product_soup):
+    """
+    Extracts high-resolution image URLs from Frontkampfer45 product pages.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: High-resolution image URLs.
+    """
+    try:
+        # Select all containers with image data
+        image_containers = product_soup.select('[data-hook="main-media-image-wrapper"] div.media-wrapper-hook')
+        
+        # Extract image URLs from the href attribute
+        image_urls = []
+        for container in image_containers:
+            high_res_image = container.get('href')
+            if high_res_image:
+                image_urls.append(high_res_image)
+
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error extracting images: {e}")
+        return []
+    
+def wars_end_shop(product_soup):
+    """
+    Extracts high-resolution image URLs from Wars End Shop product pages.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: High-resolution image URLs.
+    """
+    try:
+        # Find all image containers within the product-photo-container
+        image_containers = product_soup.select('#product-photo-container a.gallery')
+        
+        # Extract high-resolution image URLs
+        image_urls = []
+        for container in image_containers:
+            high_res_image = container.get('href')
+            if high_res_image:
+                # Ensure full URL is formed
+                if high_res_image.startswith("//"):
+                    high_res_image = "https:" + high_res_image
+                image_urls.append(high_res_image)
+
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error extracting images: {e}")
+        return []  
+    
+def the_war_front(product_soup):
+    """
+    Extracts high-resolution image URLs from The War Front product pages.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: High-resolution image URLs.
+    """
+    try:
+        # Find all image containers within the main media section
+        image_containers = product_soup.select('[data-hook="main-media-image-wrapper"] .media-wrapper-hook')
+        
+        # Extract high-resolution image URLs
+        image_urls = []
+        for container in image_containers:
+            high_res_image = container.get("href")
+            if high_res_image:
+                # Ensure full URL is formed
+                if high_res_image.startswith("//"):
+                    high_res_image = "https:" + high_res_image
+                image_urls.append(high_res_image)
+
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error extracting images: {e}")
+        return []

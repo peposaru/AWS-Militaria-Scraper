@@ -1,0 +1,1030 @@
+2024-12-26 20:18:23,460 - INFO - Logging initialized. Log file: logs\2024-12-26_instance_17.log
+2024-12-26 20:18:27,844 - INFO - 
+------------------------------------------------------------
+PROGRAM INITIALIZED 2024-12-26 20:18:27.844794
+------------------------------------------------------------
+2024-12-26 20:18:32,994 - INFO - PostgreSQL connection pool initialized.
+2024-12-26 20:18:32,996 - DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2024-12-26 20:18:32,997 - DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+2024-12-26 20:18:32,998 - DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2024-12-26 20:18:32,999 - DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2024-12-26 20:18:32,999 - DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2024-12-26 20:18:33,000 - DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2024-12-26 20:18:33,001 - DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2024-12-26 20:18:33,002 - DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2024-12-26 20:18:33,003 - DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2024-12-26 20:18:33,003 - DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2024-12-26 20:18:33,003 - DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2024-12-26 20:18:33,048 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\endpoints.json
+2024-12-26 20:18:33,059 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\sdk-default-configuration.json
+2024-12-26 20:18:33,059 - DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x000001B0231CE3E0>
+2024-12-26 20:18:33,114 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\service-2.json.gz
+2024-12-26 20:18:33,121 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\service-2.sdk-extras.json
+2024-12-26 20:18:33,167 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\endpoint-rule-set-1.json.gz
+2024-12-26 20:18:33,171 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\partitions.json
+2024-12-26 20:18:33,172 - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x000001B02310B240>
+2024-12-26 20:18:33,172 - DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x000001B02326DDA0>
+2024-12-26 20:18:33,210 - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x000001B02310AFC0>
+2024-12-26 20:18:33,210 - DEBUG - Looking for endpoint for s3 via: environment_service
+2024-12-26 20:18:33,211 - DEBUG - Looking for endpoint for s3 via: environment_global
+2024-12-26 20:18:33,211 - DEBUG - Looking for endpoint for s3 via: config_service
+2024-12-26 20:18:33,211 - DEBUG - Looking for endpoint for s3 via: config_global
+2024-12-26 20:18:33,211 - DEBUG - No configured endpoint found.
+2024-12-26 20:18:33,212 - DEBUG - Setting s3 timeout as (60, 60)
+2024-12-26 20:18:33,216 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\_retry.json
+2024-12-26 20:18:33,216 - DEBUG - Registering retry handlers for service: s3
+2024-12-26 20:18:33,217 - DEBUG - Registering S3 region redirector handler
+2024-12-26 20:18:33,217 - DEBUG - Registering S3Express Identity Resolver
+2024-12-26 20:18:33,217 - INFO - S3Manager initialized for bucket militaria-images
+2024-12-26 20:18:44,909 - DEBUG - Navigating to products page: https://www.circa1941.com/all-items?page=0
+2024-12-26 20:18:44,911 - DEBUG - Starting new HTTPS connection (1): www.circa1941.com:443
+2024-12-26 20:18:45,518 - DEBUG - https://www.circa1941.com:443 "GET /all-items?page=0 HTTP/1.1" 200 None
+2024-12-26 20:18:45,696 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-26 20:18:45,697 - INFO - MILITARIA SITE      : CIRCA1941
+2024-12-26 20:18:45,697 - INFO - PRODUCTS URL        : https://www.circa1941.com/all-items?page=0
+2024-12-26 20:18:45,697 - INFO - CYCLES RUN          : 0
+2024-12-26 20:18:45,697 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-26 20:18:45,697 - INFO - TIMESTAMP           : 2024-12-26 20:18:45.696291
+2024-12-26 20:18:45,698 - DEBUG - Product URL constructed: https://www.circa1941.com/product-page/wwii-u-s-army-15-years-long-service-patch-khaki-backing
+2024-12-26 20:18:46,242 - DEBUG - Image upload needed for product URL: https://www.circa1941.com/product-page/wwii-u-s-army-15-years-long-service-patch-khaki-backing.
+2024-12-26 20:18:47,625 - DEBUG - https://www.circa1941.com:443 "GET /product-page/wwii-u-s-army-15-years-long-service-patch-khaki-backing HTTP/1.1" 200 None
+2024-12-26 20:18:48,163 - DEBUG - Extracted image URLs: ['https://static.wixstatic.com/media/b39f4e_a69955558331427887d9f26ffa42145a~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_a69955558331427887d9f26ffa42145a~mv2.jpg', 'https://static.wixstatic.com/media/b39f4e_0b94bedcf661452ebfcb9df620a606e5~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_0b94bedcf661452ebfcb9df620a606e5~mv2.jpg']
+2024-12-26 20:18:48,164 - DEBUG - Scraped data: Title=WWII U.S. Army 15 Years Long Service Patch (Khaki Backing), Price=25.00, Available=True
+2024-12-26 20:18:48,702 - DEBUG - Product ID for URL 'https://www.circa1941.com/product-page/wwii-u-s-army-15-years-long-service-patch-khaki-backing' is 172854
+2024-12-26 20:18:48,703 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_a69955558331427887d9f26ffa42145a~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_a69955558331427887d9f26ffa42145a~mv2.jpg
+2024-12-26 20:18:48,704 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:18:49,578 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_a69955558331427887d9f26ffa42145a~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_a69955558331427887d9f26ffa42145a~mv2.jpg HTTP/1.1" 200 134627
+2024-12-26 20:18:49,578 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:18:49,578 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:18:49,578 - DEBUG - Acquiring 0
+2024-12-26 20:18:49,579 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B0245358E0>}) about to wait for the following futures []
+2024-12-26 20:18:49,579 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B0245358E0>}) done waiting for dependent futures
+2024-12-26 20:18:49,579 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B0245358E0>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B024534980>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024025D00>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024534A40>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B0245358E0>}
+2024-12-26 20:18:49,624 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-1.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024534A40> for transfer request: 0.
+2024-12-26 20:18:49,625 - DEBUG - Acquiring 0
+2024-12-26 20:18:49,625 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-1.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:18:49,625 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:18:49,625 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-1.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:18:49,626 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-1.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B0245351C0>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-1.jpg', 'extra_args': {}}
+2024-12-26 20:18:49,626 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:18:49,626 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:18:49,627 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:18:49,627 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:18:49,627 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:18:49,627 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:49,627 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:18:49,627 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:18:49,627 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:18:49,628 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:49,628 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172854/172854-1.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:18:49,628 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:18:49,628 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:18:49,629 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:18:49,629 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:18:49,629 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:18:49,629 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:18:49,630 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:18:49,630 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:18:49,630 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:18:49,630 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:18:49,630 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172854/172854-1.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': 'yQj9L17hxW4RMYzbVJJdSg==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B0245351C0>, 'auth_path': '/militaria-images/CIRCA1941/172854/172854-1.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172854/172854-1.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172854/172854-1.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B0245351C0>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172854/172854-1.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:18:49,631 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:18:49,631 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:18:49,631 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:18:49,632 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:18:49,632 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:18:49,632 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:18:49,632 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:18:49,632 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172854/172854-1.jpg
+
+content-md5:yQj9L17hxW4RMYzbVJJdSg==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111849Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:18:49,633 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111849Z
+20241226/ap-southeast-2/s3/aws4_request
+195e53783e7b9fa0fb096ff65de33aefaf8d5a2c35fdaeea6d1fa01f2a26a301
+2024-12-26 20:18:49,633 - DEBUG - Signature:
+ae44baa509c392bd889e33397af7a014a7b29372ffba28e41ba88393dca99c7c
+2024-12-26 20:18:49,633 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:18:49,634 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:18:49,634 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172854/172854-1.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'yQj9L17hxW4RMYzbVJJdSg==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111849Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=ae44baa509c392bd889e33397af7a014a7b29372ffba28e41ba88393dca99c7c', 'amz-sdk-invocation-id': b'bd1d1259-01c6-4814-a233-05a91d952cb0', 'amz-sdk-request': b'attempt=1', 'Content-Length': '134627'}>
+2024-12-26 20:18:49,634 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:18:49,635 - DEBUG - Starting new HTTPS connection (1): militaria-images.s3.ap-southeast-2.amazonaws.com:443
+2024-12-26 20:18:50,339 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:18:50,495 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:18:51,060 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172854/172854-1.jpg HTTP/1.1" 200 0
+2024-12-26 20:18:51,061 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:18:51,061 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:18:51,061 - DEBUG - Response headers: {'x-amz-id-2': 'P3hYJCyn0uU1ZktLkhrVBX9P4F5M9VhHUOSbO3PJJqvra6PzrBkxVdoubbAJT2/PGnJtLXGCQUKhvFd+gmfBRQ==', 'x-amz-request-id': 'J69PGYHKAJ5P83S3', 'Date': 'Thu, 26 Dec 2024 11:18:51 GMT', 'x-amz-version-id': 'AfA._Gt10KmbX.cpzRG0KxZcxS39DLxF', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"c908fd2f5ee1c56e11318cdb54925d4a"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:18:51,061 - DEBUG - Response body:
+b''
+2024-12-26 20:18:51,062 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:18:51,062 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:18:51,062 - DEBUG - No retry needed.
+2024-12-26 20:18:51,063 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:51,063 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:18:51,063 - INFO - Uploaded to S3: CIRCA1941/172854/172854-1.jpg
+2024-12-26 20:18:51,064 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_0b94bedcf661452ebfcb9df620a606e5~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_0b94bedcf661452ebfcb9df620a606e5~mv2.jpg
+2024-12-26 20:18:51,066 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:18:51,646 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_0b94bedcf661452ebfcb9df620a606e5~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_0b94bedcf661452ebfcb9df620a606e5~mv2.jpg HTTP/1.1" 200 152771
+2024-12-26 20:18:51,646 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:18:51,647 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:18:51,647 - DEBUG - Acquiring 0
+2024-12-26 20:18:51,647 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024534C80>}) about to wait for the following futures []
+2024-12-26 20:18:51,648 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024534C80>}) done waiting for dependent futures
+2024-12-26 20:18:51,648 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024534C80>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B0218AC4D0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024075E50>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024534A70>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024534C80>}
+2024-12-26 20:18:51,689 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-2.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024534A70> for transfer request: 0.
+2024-12-26 20:18:51,690 - DEBUG - Acquiring 0
+2024-12-26 20:18:51,691 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-2.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:18:51,691 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:18:51,691 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-2.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:18:51,691 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-2.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B024535190>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172854/172854-2.jpg', 'extra_args': {}}
+2024-12-26 20:18:51,691 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:18:51,692 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:18:51,692 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:18:51,692 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:18:51,692 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:18:51,692 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:51,692 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:18:51,692 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:18:51,692 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:18:51,692 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:51,693 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172854/172854-2.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:18:51,693 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:18:51,694 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:18:51,694 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:18:51,694 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:18:51,695 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:18:51,695 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:18:51,695 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:18:51,695 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:18:51,695 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:18:51,695 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:18:51,695 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172854/172854-2.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': '+FFsLgygrv9Y0gM9EKad3A==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B024535190>, 'auth_path': '/militaria-images/CIRCA1941/172854/172854-2.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172854/172854-2.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172854/172854-2.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B024535190>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172854/172854-2.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:18:51,696 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:18:51,696 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:18:51,696 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:18:51,696 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:18:51,696 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:18:51,697 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:18:51,697 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:18:51,697 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172854/172854-2.jpg
+
+content-md5:+FFsLgygrv9Y0gM9EKad3A==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111851Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:18:51,698 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111851Z
+20241226/ap-southeast-2/s3/aws4_request
+dca976e44c7b70dc8dc2c1065c570a846729be89accd6faf614c6a6b946edd0b
+2024-12-26 20:18:51,698 - DEBUG - Signature:
+8e8010c51595b9bc276d5baacb1b016d4ee29cef1c3ede793201649ff4d146b0
+2024-12-26 20:18:51,699 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:18:51,699 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:18:51,699 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172854/172854-2.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'+FFsLgygrv9Y0gM9EKad3A==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111851Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=8e8010c51595b9bc276d5baacb1b016d4ee29cef1c3ede793201649ff4d146b0', 'amz-sdk-invocation-id': b'51098a0e-c14b-4aea-903b-f64dff6faca0', 'amz-sdk-request': b'attempt=1', 'Content-Length': '152771'}>
+2024-12-26 20:18:51,700 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:18:51,701 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:18:51,844 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:18:52,340 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172854/172854-2.jpg HTTP/1.1" 200 0
+2024-12-26 20:18:52,341 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:18:52,341 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:18:52,341 - DEBUG - Response headers: {'x-amz-id-2': 'ajoeaUw5qk8O9efdFmNjgU6EJ26bsPdMWd2QsKMG4895enbHrzYpuYz9tJeo7p/hY1FW54871hVlgbiSZX+UpA==', 'x-amz-request-id': '16SE32W9C7K9TNXQ', 'Date': 'Thu, 26 Dec 2024 11:18:53 GMT', 'x-amz-version-id': '481wMDl1vgNV84GH8Q.OF.Qva755lxpE', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"f8516c2e0ca0aeff58d2033d10a69ddc"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:18:52,341 - DEBUG - Response body:
+b''
+2024-12-26 20:18:52,342 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:18:52,342 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:18:52,342 - DEBUG - No retry needed.
+2024-12-26 20:18:52,342 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:52,342 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:18:52,342 - INFO - Uploaded to S3: CIRCA1941/172854/172854-2.jpg
+2024-12-26 20:18:53,414 - INFO - Product 'https://www.circa1941.com/product-page/wwii-u-s-army-15-years-long-service-patch-khaki-backing' was updated or inserted successfully.
+2024-12-26 20:18:53,414 - DEBUG - Product URL constructed: https://www.circa1941.com/product-page/late-wwii-usmc-camouflage-mosquito-net-helmet-cover-type-b-1
+2024-12-26 20:18:53,952 - DEBUG - Image upload needed for product URL: https://www.circa1941.com/product-page/late-wwii-usmc-camouflage-mosquito-net-helmet-cover-type-b-1.
+2024-12-26 20:18:55,238 - DEBUG - https://www.circa1941.com:443 "GET /product-page/late-wwii-usmc-camouflage-mosquito-net-helmet-cover-type-b-1 HTTP/1.1" 200 None
+2024-12-26 20:18:55,805 - DEBUG - Extracted image URLs: ['https://static.wixstatic.com/media/b39f4e_3fdabf55280f457596ac3b63dfdb5780~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_3fdabf55280f457596ac3b63dfdb5780~mv2.jpg', 'https://static.wixstatic.com/media/b39f4e_82ba4fb81c8447b4a728460a165c4abe~mv2.jpg/v1/fill/w_1404,h_1092,al_c,q_85/b39f4e_82ba4fb81c8447b4a728460a165c4abe~mv2.jpg', 'https://static.wixstatic.com/media/b39f4e_8c186fd70da046a4b2bcf6e11a73976a~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_8c186fd70da046a4b2bcf6e11a73976a~mv2.jpg', 'https://static.wixstatic.com/media/b39f4e_c309a671c0354cd6a147e6fb0c70fb80~mv2.jpeg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_c309a671c0354cd6a147e6fb0c70fb80~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_5b47eb3505324b059ade10da295399ea~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_5b47eb3505324b059ade10da295399ea~mv2.jpg']
+2024-12-26 20:18:55,806 - DEBUG - Scraped data: Title=Late-WWII USMC Camouflage Mosquito Net Helmet Cover (Type B), Price=75.00, Available=True
+2024-12-26 20:18:56,341 - DEBUG - Product ID for URL 'https://www.circa1941.com/product-page/late-wwii-usmc-camouflage-mosquito-net-helmet-cover-type-b-1' is 172855
+2024-12-26 20:18:56,342 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_3fdabf55280f457596ac3b63dfdb5780~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_3fdabf55280f457596ac3b63dfdb5780~mv2.jpg
+2024-12-26 20:18:56,343 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:18:57,136 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_3fdabf55280f457596ac3b63dfdb5780~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_3fdabf55280f457596ac3b63dfdb5780~mv2.jpg HTTP/1.1" 200 311103
+2024-12-26 20:18:57,136 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:18:57,137 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:18:57,137 - DEBUG - Acquiring 0
+2024-12-26 20:18:57,137 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024174DD0>}) about to wait for the following futures []
+2024-12-26 20:18:57,137 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024174DD0>}) done waiting for dependent futures
+2024-12-26 20:18:57,138 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024174DD0>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B0240756D0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B0240755B0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024535490>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024174DD0>}
+2024-12-26 20:18:57,200 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-1.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024535490> for transfer request: 0.
+2024-12-26 20:18:57,200 - DEBUG - Acquiring 0
+2024-12-26 20:18:57,201 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-1.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:18:57,201 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:18:57,201 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-1.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:18:57,202 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-1.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B0241746B0>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-1.jpg', 'extra_args': {}}
+2024-12-26 20:18:57,202 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:18:57,202 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:18:57,202 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:18:57,202 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:18:57,202 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:18:57,202 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:57,203 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:18:57,203 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:18:57,203 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:18:57,203 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:57,203 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172855/172855-1.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:18:57,203 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:18:57,204 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:18:57,204 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:18:57,204 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:18:57,204 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:18:57,205 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:18:57,205 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:18:57,205 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:18:57,205 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:18:57,205 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:18:57,205 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172855/172855-1.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': 'EPtsBV5TcE89sWI1qoKBMg==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B0241746B0>, 'auth_path': '/militaria-images/CIRCA1941/172855/172855-1.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-1.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-1.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B0241746B0>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-1.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:18:57,206 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:18:57,206 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:18:57,206 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:18:57,206 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:18:57,206 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:18:57,206 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:18:57,207 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:18:57,207 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172855/172855-1.jpg
+
+content-md5:EPtsBV5TcE89sWI1qoKBMg==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111857Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:18:57,207 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111857Z
+20241226/ap-southeast-2/s3/aws4_request
+19f023d09348765cac6c998272fdc4a3a1d41ba08007e580b1bd61d66f8b89d4
+2024-12-26 20:18:57,208 - DEBUG - Signature:
+e74ca72e6d29c26de133d2f1a5ed71b8048d1603d323e80b0fb01310adda26b9
+2024-12-26 20:18:57,208 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:18:57,208 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:18:57,208 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-1.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'EPtsBV5TcE89sWI1qoKBMg==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111857Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=e74ca72e6d29c26de133d2f1a5ed71b8048d1603d323e80b0fb01310adda26b9', 'amz-sdk-invocation-id': b'982431c6-b51e-4acb-83e5-a5fb05ddfa25', 'amz-sdk-request': b'attempt=1', 'Content-Length': '311103'}>
+2024-12-26 20:18:57,209 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:18:57,209 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:18:57,351 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:18:58,127 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172855/172855-1.jpg HTTP/1.1" 200 0
+2024-12-26 20:18:58,127 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:18:58,127 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:18:58,128 - DEBUG - Response headers: {'x-amz-id-2': 'l5MJVlx7MYZnMIIWyHGhTm45yq5vBdFBjdFdJUmYHCJbixStxsbZVBlwyck6wYBXzWP00Pxq0mlipWpp5xDgaA==', 'x-amz-request-id': 'R38JZXZ21RPD6EY1', 'Date': 'Thu, 26 Dec 2024 11:18:58 GMT', 'x-amz-version-id': 'Fow_wJZv6TB09NWgziK5JisinBs.tSbf', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"10fb6c055e53704f3db16235aa828132"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:18:58,128 - DEBUG - Response body:
+b''
+2024-12-26 20:18:58,128 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:18:58,128 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:18:58,129 - DEBUG - No retry needed.
+2024-12-26 20:18:58,129 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:58,129 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:18:58,129 - INFO - Uploaded to S3: CIRCA1941/172855/172855-1.jpg
+2024-12-26 20:18:58,131 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_82ba4fb81c8447b4a728460a165c4abe~mv2.jpg/v1/fill/w_1404,h_1092,al_c,q_85/b39f4e_82ba4fb81c8447b4a728460a165c4abe~mv2.jpg
+2024-12-26 20:18:58,132 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:18:58,671 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_82ba4fb81c8447b4a728460a165c4abe~mv2.jpg/v1/fill/w_1404,h_1092,al_c,q_85/b39f4e_82ba4fb81c8447b4a728460a165c4abe~mv2.jpg HTTP/1.1" 200 269999
+2024-12-26 20:18:58,672 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:18:58,672 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:18:58,672 - DEBUG - Acquiring 0
+2024-12-26 20:18:58,673 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024175340>}) about to wait for the following futures []
+2024-12-26 20:18:58,673 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024175340>}) done waiting for dependent futures
+2024-12-26 20:18:58,673 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024175340>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B02431B5F0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024076300>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B0245354F0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024175340>}
+2024-12-26 20:18:58,737 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-2.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B0245354F0> for transfer request: 0.
+2024-12-26 20:18:58,738 - DEBUG - Acquiring 0
+2024-12-26 20:18:58,738 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-2.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:18:58,738 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:18:58,739 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-2.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:18:58,739 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-2.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B024174980>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-2.jpg', 'extra_args': {}}
+2024-12-26 20:18:58,739 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:18:58,739 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:18:58,739 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:18:58,739 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:18:58,740 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:18:58,740 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:58,740 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:18:58,740 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:18:58,740 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:18:58,740 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:58,740 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172855/172855-2.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:18:58,741 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:18:58,741 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:18:58,741 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:18:58,742 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:18:58,742 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:18:58,742 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:18:58,743 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:18:58,743 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:18:58,743 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:18:58,743 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:18:58,743 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172855/172855-2.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': 'R0wpVXKbTqv7pH9BHOfNbw==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B024174980>, 'auth_path': '/militaria-images/CIRCA1941/172855/172855-2.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-2.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-2.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B024174980>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-2.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:18:58,744 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:18:58,744 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:18:58,744 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:18:58,744 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:18:58,745 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:18:58,745 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:18:58,745 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:18:58,745 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172855/172855-2.jpg
+
+content-md5:R0wpVXKbTqv7pH9BHOfNbw==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111858Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:18:58,746 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111858Z
+20241226/ap-southeast-2/s3/aws4_request
+f744117565ca8bc85c79ab0c09d57dbf60485c1708354a979c52804ed9b4b3cd
+2024-12-26 20:18:58,747 - DEBUG - Signature:
+c35db8f31f78c180d4a4611be0060f829a2ae854733efb5e908f36f20c81727b
+2024-12-26 20:18:58,747 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:18:58,747 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:18:58,748 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-2.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'R0wpVXKbTqv7pH9BHOfNbw==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111858Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=c35db8f31f78c180d4a4611be0060f829a2ae854733efb5e908f36f20c81727b', 'amz-sdk-invocation-id': b'f2151059-2c85-4ad4-bbed-9f3b7c1fa24c', 'amz-sdk-request': b'attempt=1', 'Content-Length': '269999'}>
+2024-12-26 20:18:58,748 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:18:58,749 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:18:58,891 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:18:59,681 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172855/172855-2.jpg HTTP/1.1" 200 0
+2024-12-26 20:18:59,681 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:18:59,681 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:18:59,681 - DEBUG - Response headers: {'x-amz-id-2': '7Ic90IjGJf8HOB0jB6w5V8K1VNTwS5e+KxQpCI8oYx9Ovw53FQmjDu2/jujZfZUu3pGolpIUvQCg9ff0aOfaog==', 'x-amz-request-id': 'MPT9GSQ6BCT8331G', 'Date': 'Thu, 26 Dec 2024 11:19:00 GMT', 'x-amz-version-id': '_KlDKgsvQhZ7pLIvNCiTsw4yzveoEX2o', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"474c2955729b4eabfba47f411ce7cd6f"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:18:59,682 - DEBUG - Response body:
+b''
+2024-12-26 20:18:59,682 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:18:59,682 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:18:59,682 - DEBUG - No retry needed.
+2024-12-26 20:18:59,682 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:18:59,682 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:18:59,683 - INFO - Uploaded to S3: CIRCA1941/172855/172855-2.jpg
+2024-12-26 20:18:59,684 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_8c186fd70da046a4b2bcf6e11a73976a~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_8c186fd70da046a4b2bcf6e11a73976a~mv2.jpg
+2024-12-26 20:18:59,685 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:19:00,351 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_8c186fd70da046a4b2bcf6e11a73976a~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_8c186fd70da046a4b2bcf6e11a73976a~mv2.jpg HTTP/1.1" 200 434133
+2024-12-26 20:19:00,351 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:19:00,352 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:19:00,352 - DEBUG - Acquiring 0
+2024-12-26 20:19:00,352 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024174C50>}) about to wait for the following futures []
+2024-12-26 20:19:00,352 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024174C50>}) done waiting for dependent futures
+2024-12-26 20:19:00,353 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024174C50>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B0245EFB30>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B0240755B0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024535250>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024174C50>}
+2024-12-26 20:19:00,446 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-3.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024535250> for transfer request: 0.
+2024-12-26 20:19:00,446 - DEBUG - Acquiring 0
+2024-12-26 20:19:00,447 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-3.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:19:00,447 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:00,447 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-3.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:19:00,447 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-3.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B024174890>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-3.jpg', 'extra_args': {}}
+2024-12-26 20:19:00,447 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:19:00,448 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:19:00,448 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:19:00,448 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:19:00,448 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:19:00,448 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:00,448 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:00,448 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:19:00,449 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:19:00,449 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:00,449 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172855/172855-3.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:19:00,450 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:19:00,450 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:19:00,450 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:19:00,450 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:19:00,451 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:19:00,451 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:19:00,451 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:00,451 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:19:00,452 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:19:00,452 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:19:00,452 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172855/172855-3.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': 'JzgVN7kpTELi9aejDno3qQ==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B024174890>, 'auth_path': '/militaria-images/CIRCA1941/172855/172855-3.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-3.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-3.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B024174890>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-3.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:19:00,452 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:19:00,453 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:19:00,453 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:00,453 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:19:00,453 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:19:00,453 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:00,454 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:19:00,454 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172855/172855-3.jpg
+
+content-md5:JzgVN7kpTELi9aejDno3qQ==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111900Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:19:00,455 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111900Z
+20241226/ap-southeast-2/s3/aws4_request
+19ceba598ef433f3328f85018f85f3b5a72600daebfe95a37300627ce93e62d3
+2024-12-26 20:19:00,456 - DEBUG - Signature:
+762bd7e90fcc39679a45892c0a2b77b61ba138f398ba848245afe7ee21e9c5f2
+2024-12-26 20:19:00,456 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:19:00,456 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:19:00,456 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-3.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'JzgVN7kpTELi9aejDno3qQ==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111900Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=762bd7e90fcc39679a45892c0a2b77b61ba138f398ba848245afe7ee21e9c5f2', 'amz-sdk-invocation-id': b'10b1011e-34a1-4447-8e1e-ce358a36a265', 'amz-sdk-request': b'attempt=1', 'Content-Length': '434133'}>
+2024-12-26 20:19:00,457 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:19:00,457 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:19:00,599 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:19:01,641 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172855/172855-3.jpg HTTP/1.1" 200 0
+2024-12-26 20:19:01,642 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:19:01,642 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:19:01,642 - DEBUG - Response headers: {'x-amz-id-2': 'Bqy4KEK9ZQh9wdPE0jcnOAzrqjqLWkLWgmQyLB0qVafBwuSd7Xsewithj4EDVCz8Ok1Kbsk2q48xsHwkU9KVtw==', 'x-amz-request-id': '4P6KGY1TV8SV3VFA', 'Date': 'Thu, 26 Dec 2024 11:19:01 GMT', 'x-amz-version-id': 'GpP1uYt_J__sWq.p8DM5JIuCv4iF9OFC', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"27381537b9294c42e2f5a7a30e7a37a9"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:19:01,642 - DEBUG - Response body:
+b''
+2024-12-26 20:19:01,642 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:19:01,643 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:19:01,643 - DEBUG - No retry needed.
+2024-12-26 20:19:01,643 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:01,643 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:01,643 - INFO - Uploaded to S3: CIRCA1941/172855/172855-3.jpg
+2024-12-26 20:19:01,644 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_c309a671c0354cd6a147e6fb0c70fb80~mv2.jpeg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_c309a671c0354cd6a147e6fb0c70fb80~mv2.jpeg
+2024-12-26 20:19:01,645 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:19:02,582 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_c309a671c0354cd6a147e6fb0c70fb80~mv2.jpeg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_c309a671c0354cd6a147e6fb0c70fb80~mv2.jpeg HTTP/1.1" 200 1112232
+2024-12-26 20:19:02,583 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:19:02,583 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:19:02,583 - DEBUG - Acquiring 0
+2024-12-26 20:19:02,584 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024175CA0>}) about to wait for the following futures []
+2024-12-26 20:19:02,584 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024175CA0>}) done waiting for dependent futures
+2024-12-26 20:19:02,584 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024175CA0>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B02309E480>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024537AA0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024534E90>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B024175CA0>}
+2024-12-26 20:19:02,723 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-4.jpeg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024534E90> for transfer request: 0.
+2024-12-26 20:19:02,723 - DEBUG - Acquiring 0
+2024-12-26 20:19:02,724 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-4.jpeg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:19:02,724 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:02,724 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-4.jpeg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:19:02,724 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-4.jpeg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B024174770>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-4.jpeg', 'extra_args': {}}
+2024-12-26 20:19:02,725 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:19:02,725 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:19:02,725 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:19:02,725 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:19:02,725 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:19:02,725 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:02,725 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:02,725 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:19:02,725 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:19:02,725 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:02,726 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172855/172855-4.jpeg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:19:02,726 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:19:02,726 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:19:02,726 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:19:02,726 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:19:02,728 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:19:02,728 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:19:02,728 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:02,728 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:19:02,728 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:19:02,729 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:19:02,729 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172855/172855-4.jpeg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': '/fNz98GX+Wo3FAhIHF5Jjw==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B024174770>, 'auth_path': '/militaria-images/CIRCA1941/172855/172855-4.jpeg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-4.jpeg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-4.jpeg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B024174770>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-4.jpeg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:19:02,729 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:19:02,729 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:19:02,730 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:02,730 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:19:02,730 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:19:02,730 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:02,730 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:19:02,731 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172855/172855-4.jpeg
+
+content-md5:/fNz98GX+Wo3FAhIHF5Jjw==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111902Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:19:02,731 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111902Z
+20241226/ap-southeast-2/s3/aws4_request
+eb49d12feec6e666aea9519deb6fa411337c7a0b177b7e7faff213be65c85cf1
+2024-12-26 20:19:02,732 - DEBUG - Signature:
+7128256d52dbefe48a80caa28c0878497fe7bdf9f4badafa012681a209ea911a
+2024-12-26 20:19:02,732 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:19:02,732 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:19:02,732 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-4.jpeg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'/fNz98GX+Wo3FAhIHF5Jjw==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111902Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=7128256d52dbefe48a80caa28c0878497fe7bdf9f4badafa012681a209ea911a', 'amz-sdk-invocation-id': b'7b374861-1e81-4cbd-a8d5-aad0c01be1d7', 'amz-sdk-request': b'attempt=1', 'Content-Length': '1112232'}>
+2024-12-26 20:19:02,733 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:19:02,733 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:19:02,881 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:19:05,310 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172855/172855-4.jpeg HTTP/1.1" 200 0
+2024-12-26 20:19:05,310 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:19:05,310 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:19:05,311 - DEBUG - Response headers: {'x-amz-id-2': 'pqPxpS2uKzQ7R7IntitQQlIg0ORD8oulZtx8m/dsIRGwlyKaobLpeaQ6TilTwwnWcJbREGiwRfy97z3kCxhRnw==', 'x-amz-request-id': 'G96H49VSD5ZAHCWR', 'Date': 'Thu, 26 Dec 2024 11:19:04 GMT', 'x-amz-version-id': 'TizhHKtJK_QMxwWjoyBL21Szpn_PJnCm', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"fdf373f7c197f96a371408481c5e498f"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:19:05,311 - DEBUG - Response body:
+b''
+2024-12-26 20:19:05,311 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:19:05,311 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:19:05,311 - DEBUG - No retry needed.
+2024-12-26 20:19:05,312 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:05,312 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:05,312 - INFO - Uploaded to S3: CIRCA1941/172855/172855-4.jpeg
+2024-12-26 20:19:05,313 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_5b47eb3505324b059ade10da295399ea~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_5b47eb3505324b059ade10da295399ea~mv2.jpg
+2024-12-26 20:19:05,314 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:19:06,004 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_5b47eb3505324b059ade10da295399ea~mv2.jpg/v1/fill/w_2049,h_1537,al_c,q_85/b39f4e_5b47eb3505324b059ade10da295399ea~mv2.jpg HTTP/1.1" 200 366099
+2024-12-26 20:19:06,005 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:19:06,005 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:19:06,005 - DEBUG - Acquiring 0
+2024-12-26 20:19:06,006 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B0241758B0>}) about to wait for the following futures []
+2024-12-26 20:19:06,006 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B0241758B0>}) done waiting for dependent futures
+2024-12-26 20:19:06,006 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B0241758B0>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B02431B5F0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B0240755B0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B0245352E0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B0241758B0>}
+2024-12-26 20:19:06,082 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-5.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B0245352E0> for transfer request: 0.
+2024-12-26 20:19:06,082 - DEBUG - Acquiring 0
+2024-12-26 20:19:06,083 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-5.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:19:06,083 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:06,083 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-5.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:19:06,083 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-5.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B024174BC0>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172855/172855-5.jpg', 'extra_args': {}}
+2024-12-26 20:19:06,083 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:19:06,084 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:19:06,084 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:19:06,084 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:19:06,084 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:19:06,084 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:06,084 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:06,084 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:19:06,084 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:19:06,085 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:06,085 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172855/172855-5.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:19:06,085 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:19:06,085 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:19:06,085 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:19:06,086 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:19:06,086 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:19:06,086 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:19:06,086 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:06,087 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:19:06,087 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:19:06,087 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:19:06,087 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172855/172855-5.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': 'qcc9PYqvfYNAHQAiScps8Q==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B024174BC0>, 'auth_path': '/militaria-images/CIRCA1941/172855/172855-5.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-5.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-5.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B024174BC0>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172855/172855-5.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:19:06,087 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:19:06,088 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:19:06,088 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:06,088 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:19:06,088 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:19:06,088 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:06,089 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:19:06,089 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172855/172855-5.jpg
+
+content-md5:qcc9PYqvfYNAHQAiScps8Q==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111906Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:19:06,089 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111906Z
+20241226/ap-southeast-2/s3/aws4_request
+1a703a53e6c196f69851da5d23fbaff1ed96e936d66f58b0839d0d441e39d337
+2024-12-26 20:19:06,089 - DEBUG - Signature:
+455649324cff57b2d8ba923a193b28a55307a7ee3168374d0f200b5101bc4a57
+2024-12-26 20:19:06,090 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:19:06,090 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:19:06,090 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172855/172855-5.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'qcc9PYqvfYNAHQAiScps8Q==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111906Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=455649324cff57b2d8ba923a193b28a55307a7ee3168374d0f200b5101bc4a57', 'amz-sdk-invocation-id': b'046db50e-a1bd-4f49-9ac6-472ee4fff2c8', 'amz-sdk-request': b'attempt=1', 'Content-Length': '366099'}>
+2024-12-26 20:19:06,091 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:19:06,091 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:19:06,236 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:19:07,141 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172855/172855-5.jpg HTTP/1.1" 200 0
+2024-12-26 20:19:07,141 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:19:07,141 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:19:07,142 - DEBUG - Response headers: {'x-amz-id-2': '+5PZLm4qO7XSY5VAJs0zRV9gpLa5oQNJup1LKvaFX75WrGbSB3E+989RyH3GFrMG750MhT4zsVpGcZ+aVXI4qw==', 'x-amz-request-id': 'GMDHVE2DQKHR265M', 'Date': 'Thu, 26 Dec 2024 11:19:07 GMT', 'x-amz-version-id': 'xyEvhgkN56UV9r74OLFiNtvZes4TPjk_', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"a9c73d3d8aaf7d83401d002249ca6cf1"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:19:07,142 - DEBUG - Response body:
+b''
+2024-12-26 20:19:07,142 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:19:07,142 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:19:07,142 - DEBUG - No retry needed.
+2024-12-26 20:19:07,142 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:07,143 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:07,143 - INFO - Uploaded to S3: CIRCA1941/172855/172855-5.jpg
+2024-12-26 20:19:08,246 - INFO - Product 'https://www.circa1941.com/product-page/late-wwii-usmc-camouflage-mosquito-net-helmet-cover-type-b-1' was updated or inserted successfully.
+2024-12-26 20:19:08,246 - DEBUG - Product URL constructed: https://www.circa1941.com/product-page/pre-wwii-german-commercial-m18-allgemeine-ss-droop-bill-helmet-liner-set
+2024-12-26 20:19:08,794 - DEBUG - Image upload needed for product URL: https://www.circa1941.com/product-page/pre-wwii-german-commercial-m18-allgemeine-ss-droop-bill-helmet-liner-set.
+2024-12-26 20:19:10,125 - DEBUG - https://www.circa1941.com:443 "GET /product-page/pre-wwii-german-commercial-m18-allgemeine-ss-droop-bill-helmet-liner-set HTTP/1.1" 200 None
+2024-12-26 20:19:10,697 - DEBUG - Extracted image URLs: ['https://static.wixstatic.com/media/b39f4e_2d26441aaf4a4ba6b6d192b98036cb05~mv2.jpeg/v1/fill/w_3703,h_2777,al_c,q_85/b39f4e_2d26441aaf4a4ba6b6d192b98036cb05~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_a0dbc06dabef40eb9a9df3bfc89e3894~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_a0dbc06dabef40eb9a9df3bfc89e3894~mv2.jpg', 'https://static.wixstatic.com/media/b39f4e_9bddb5112da143e195b6d823787830e2~mv2.jpeg/v1/fill/w_3942,h_2956,al_c,q_85/b39f4e_9bddb5112da143e195b6d823787830e2~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_3a7e4d925a6343649621a42dcc0d8b23~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_3a7e4d925a6343649621a42dcc0d8b23~mv2.jpg', 'https://static.wixstatic.com/media/b39f4e_0de770e1c4274e329f5b5fd08e262903~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_0de770e1c4274e329f5b5fd08e262903~mv2.jpg', 'https://static.wixstatic.com/media/b39f4e_fa28bb8f483142fc938ed2aeb8793313~mv2.jpeg/v1/fill/w_3723,h_2792,al_c,q_85/b39f4e_fa28bb8f483142fc938ed2aeb8793313~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_1e21058e1f16401db487a0b90ba4f316~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_1e21058e1f16401db487a0b90ba4f316~mv2.jpg', 'https://static.wixstatic.com/media/b39f4e_bb4bab57e27040f4afe4bd57f96cfe98~mv2.jpeg/v1/fill/w_3975,h_2981,al_c,q_85/b39f4e_bb4bab57e27040f4afe4bd57f96cfe98~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_fdc5ecafdbb34d2e822c80d08b418205~mv2.jpeg/v1/fill/w_3763,h_2822,al_c,q_85/b39f4e_fdc5ecafdbb34d2e822c80d08b418205~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_afa1868b862146d38f176ad57e22cd4a~mv2.jpeg/v1/fill/w_3646,h_2734,al_c,q_85/b39f4e_afa1868b862146d38f176ad57e22cd4a~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_9befab719a9d45969c620d6bb3358719~mv2.jpeg/v1/fill/w_3730,h_2798,al_c,q_85/b39f4e_9befab719a9d45969c620d6bb3358719~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_be3ba2c4a1bb4a53b2e6dab539cd150d~mv2.jpeg/v1/fill/w_3754,h_2816,al_c,q_85/b39f4e_be3ba2c4a1bb4a53b2e6dab539cd150d~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_2791332ce61a4231abcc9e73c8ce0018~mv2.jpeg/v1/fill/w_3702,h_2776,al_c,q_85/b39f4e_2791332ce61a4231abcc9e73c8ce0018~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_b7a589bb514a403cba567b1c6acdc103~mv2.jpeg/v1/fill/w_3740,h_2805,al_c,q_85/b39f4e_b7a589bb514a403cba567b1c6acdc103~mv2.jpeg', 'https://static.wixstatic.com/media/b39f4e_a10c2d97619c486bb1110536b937706a~mv2.jpeg/v1/fill/w_3808,h_2856,al_c,q_85/b39f4e_a10c2d97619c486bb1110536b937706a~mv2.jpeg']
+2024-12-26 20:19:10,698 - DEBUG - Scraped data: Title=Pre-WWII German Commercial M18 Allgemeine SS *Droop Bill* Helmet & Liner Set, Price=5000.00, Available=True
+2024-12-26 20:19:11,245 - DEBUG - Product ID for URL 'https://www.circa1941.com/product-page/pre-wwii-german-commercial-m18-allgemeine-ss-droop-bill-helmet-liner-set' is 172856
+2024-12-26 20:19:11,245 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_2d26441aaf4a4ba6b6d192b98036cb05~mv2.jpeg/v1/fill/w_3703,h_2777,al_c,q_85/b39f4e_2d26441aaf4a4ba6b6d192b98036cb05~mv2.jpeg
+2024-12-26 20:19:11,246 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:19:12,171 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_2d26441aaf4a4ba6b6d192b98036cb05~mv2.jpeg/v1/fill/w_3703,h_2777,al_c,q_85/b39f4e_2d26441aaf4a4ba6b6d192b98036cb05~mv2.jpeg HTTP/1.1" 200 820925
+2024-12-26 20:19:12,172 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:19:12,172 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:19:12,172 - DEBUG - Acquiring 0
+2024-12-26 20:19:12,173 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442A840>}) about to wait for the following futures []
+2024-12-26 20:19:12,173 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442A840>}) done waiting for dependent futures
+2024-12-26 20:19:12,173 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442A840>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B024174DD0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024174FB0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024535220>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442A840>}
+2024-12-26 20:19:12,341 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-1.jpeg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024535220> for transfer request: 0.
+2024-12-26 20:19:12,341 - DEBUG - Acquiring 0
+2024-12-26 20:19:12,342 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-1.jpeg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:19:12,342 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:12,342 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-1.jpeg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:19:12,342 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-1.jpeg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A120>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-1.jpeg', 'extra_args': {}}
+2024-12-26 20:19:12,342 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:19:12,343 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:19:12,343 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:19:12,343 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:19:12,343 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:19:12,343 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:12,343 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:12,343 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:19:12,343 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:19:12,343 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:12,344 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172856/172856-1.jpeg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:19:12,344 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:19:12,344 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:19:12,344 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:19:12,345 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:19:12,346 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:19:12,346 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:19:12,346 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:12,346 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:19:12,346 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:19:12,346 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:19:12,346 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172856/172856-1.jpeg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': '9W8zDfVbMaT7PralCfqr5Q==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A120>, 'auth_path': '/militaria-images/CIRCA1941/172856/172856-1.jpeg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-1.jpeg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-1.jpeg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A120>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-1.jpeg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:19:12,347 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:19:12,347 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:19:12,347 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:12,347 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:19:12,347 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:19:12,347 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:12,348 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:19:12,348 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172856/172856-1.jpeg
+
+content-md5:9W8zDfVbMaT7PralCfqr5Q==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111912Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:19:12,348 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111912Z
+20241226/ap-southeast-2/s3/aws4_request
+a38364df08f1f935d120b8ba75272804ca5199b82b2026b338e5b01f9be26de7
+2024-12-26 20:19:12,349 - DEBUG - Signature:
+e22d63adacf621854b2ae3ed58a8767e1dde45c91e8d1058e4d02df66304d9f3
+2024-12-26 20:19:12,349 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:19:12,349 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:19:12,349 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-1.jpeg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'9W8zDfVbMaT7PralCfqr5Q==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111912Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=e22d63adacf621854b2ae3ed58a8767e1dde45c91e8d1058e4d02df66304d9f3', 'amz-sdk-invocation-id': b'f5a26115-f7a1-496d-9d7a-8493177691d5', 'amz-sdk-request': b'attempt=1', 'Content-Length': '820925'}>
+2024-12-26 20:19:12,349 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:19:12,350 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:19:12,492 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:19:14,347 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172856/172856-1.jpeg HTTP/1.1" 200 0
+2024-12-26 20:19:14,348 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:19:14,348 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:19:14,348 - DEBUG - Response headers: {'x-amz-id-2': 'sFcfTpBXQvl3/XOb8to5wxBOfjAlQVvVpglfyM6uVN4LHY5QBkn4UFU3YOzoPRCGwr9Y/dvbO2HrzO+ZihLsfw==', 'x-amz-request-id': 'T0JFXCH8EV1SP3TP', 'Date': 'Thu, 26 Dec 2024 11:19:13 GMT', 'x-amz-version-id': 'URn6qT0KEiwdQ_tH01xMv3n4iZZoxy8h', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"f56f330df55b31a4fb3eb6a509faabe5"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:19:14,348 - DEBUG - Response body:
+b''
+2024-12-26 20:19:14,349 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:19:14,349 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:19:14,349 - DEBUG - No retry needed.
+2024-12-26 20:19:14,349 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:14,349 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:14,349 - INFO - Uploaded to S3: CIRCA1941/172856/172856-1.jpeg
+2024-12-26 20:19:14,350 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_a0dbc06dabef40eb9a9df3bfc89e3894~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_a0dbc06dabef40eb9a9df3bfc89e3894~mv2.jpg
+2024-12-26 20:19:14,351 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:19:15,610 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_a0dbc06dabef40eb9a9df3bfc89e3894~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_a0dbc06dabef40eb9a9df3bfc89e3894~mv2.jpg HTTP/1.1" 200 1584995
+2024-12-26 20:19:15,611 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:19:15,611 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:19:15,611 - DEBUG - Acquiring 0
+2024-12-26 20:19:15,611 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442AE70>}) about to wait for the following futures []
+2024-12-26 20:19:15,612 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442AE70>}) done waiting for dependent futures
+2024-12-26 20:19:15,612 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442AE70>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B0240761E0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024535700>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024535370>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442AE70>}
+2024-12-26 20:19:16,017 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-2.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024535370> for transfer request: 0.
+2024-12-26 20:19:16,018 - DEBUG - Acquiring 0
+2024-12-26 20:19:16,018 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-2.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:19:16,018 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:16,018 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-2.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:19:16,019 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-2.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A390>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-2.jpg', 'extra_args': {}}
+2024-12-26 20:19:16,019 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:19:16,019 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:19:16,019 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:19:16,019 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:19:16,019 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:19:16,019 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:16,020 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:16,020 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:19:16,020 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:19:16,020 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:16,020 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172856/172856-2.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:19:16,021 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:19:16,021 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:19:16,021 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:19:16,021 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:19:16,023 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:19:16,024 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:19:16,024 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:16,024 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:19:16,024 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:19:16,024 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:19:16,024 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172856/172856-2.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': 'Km7/JrkfFONX65Q7J1zLZQ==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A390>, 'auth_path': '/militaria-images/CIRCA1941/172856/172856-2.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-2.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-2.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A390>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-2.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:19:16,025 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:19:16,025 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:19:16,025 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:16,025 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:19:16,026 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:19:16,026 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:16,026 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:19:16,026 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172856/172856-2.jpg
+
+content-md5:Km7/JrkfFONX65Q7J1zLZQ==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111916Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:19:16,026 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111916Z
+20241226/ap-southeast-2/s3/aws4_request
+344d2d0f82b1f09e2606d6f40091942c6999c1c27e87b5aed124133fe165c305
+2024-12-26 20:19:16,027 - DEBUG - Signature:
+be35ec770aaa0efe91efd1b449f58e2fbeb6ff8fef53893d9f7b16c1285e1e69
+2024-12-26 20:19:16,027 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:19:16,027 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:19:16,028 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-2.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'Km7/JrkfFONX65Q7J1zLZQ==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111916Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=be35ec770aaa0efe91efd1b449f58e2fbeb6ff8fef53893d9f7b16c1285e1e69', 'amz-sdk-invocation-id': b'b82611db-f336-4738-b09b-ff8ae6e36c3e', 'amz-sdk-request': b'attempt=1', 'Content-Length': '1584995'}>
+2024-12-26 20:19:16,028 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:19:16,028 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:19:16,170 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:19:19,638 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172856/172856-2.jpg HTTP/1.1" 200 0
+2024-12-26 20:19:19,638 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:19:19,639 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:19:19,639 - DEBUG - Response headers: {'x-amz-id-2': 'yw8SSsbKPDB8HiPDV5JO8IzZgTUqBeKQSrz+HgckaSB2s6eKsn0/AkwsR2z5jYESxCW+30XBWrKxfE/MQDh+3A==', 'x-amz-request-id': 'VF7PT0CE5XGJQQ0Y', 'Date': 'Thu, 26 Dec 2024 11:19:17 GMT', 'x-amz-version-id': 'mbKoq7ZOfE3iGlTyCj3fNjROvhBKA4Qc', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"2a6eff26b91f14e357eb943b275ccb65"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:19:19,639 - DEBUG - Response body:
+b''
+2024-12-26 20:19:19,640 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:19:19,640 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:19:19,640 - DEBUG - No retry needed.
+2024-12-26 20:19:19,640 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:19,640 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:19,641 - INFO - Uploaded to S3: CIRCA1941/172856/172856-2.jpg
+2024-12-26 20:19:19,642 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_9bddb5112da143e195b6d823787830e2~mv2.jpeg/v1/fill/w_3942,h_2956,al_c,q_85/b39f4e_9bddb5112da143e195b6d823787830e2~mv2.jpeg
+2024-12-26 20:19:19,643 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:19:21,097 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_9bddb5112da143e195b6d823787830e2~mv2.jpeg/v1/fill/w_3942,h_2956,al_c,q_85/b39f4e_9bddb5112da143e195b6d823787830e2~mv2.jpeg HTTP/1.1" 200 983406
+2024-12-26 20:19:21,098 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:19:21,098 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:19:21,098 - DEBUG - Acquiring 0
+2024-12-26 20:19:21,099 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442B530>}) about to wait for the following futures []
+2024-12-26 20:19:21,099 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442B530>}) done waiting for dependent futures
+2024-12-26 20:19:21,099 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442B530>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B0244114F0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024174EC0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024535460>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442B530>}
+2024-12-26 20:19:21,207 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-3.jpeg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024535460> for transfer request: 0.
+2024-12-26 20:19:21,207 - DEBUG - Acquiring 0
+2024-12-26 20:19:21,208 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-3.jpeg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:19:21,208 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:21,208 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-3.jpeg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:19:21,208 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-3.jpeg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A1B0>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-3.jpeg', 'extra_args': {}}
+2024-12-26 20:19:21,209 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:19:21,209 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:19:21,209 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:19:21,209 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:19:21,209 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:19:21,209 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:21,210 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:21,210 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:19:21,210 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:19:21,210 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:21,210 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172856/172856-3.jpeg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:19:21,211 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:19:21,211 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:19:21,211 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:19:21,211 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:19:21,213 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:19:21,213 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:19:21,213 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:21,213 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:19:21,213 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:19:21,213 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:19:21,214 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172856/172856-3.jpeg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': '7m1ps/lQicktBuasPymJsg==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A1B0>, 'auth_path': '/militaria-images/CIRCA1941/172856/172856-3.jpeg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-3.jpeg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-3.jpeg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A1B0>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-3.jpeg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:19:21,214 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:19:21,214 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:19:21,214 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:21,215 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:19:21,215 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:19:21,215 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:21,215 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:19:21,215 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172856/172856-3.jpeg
+
+content-md5:7m1ps/lQicktBuasPymJsg==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111921Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:19:21,216 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111921Z
+20241226/ap-southeast-2/s3/aws4_request
+97a19507f352a2498e3fbec3e3388e9ba94f327c84dfebb26d5b94462880a7f0
+2024-12-26 20:19:21,216 - DEBUG - Signature:
+baba60376b77181c1f1496ee61d8a0b4430c7e8362a4e1bd5d489bec88da4c3c
+2024-12-26 20:19:21,217 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:19:21,217 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:19:21,217 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-3.jpeg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'7m1ps/lQicktBuasPymJsg==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111921Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=baba60376b77181c1f1496ee61d8a0b4430c7e8362a4e1bd5d489bec88da4c3c', 'amz-sdk-invocation-id': b'4afb0064-8885-4039-a7b0-a525e26e82c0', 'amz-sdk-request': b'attempt=1', 'Content-Length': '983406'}>
+2024-12-26 20:19:21,218 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:19:21,218 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:19:21,359 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:19:23,613 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172856/172856-3.jpeg HTTP/1.1" 200 0
+2024-12-26 20:19:23,613 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:19:23,613 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:19:23,613 - DEBUG - Response headers: {'x-amz-id-2': 'PcKKgpbaZpIhfVzLRos02h/2hGmh2apKAwGKaaToILeKa8Ty8damrd7S6wAOzElnpZAxQ3Fy95XFT53Qs594aA==', 'x-amz-request-id': 'YS08FWAPJGD1FPGX', 'Date': 'Thu, 26 Dec 2024 11:19:22 GMT', 'x-amz-version-id': 'IdfnJKfW7ULCxPiRknVtrYZiJrcfLy63', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"ee6d69b3f95089c92d06e6ac3f2989b2"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:19:23,614 - DEBUG - Response body:
+b''
+2024-12-26 20:19:23,614 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:19:23,614 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:19:23,614 - DEBUG - No retry needed.
+2024-12-26 20:19:23,614 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:23,614 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:23,615 - INFO - Uploaded to S3: CIRCA1941/172856/172856-3.jpeg
+2024-12-26 20:19:23,616 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_3a7e4d925a6343649621a42dcc0d8b23~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_3a7e4d925a6343649621a42dcc0d8b23~mv2.jpg
+2024-12-26 20:19:23,617 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:19:25,164 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_3a7e4d925a6343649621a42dcc0d8b23~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_3a7e4d925a6343649621a42dcc0d8b23~mv2.jpg HTTP/1.1" 200 1777678
+2024-12-26 20:19:25,165 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:19:25,165 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:19:25,165 - DEBUG - Acquiring 0
+2024-12-26 20:19:25,166 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442BAA0>}) about to wait for the following futures []
+2024-12-26 20:19:25,166 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442BAA0>}) done waiting for dependent futures
+2024-12-26 20:19:25,166 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442BAA0>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B0244114F0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024174AA0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024534E90>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442BAA0>}
+2024-12-26 20:19:25,594 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-4.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024534E90> for transfer request: 0.
+2024-12-26 20:19:25,594 - DEBUG - Acquiring 0
+2024-12-26 20:19:25,595 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-4.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:19:25,595 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:25,595 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-4.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:19:25,595 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-4.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A4B0>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-4.jpg', 'extra_args': {}}
+2024-12-26 20:19:25,595 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:19:25,595 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:19:25,595 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:19:25,596 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:19:25,596 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:19:25,596 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:25,596 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:25,596 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:19:25,596 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:19:25,596 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:25,596 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172856/172856-4.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:19:25,597 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:19:25,597 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:19:25,597 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:19:25,597 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:19:25,600 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:19:25,600 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:19:25,600 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:25,600 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:19:25,600 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:19:25,601 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:19:25,601 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172856/172856-4.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': '4vLk8vcvqMRdUFgq5HggrQ==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A4B0>, 'auth_path': '/militaria-images/CIRCA1941/172856/172856-4.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-4.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-4.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442A4B0>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-4.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:19:25,601 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:19:25,601 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:19:25,602 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:25,602 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:19:25,602 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:19:25,602 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:25,602 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:19:25,602 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172856/172856-4.jpg
+
+content-md5:4vLk8vcvqMRdUFgq5HggrQ==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111925Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:19:25,603 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111925Z
+20241226/ap-southeast-2/s3/aws4_request
+c1772b36db62603d200462311cfa3fbbc8a6f7da0d2bf36e8c18cf89ad0cf5fd
+2024-12-26 20:19:25,603 - DEBUG - Signature:
+e0e6ee14829689e66c99336a99f806ed20325716707d8331a65f20d53ac5eacd
+2024-12-26 20:19:25,604 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:19:25,604 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:19:25,604 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-4.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'4vLk8vcvqMRdUFgq5HggrQ==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111925Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=e0e6ee14829689e66c99336a99f806ed20325716707d8331a65f20d53ac5eacd', 'amz-sdk-invocation-id': b'a4e0abc0-584b-4c90-90aa-5c4d329dc4d8', 'amz-sdk-request': b'attempt=1', 'Content-Length': '1777678'}>
+2024-12-26 20:19:25,604 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:19:25,605 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:19:25,747 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:19:29,650 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172856/172856-4.jpg HTTP/1.1" 200 0
+2024-12-26 20:19:29,651 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:19:29,651 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:19:29,651 - DEBUG - Response headers: {'x-amz-id-2': 'T/bjhgxaq0BXBokc/afD8QlwtvZCrQ94DReoH0jT7Rl0pYxO5rsKjZvKvIhoEcaK3fk60HXceTzgHXSDR3oYcw==', 'x-amz-request-id': '6YF8DEQTGMHT8M7Q', 'Date': 'Thu, 26 Dec 2024 11:19:26 GMT', 'x-amz-version-id': 'NZroPkyTUleiShgdBs1_7tClhUGfT4lr', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"e2f2e4f2f72fa8c45d50582ae47820ad"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:19:29,651 - DEBUG - Response body:
+b''
+2024-12-26 20:19:29,652 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:19:29,652 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:19:29,652 - DEBUG - No retry needed.
+2024-12-26 20:19:29,652 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:29,652 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:29,652 - INFO - Uploaded to S3: CIRCA1941/172856/172856-4.jpg
+2024-12-26 20:19:29,654 - DEBUG - Fetching image from https://static.wixstatic.com/media/b39f4e_0de770e1c4274e329f5b5fd08e262903~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_0de770e1c4274e329f5b5fd08e262903~mv2.jpg
+2024-12-26 20:19:29,654 - DEBUG - Starting new HTTPS connection (1): static.wixstatic.com:443
+2024-12-26 20:19:30,837 - DEBUG - https://static.wixstatic.com:443 "GET /media/b39f4e_0de770e1c4274e329f5b5fd08e262903~mv2.jpg/v1/fill/w_4000,h_3000,al_c,q_85/b39f4e_0de770e1c4274e329f5b5fd08e262903~mv2.jpg HTTP/1.1" 200 1502627
+2024-12-26 20:19:30,837 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-12-26 20:19:30,837 - DEBUG - Using default client. pid: 140164, thread: 127764
+2024-12-26 20:19:30,838 - DEBUG - Acquiring 0
+2024-12-26 20:19:30,838 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442BDA0>}) about to wait for the following futures []
+2024-12-26 20:19:30,838 - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442BDA0>}) done waiting for dependent futures
+2024-12-26 20:19:30,838 - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442BDA0>}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001B023DDCB00>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001B024535700>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001B024176EA0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001B02442BDA0>}
+2024-12-26 20:19:31,151 - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-5.jpg', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001B024176EA0> for transfer request: 0.
+2024-12-26 20:19:31,151 - DEBUG - Acquiring 0
+2024-12-26 20:19:31,152 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-5.jpg', 'extra_args': {}}) about to wait for the following futures []
+2024-12-26 20:19:31,152 - DEBUG - Releasing acquire 0/None
+2024-12-26 20:19:31,153 - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-5.jpg', 'extra_args': {}}) done waiting for dependent futures
+2024-12-26 20:19:31,153 - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-5.jpg', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001B022E28470>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001B02442AAE0>, 'bucket': 'militaria-images', 'key': 'CIRCA1941/172856/172856-5.jpg', 'extra_args': {}}
+2024-12-26 20:19:31,153 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001B0231F5260>
+2024-12-26 20:19:31,153 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001B0231F4540>
+2024-12-26 20:19:31,153 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001B0231F5C60>
+2024-12-26 20:19:31,153 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001B0231F44A0>
+2024-12-26 20:19:31,154 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001B0231F6660>
+2024-12-26 20:19:31,154 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:31,154 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:31,154 - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001B0231F42C0>
+2024-12-26 20:19:31,154 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001B0231F6840>
+2024-12-26 20:19:31,154 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:31,154 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'militaria-images', 'Region': 'ap-southeast-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'CIRCA1941/172856/172856-5.jpg', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-12-26 20:19:31,155 - DEBUG - Endpoint provider result: https://militaria-images.s3.ap-southeast-2.amazonaws.com
+2024-12-26 20:19:31,155 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-12-26 20:19:31,155 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-12-26 20:19:31,155 - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x000001B0230385E0>
+2024-12-26 20:19:31,157 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001B0231F4860>
+2024-12-26 20:19:31,157 - DEBUG - Adding expect 100 continue header to request.
+2024-12-26 20:19:31,157 - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:31,158 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001B0231CF600>
+2024-12-26 20:19:31,158 - DEBUG - Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001B0231F6D40>
+2024-12-26 20:19:31,158 - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001B0231F5DA0>
+2024-12-26 20:19:31,158 - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/CIRCA1941/172856/172856-5.jpg', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': 'EjfFwouF9pVwPHVdGZ5TQg==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442AAE0>, 'auth_path': '/militaria-images/CIRCA1941/172856/172856-5.jpg', 'url': 'https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-5.jpg', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x000001B023F43980>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'militaria-images', 'params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-5.jpg', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001B02442AAE0>}}, 'input_params': {'Bucket': 'militaria-images', 'Key': 'CIRCA1941/172856/172856-5.jpg'}, 'signing': {'region': 'ap-southeast-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-southeast-2'}]}}}
+2024-12-26 20:19:31,159 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001B023FD8CC0>
+2024-12-26 20:19:31,159 - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B023F72BA0>>
+2024-12-26 20:19:31,159 - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001B021A07EC0>>
+2024-12-26 20:19:31,159 - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001B0231F40E0>
+2024-12-26 20:19:31,159 - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001B0231F67A0>
+2024-12-26 20:19:31,160 - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001B02405FF50>>
+2024-12-26 20:19:31,160 - DEBUG - Calculating signature using v4 auth.
+2024-12-26 20:19:31,160 - DEBUG - CanonicalRequest:
+PUT
+/CIRCA1941/172856/172856-5.jpg
+
+content-md5:EjfFwouF9pVwPHVdGZ5TQg==
+host:militaria-images.s3.ap-southeast-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20241226T111931Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2024-12-26 20:19:31,161 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20241226T111931Z
+20241226/ap-southeast-2/s3/aws4_request
+85c7926aa180bbf70f0c225c37c203512c9d823369fc54864c4c018419c1e989
+2024-12-26 20:19:31,161 - DEBUG - Signature:
+a25fcf88e65cb04ac97ce1124fbca59560672981eb17b570550e76faeba2a977
+2024-12-26 20:19:31,161 - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001B023FD8E00>
+2024-12-26 20:19:31,161 - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001B0231F65C0>
+2024-12-26 20:19:31,162 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://militaria-images.s3.ap-southeast-2.amazonaws.com/CIRCA1941/172856/172856-5.jpg, headers={'User-Agent': b'Boto3/1.35.84 md/Botocore#1.35.84 ua/2.0 os/windows#11 md/arch#amd64 lang/python#3.12.0 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.35.84', 'Content-MD5': b'EjfFwouF9pVwPHVdGZ5TQg==', 'Expect': b'100-continue', 'X-Amz-Date': b'20241226T111931Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAVWABJ6UA6P67D2EB/20241226/ap-southeast-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=a25fcf88e65cb04ac97ce1124fbca59560672981eb17b570550e76faeba2a977', 'amz-sdk-invocation-id': b'3e94ba1d-3293-4aee-bba7-5695eb282558', 'amz-sdk-request': b'attempt=1', 'Content-Length': '1502627'}>
+2024-12-26 20:19:31,162 - DEBUG - Certificate path: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-12-26 20:19:31,163 - DEBUG - Waiting for 100 Continue response.
+2024-12-26 20:19:31,304 - DEBUG - 100 Continue response seen, now sending request body.
+2024-12-26 20:19:34,582 - DEBUG - https://militaria-images.s3.ap-southeast-2.amazonaws.com:443 "PUT /CIRCA1941/172856/172856-5.jpg HTTP/1.1" 200 0
+2024-12-26 20:19:34,582 - DEBUG - Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001B0231F6B60>
+2024-12-26 20:19:34,582 - DEBUG - Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001B0231F6980>
+2024-12-26 20:19:34,583 - DEBUG - Response headers: {'x-amz-id-2': '4ltdVllNFHr+awP3FtOqdic/e4l9ev7zvgckdZR7HBiUtGHqJeoKJnt3bzS7szczl0Dx6QkzWx2iG+YeMop/1w==', 'x-amz-request-id': '0951K3GTKA81A4YK', 'Date': 'Thu, 26 Dec 2024 11:19:32 GMT', 'x-amz-version-id': 'EKnv86m5ErY4jHo1qYFX7a9u3Yy1YEug', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"1237c5c28b85f695703c755d199e5342"', 'Content-Length': '0', 'Server': 'AmazonS3'}
+2024-12-26 20:19:34,583 - DEBUG - Response body:
+b''
+2024-12-26 20:19:34,583 - DEBUG - Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001B0231F6CA0>
+2024-12-26 20:19:34,584 - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B023F72E10>
+2024-12-26 20:19:34,584 - DEBUG - No retry needed.
+2024-12-26 20:19:34,584 - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001B023F72AB0>>
+2024-12-26 20:19:34,584 - DEBUG - Releasing acquire 0/None
