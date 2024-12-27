@@ -74,11 +74,14 @@ def process_product(
     Process a single product by constructing its URL, scraping details, and updating/inserting into the database.
     """
     try:
+        # Increment the total number of products processed
         urlCount += 1
+
         # Check if the target match count has been reached
         if consecutiveMatches >= targetMatch:
             logging.info(f"Target match count ({targetMatch}) reached. Halting product processing.")
             return urlCount, consecutiveMatches
+
         # Create the product URL and if it doesn't work, stop.
         productUrl = construct_product_url(productUrlElement, base_url, product)
         if not productUrl:
@@ -87,13 +90,13 @@ def process_product(
 
         # Check if the product's images have already been uploaded
         if dataManager.should_skip_image_upload(productUrl):
-            consecutiveMatches += 1
+            consecutiveMatches += 1  # Increment because the product is already known
             logging.info(f"Skipping image upload for product: {productUrl} as images are already uploaded.")
             return urlCount, consecutiveMatches
-
-        if not dataManager.should_skip_image_upload(productUrl):
+        else:
+            # Reset consecutiveMatches because this product is new
             consecutiveMatches = 0
-            return urlCount, consecutiveMatches
+
         # Fetch and scrape the product details
         try:
             title, description, price, available, original_image_urls, uploaded_image_urls = fetch_and_scrape_product(
@@ -131,6 +134,7 @@ def process_product(
             logging.info(f"Product '{productUrl}' was updated or inserted successfully.")
         else:
             logging.info(f"No changes made for product '{productUrl}'.")
+
     except Exception as e:
         logging.error(f"Error processing product: {e}")
     return urlCount, consecutiveMatches
