@@ -16,6 +16,32 @@ DEFAULT_PC_SETTINGS = {
     "s3Cred"       : r'C:/Users/keena/Desktop/Cloud Militaria Scraper/s3_credentials.json'
 }
 
+# Which sites does the user want to process?
+def site_choice(jsonData):
+    print("Available sites:")
+    for idx, site in enumerate(jsonData):
+        print(f"{idx + 1}. {site['source']}")
+
+    try:
+        choice = input("Select sites to scrape (e.g., '1,3-5,7'): ")
+        selected_indices = set()
+        for part in choice.split(','):
+            if '-' in part:
+                start, end = map(int, part.split('-'))
+                selected_indices.update(range(start - 1, end))
+            else:
+                selected_indices.add(int(part) - 1)
+
+        selected_indices = sorted(selected_indices)
+        if any(idx < 0 or idx >= len(jsonData) for idx in selected_indices):
+            raise ValueError("One or more indices are out of range.")
+
+        selected_sites = [jsonData[idx] for idx in selected_indices]
+        return selected_sites
+    except ValueError as e:
+        logging.error(f"Invalid selection: {e}")
+        return 
+
 def get_user_settings():
     """
     Prompt user to select settings for infoLocation, pgAdmin credentials, and selector JSON file.

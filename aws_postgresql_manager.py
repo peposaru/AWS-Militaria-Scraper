@@ -5,7 +5,7 @@ from psycopg2 import pool
 class PostgreSQLProcessor:
     def __init__(self, credFile):
         """
-        Initialize PostgreSQL connection pool with credentials from a file.
+        Initialize PostgreSQL connection with credentials from a file.
 
         Args:
             credFile (str): Path to the credentials JSON file.
@@ -17,11 +17,11 @@ class PostgreSQLProcessor:
             # Initialize a connection pool with 5-10 connections
             self.pool = pool.SimpleConnectionPool(
                 5, 10,
-                user=creds["userName"],
-                password=creds["pwd"],
-                host=creds["hostName"],
-                database=creds["dataBase"],
-                port=creds["portId"]
+                user      =creds["userName"],
+                password  =creds["pwd"],
+                host      =creds["hostName"],
+                database  =creds["dataBase"],
+                port      =creds["portId"]
             )
 
             logging.info("PostgreSQL connection pool initialized.")

@@ -3,6 +3,33 @@ import logging
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+def run_availability_check_loop(webScrapeManager, dataManager, jsonManager, selectorJson):
+    """
+    Run the availability check in a loop with a user-defined sleep interval.
+    """
+    # Prompt the user for sleep duration
+    try:
+        sleep_minutes = int(input("Enter the number of minutes to sleep between checks: "))
+    except ValueError:
+        print("Invalid input. Defaulting to 480 minutes (8 hours).")
+        sleep_minutes = 480
+
+    # Convert minutes to seconds
+    sleep_seconds = sleep_minutes * 60
+
+    # Run the availability check in a loop
+    while True:
+        try:
+            check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
+            print(f"Availability check completed. Sleeping for {sleep_minutes} minutes...")
+            time.sleep(sleep_seconds)
+        except KeyboardInterrupt:
+            print("Availability check loop interrupted by user. Exiting...")
+            break
+        except Exception as e:
+            logging.error(f"Error during availability check loop: {e}")
+            break
+
 def validate_json_profile(militariaSite):
     """Validate required keys in JSON profile."""
     required_keys = {"source", "product_url_element", "productsPageUrl", "base_url"}

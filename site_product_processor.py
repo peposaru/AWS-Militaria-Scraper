@@ -3,6 +3,66 @@ import logging, json
 import time
 from urllib.parse import urlparse
 
+#Process individual site.
+def process_site(webScrapeManager, dataManager, jsonManager, prints, site, targetMatch, runCycle, productsProcessed, s3_manager):
+    """
+    Processes a single site based on the JSON selector configuration, scraping and updating/inserting products.
+    """
+    (
+        conflict, nation, item_type, grade, source, pageIncrement, currency, products,
+        productUrlElement, titleElement, descElement, priceElement, availableElement,
+        productsPageUrl, base_url, imageElement
+    ) = jsonManager.jsonSelectors(site)
+
+    urlCount           = 0
+    consecutiveMatches = 0
+    page               = 0
+
+    # While the target number of consecutive matches have no been met, keep the program running.
+    while True:
+        if consecutiveMatches == targetMatch:
+            # Ensure termination when the targetMatch is reached
+            logging.info(f"Target match count ({targetMatch}) reached. Exiting the processing loop.")
+            break
+
+        # Generate link for the sites products page. Typically the new items page.
+        productsPage = base_url + productsPageUrl.format(page=page)
+        logging.debug(f"Navigating to products page: {productsPage}")
+
+        # Create a list of urls extracted from products page. Typically the new items page.
+        product_list = fetch_products_from_page(webScrapeManager, productsPage, products)
+        if not product_list:
+            logging.warning(f"No products found on page: {productsPage}")
+            break
+
+        prints.newInstance(source, productsPage, runCycle, productsProcessed)
+
+        for product in product_list:
+            if not product:
+                logging.error("Empty product element found, skipping.")
+                continue
+
+            # Process each product and track updates
+            urlCount, consecutiveMatches = process_product(
+                webScrapeManager, dataManager, prints, product, source, base_url, currency,
+                conflict, nation, item_type, page, urlCount, consecutiveMatches, targetMatch,
+                productUrlElement, titleElement, descElement, priceElement, availableElement,
+                imageElement, s3_manager 
+            )
+
+            # Stop if the target match count is reached
+            if consecutiveMatches == targetMatch:
+                logging.info(f"Target match count ({targetMatch}) reached. Terminating site processing.")
+                prints.terminating(source, consecutiveMatches, targetMatch, runCycle, productsProcessed)
+                return
+
+        # Increment to the next page
+        page += int(pageIncrement)
+
+    logging.info(f"Finished processing site: {source}")
+
+
+
 # Process a single product
 def process_product(
     webScrapeManager, dataManager, prints, product, source, base_url, currency,
@@ -14,7 +74,12 @@ def process_product(
     Process a single product by constructing its URL, scraping details, and updating/inserting into the database.
     """
     try:
-        # Dynamically evaluate the product URL element
+        urlCount += 1
+        # Check if the target match count has been reached
+        if consecutiveMatches >= targetMatch:
+            logging.info(f"Target match count ({targetMatch}) reached. Halting product processing.")
+            return urlCount, consecutiveMatches
+        # Create the product URL and if it doesn't work, stop.
         productUrl = construct_product_url(productUrlElement, base_url, product)
         if not productUrl:
             logging.warning("Product URL is invalid. Skipping this product.")
@@ -22,9 +87,13 @@ def process_product(
 
         # Check if the product's images have already been uploaded
         if dataManager.should_skip_image_upload(productUrl):
+            consecutiveMatches += 1
             logging.info(f"Skipping image upload for product: {productUrl} as images are already uploaded.")
             return urlCount, consecutiveMatches
 
+        if not dataManager.should_skip_image_upload(productUrl):
+            consecutiveMatches = 0
+            return urlCount, consecutiveMatches
         # Fetch and scrape the product details
         try:
             title, description, price, available, original_image_urls, uploaded_image_urls = fetch_and_scrape_product(
@@ -52,6 +121,11 @@ def process_product(
             targetMatch, original_image_urls, uploaded_image_urls, s3_manager
         )
 
+        # Stop processing immediately if the target match count is reached after updating
+        if consecutiveMatches >= targetMatch:
+            logging.info(f"Target match count ({targetMatch}) reached after processing product: {productUrl}.")
+            return urlCount, consecutiveMatches
+
         # Log based on whether the product was updated or not
         if updated:
             logging.info(f"Product '{productUrl}' was updated or inserted successfully.")
@@ -61,9 +135,8 @@ def process_product(
         logging.error(f"Error processing product: {e}")
     return urlCount, consecutiveMatches
 
-
+# Get the list of products from the products page.
 def fetch_products_from_page(webScrapeManager, productsPage, productsSelector):
-    """Fetch the product list from a site page using the provided selector."""
     soup = webScrapeManager.readProductPage(productsPage)
     if soup is None:
         logging.warning(f"Failed to load products page: {productsPage}")
@@ -207,54 +280,3 @@ def update_or_insert_product(
     except Exception as e:
         logging.error(f"Error updating or inserting product: {e}")
     return urlCount + 1, consecutiveMatches, updated
-
-
-def process_site(webScrapeManager, dataManager, jsonManager, prints, site, targetMatch, runCycle, productsProcessed, s3_manager):
-    """
-    Processes a single site based on the JSON selector configuration, scraping and updating/inserting products.
-    """
-    (
-        conflict, nation, item_type, grade, source, pageIncrement, currency, products,
-        productUrlElement, titleElement, descElement, priceElement, availableElement,
-        productsPageUrl, base_url, imageElement
-    ) = jsonManager.jsonSelectors(site)
-
-    urlCount = 0
-    consecutiveMatches = 0
-    page = 0
-
-    while consecutiveMatches != targetMatch:
-        productsPage = base_url + productsPageUrl.format(page=page)
-        logging.debug(f"Navigating to products page: {productsPage}")
-
-        product_list = fetch_products_from_page(webScrapeManager, productsPage, products)
-        if not product_list:
-            logging.warning(f"No products found on page: {productsPage}")
-            break
-
-        prints.newInstance(source, productsPage, runCycle, productsProcessed)
-
-        for product in product_list:
-            if not product:
-                logging.info("Empty product element found, skipping.")
-                continue
-
-            # Process each product and track updates
-            urlCount, consecutiveMatches = process_product(
-                webScrapeManager, dataManager, prints, product, source, base_url, currency,
-                conflict, nation, item_type, page, urlCount, consecutiveMatches, targetMatch,
-                productUrlElement, titleElement, descElement, priceElement, availableElement,
-                imageElement, s3_manager  # Passes the updated S3 manager handling to process_product
-            )
-
-            # Stop if the target match count is reached
-            if consecutiveMatches == targetMatch:
-                logging.info(f"Target match count ({targetMatch}) reached. Terminating site processing.")
-                prints.terminating(source, consecutiveMatches, targetMatch, runCycle, productsProcessed)
-                return
-
-        # Increment to the next page
-        page += int(pageIncrement)
-
-    logging.info(f"Finished processing site: {source}")
-

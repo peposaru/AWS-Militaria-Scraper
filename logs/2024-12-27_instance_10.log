@@ -1,0 +1,277 @@
+2024-12-27 23:54:29,909 - INFO - Logging initialized. Log file: logs\2024-12-27_instance_10.log
+2024-12-27 23:54:33,601 - WARNING - 
+------------------------------------------------------------
+PROGRAM INITIALIZED 2024-12-27 23:54:33.601654
+------------------------------------------------------------
+2024-12-27 23:54:39,013 - INFO - PostgreSQL connection pool initialized.
+2024-12-27 23:54:39,015 - DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2024-12-27 23:54:39,016 - DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+2024-12-27 23:54:39,018 - DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2024-12-27 23:54:39,019 - DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2024-12-27 23:54:39,019 - DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2024-12-27 23:54:39,020 - DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2024-12-27 23:54:39,020 - DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2024-12-27 23:54:39,022 - DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2024-12-27 23:54:39,022 - DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2024-12-27 23:54:39,023 - DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2024-12-27 23:54:39,023 - DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2024-12-27 23:54:39,084 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\endpoints.json
+2024-12-27 23:54:39,095 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\sdk-default-configuration.json
+2024-12-27 23:54:39,096 - DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x00000218A8A4E700>
+2024-12-27 23:54:39,342 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\service-2.json.gz
+2024-12-27 23:54:39,349 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\service-2.sdk-extras.json
+2024-12-27 23:54:39,405 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\s3\2006-03-01\endpoint-rule-set-1.json.gz
+2024-12-27 23:54:39,409 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\partitions.json
+2024-12-27 23:54:39,410 - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x00000218A898B560>
+2024-12-27 23:54:39,410 - DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x00000218A8AEA520>
+2024-12-27 23:54:39,460 - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x00000218A898B2E0>
+2024-12-27 23:54:39,460 - DEBUG - Looking for endpoint for s3 via: environment_service
+2024-12-27 23:54:39,460 - DEBUG - Looking for endpoint for s3 via: environment_global
+2024-12-27 23:54:39,460 - DEBUG - Looking for endpoint for s3 via: config_service
+2024-12-27 23:54:39,460 - DEBUG - Looking for endpoint for s3 via: config_global
+2024-12-27 23:54:39,460 - DEBUG - No configured endpoint found.
+2024-12-27 23:54:39,462 - DEBUG - Setting s3 timeout as (60, 60)
+2024-12-27 23:54:39,479 - DEBUG - Loading JSON file: C:\Users\keena\AppData\Local\Programs\Python\Python312\Lib\site-packages\botocore\data\_retry.json
+2024-12-27 23:54:39,480 - DEBUG - Registering retry handlers for service: s3
+2024-12-27 23:54:39,480 - DEBUG - Registering S3 region redirector handler
+2024-12-27 23:54:39,481 - DEBUG - Registering S3Express Identity Resolver
+2024-12-27 23:54:39,481 - INFO - S3Manager initialized for bucket militaria-images
+2024-12-27 23:54:43,201 - DEBUG - Navigating to products page: https://oorlogsspullen.nl/product-categorie/new/page/0/
+2024-12-27 23:54:43,205 - DEBUG - Starting new HTTPS connection (1): oorlogsspullen.nl:443
+2024-12-27 23:54:46,167 - DEBUG - https://oorlogsspullen.nl:443 "GET /product-categorie/new/page/0/ HTTP/1.1" 200 21121
+2024-12-27 23:54:46,446 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-27 23:54:46,446 - INFO - MILITARIA SITE      : OORLOGSSPULLEN
+2024-12-27 23:54:46,446 - INFO - PRODUCTS URL        : https://oorlogsspullen.nl/product-categorie/new/page/0/
+2024-12-27 23:54:46,447 - INFO - CYCLES RUN          : 0
+2024-12-27 23:54:46,447 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-27 23:54:46,447 - INFO - TIMESTAMP           : 2024-12-27 23:54:46.446169
+2024-12-27 23:54:46,447 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-army-snow-camouflage-trousers-7/
+2024-12-27 23:54:46,948 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-army-snow-camouflage-trousers-7/.
+2024-12-27 23:54:46,948 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-army-snow-camouflage-trousers-7/ as images are already uploaded.
+2024-12-27 23:54:46,949 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-bank-document-grouping-nsb-leader-anton-mussert/
+2024-12-27 23:54:47,443 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-bank-document-grouping-nsb-leader-anton-mussert/.
+2024-12-27 23:54:47,443 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-bank-document-grouping-nsb-leader-anton-mussert/ as images are already uploaded.
+2024-12-27 23:54:47,443 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-red-cross-letter-guernsey-island-somerset/
+2024-12-27 23:54:47,944 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-red-cross-letter-guernsey-island-somerset/.
+2024-12-27 23:54:47,944 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-red-cross-letter-guernsey-island-somerset/ as images are already uploaded.
+2024-12-27 23:54:47,944 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-south-african-sanp-greyshemde-uniform/
+2024-12-27 23:54:48,417 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-south-african-sanp-greyshemde-uniform/.
+2024-12-27 23:54:48,417 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-south-african-sanp-greyshemde-uniform/ as images are already uploaded.
+2024-12-27 23:54:48,418 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-baugnez-4/
+2024-12-27 23:54:48,889 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-baugnez-4/.
+2024-12-27 23:54:48,890 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-baugnez-4/ as images are already uploaded.
+2024-12-27 23:54:48,890 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-police-fn-m25-holster/
+2024-12-27 23:54:49,390 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-police-fn-m25-holster/.
+2024-12-27 23:54:49,390 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-police-fn-m25-holster/ as images are already uploaded.
+2024-12-27 23:54:49,391 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-luchtbeschermingsdienst-helmet-39/
+2024-12-27 23:54:49,861 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-luchtbeschermingsdienst-helmet-39/.
+2024-12-27 23:54:49,862 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-luchtbeschermingsdienst-helmet-39/ as images are already uploaded.
+2024-12-27 23:54:49,862 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-durbuy-clavier/
+2024-12-27 23:54:50,332 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-durbuy-clavier/.
+2024-12-27 23:54:50,333 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-durbuy-clavier/ as images are already uploaded.
+2024-12-27 23:54:50,333 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-ardennes-antitank-minefield-sketches-maps-area-near-vielsalm/
+2024-12-27 23:54:50,806 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-ardennes-antitank-minefield-sketches-maps-area-near-vielsalm/.
+2024-12-27 23:54:50,807 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-ardennes-antitank-minefield-sketches-maps-area-near-vielsalm/ as images are already uploaded.
+2024-12-27 23:54:50,807 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-8/
+2024-12-27 23:54:51,279 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-8/.
+2024-12-27 23:54:51,279 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-8/ as images are already uploaded.
+2024-12-27 23:54:51,279 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-7/
+2024-12-27 23:54:51,751 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-7/.
+2024-12-27 23:54:51,751 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-7/ as images are already uploaded.
+2024-12-27 23:54:51,752 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-6/
+2024-12-27 23:54:52,221 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-6/.
+2024-12-27 23:54:52,222 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-6/ as images are already uploaded.
+2024-12-27 23:54:52,222 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-nsnap-magazine-rappard-2/
+2024-12-27 23:54:52,692 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-nsnap-magazine-rappard-2/.
+2024-12-27 23:54:52,693 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-nsnap-magazine-rappard-2/ as images are already uploaded.
+2024-12-27 23:54:52,693 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-officers-raincoat/
+2024-12-27 23:54:53,169 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-officers-raincoat/.
+2024-12-27 23:54:53,169 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-officers-raincoat/ as images are already uploaded.
+2024-12-27 23:54:53,169 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-wh-m36-medical-major-field-jacket/
+2024-12-27 23:54:53,639 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-wh-m36-medical-major-field-jacket/.
+2024-12-27 23:54:53,639 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-wh-m36-medical-major-field-jacket/ as images are already uploaded.
+2024-12-27 23:54:53,640 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-red-cross-letter-utrecht-london/
+2024-12-27 23:54:54,119 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-red-cross-letter-utrecht-london/.
+2024-12-27 23:54:54,119 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-red-cross-letter-utrecht-london/ as images are already uploaded.
+2024-12-27 23:54:54,119 - DEBUG - Navigating to products page: https://oorlogsspullen.nl/product-categorie/new/page/1/
+2024-12-27 23:54:54,121 - DEBUG - Resetting dropped connection: oorlogsspullen.nl
+2024-12-27 23:54:56,653 - DEBUG - https://oorlogsspullen.nl:443 "GET /product-categorie/new/page/1/ HTTP/1.1" 301 0
+2024-12-27 23:54:58,315 - DEBUG - https://oorlogsspullen.nl:443 "GET /product-categorie/new/ HTTP/1.1" 200 21121
+2024-12-27 23:54:58,597 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-27 23:54:58,598 - INFO - MILITARIA SITE      : OORLOGSSPULLEN
+2024-12-27 23:54:58,598 - INFO - PRODUCTS URL        : https://oorlogsspullen.nl/product-categorie/new/page/1/
+2024-12-27 23:54:58,598 - INFO - CYCLES RUN          : 0
+2024-12-27 23:54:58,598 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-27 23:54:58,598 - INFO - TIMESTAMP           : 2024-12-27 23:54:58.597756
+2024-12-27 23:54:58,599 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-army-snow-camouflage-trousers-7/
+2024-12-27 23:54:59,070 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-army-snow-camouflage-trousers-7/.
+2024-12-27 23:54:59,071 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-army-snow-camouflage-trousers-7/ as images are already uploaded.
+2024-12-27 23:54:59,071 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-bank-document-grouping-nsb-leader-anton-mussert/
+2024-12-27 23:54:59,544 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-bank-document-grouping-nsb-leader-anton-mussert/.
+2024-12-27 23:54:59,544 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-bank-document-grouping-nsb-leader-anton-mussert/ as images are already uploaded.
+2024-12-27 23:54:59,544 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-red-cross-letter-guernsey-island-somerset/
+2024-12-27 23:55:00,017 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-red-cross-letter-guernsey-island-somerset/.
+2024-12-27 23:55:00,017 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-red-cross-letter-guernsey-island-somerset/ as images are already uploaded.
+2024-12-27 23:55:00,018 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-south-african-sanp-greyshemde-uniform/
+2024-12-27 23:55:00,489 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-south-african-sanp-greyshemde-uniform/.
+2024-12-27 23:55:00,489 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-south-african-sanp-greyshemde-uniform/ as images are already uploaded.
+2024-12-27 23:55:00,489 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-baugnez-4/
+2024-12-27 23:55:00,961 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-baugnez-4/.
+2024-12-27 23:55:00,962 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-baugnez-4/ as images are already uploaded.
+2024-12-27 23:55:00,962 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-police-fn-m25-holster/
+2024-12-27 23:55:01,738 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-police-fn-m25-holster/.
+2024-12-27 23:55:01,738 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-police-fn-m25-holster/ as images are already uploaded.
+2024-12-27 23:55:01,739 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-luchtbeschermingsdienst-helmet-39/
+2024-12-27 23:55:02,213 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-luchtbeschermingsdienst-helmet-39/.
+2024-12-27 23:55:02,213 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-luchtbeschermingsdienst-helmet-39/ as images are already uploaded.
+2024-12-27 23:55:02,214 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-durbuy-clavier/
+2024-12-27 23:55:02,690 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-durbuy-clavier/.
+2024-12-27 23:55:02,690 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-battle-of-the-bulge-antitank-minefield-sketch-map-area-of-durbuy-clavier/ as images are already uploaded.
+2024-12-27 23:55:02,690 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-ardennes-antitank-minefield-sketches-maps-area-near-vielsalm/
+2024-12-27 23:55:03,205 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-ardennes-antitank-minefield-sketches-maps-area-near-vielsalm/.
+2024-12-27 23:55:03,205 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-ardennes-antitank-minefield-sketches-maps-area-near-vielsalm/ as images are already uploaded.
+2024-12-27 23:55:03,205 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-8/
+2024-12-27 23:55:03,686 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-8/.
+2024-12-27 23:55:03,687 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-8/ as images are already uploaded.
+2024-12-27 23:55:03,687 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-7/
+2024-12-27 23:55:04,160 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-7/.
+2024-12-27 23:55:04,160 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-7/ as images are already uploaded.
+2024-12-27 23:55:04,161 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-6/
+2024-12-27 23:55:04,633 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-6/.
+2024-12-27 23:55:04,633 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-italian-waffen-ss-newspaper-6/ as images are already uploaded.
+2024-12-27 23:55:04,634 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-nsnap-magazine-rappard-2/
+2024-12-27 23:55:05,105 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-nsnap-magazine-rappard-2/.
+2024-12-27 23:55:05,106 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-nsnap-magazine-rappard-2/ as images are already uploaded.
+2024-12-27 23:55:05,106 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-officers-raincoat/
+2024-12-27 23:55:05,581 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-officers-raincoat/.
+2024-12-27 23:55:05,582 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-officers-raincoat/ as images are already uploaded.
+2024-12-27 23:55:05,582 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-wh-m36-medical-major-field-jacket/
+2024-12-27 23:55:06,056 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-wh-m36-medical-major-field-jacket/.
+2024-12-27 23:55:06,056 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-wh-m36-medical-major-field-jacket/ as images are already uploaded.
+2024-12-27 23:55:06,056 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-red-cross-letter-utrecht-london/
+2024-12-27 23:55:06,533 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-red-cross-letter-utrecht-london/.
+2024-12-27 23:55:06,533 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-red-cross-letter-utrecht-london/ as images are already uploaded.
+2024-12-27 23:55:06,534 - DEBUG - Navigating to products page: https://oorlogsspullen.nl/product-categorie/new/page/2/
+2024-12-27 23:55:06,535 - DEBUG - Resetting dropped connection: oorlogsspullen.nl
+2024-12-27 23:55:08,998 - DEBUG - https://oorlogsspullen.nl:443 "GET /product-categorie/new/page/2/ HTTP/1.1" 200 20268
+2024-12-27 23:55:09,290 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-27 23:55:09,290 - INFO - MILITARIA SITE      : OORLOGSSPULLEN
+2024-12-27 23:55:09,291 - INFO - PRODUCTS URL        : https://oorlogsspullen.nl/product-categorie/new/page/2/
+2024-12-27 23:55:09,291 - INFO - CYCLES RUN          : 0
+2024-12-27 23:55:09,291 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-27 23:55:09,291 - INFO - TIMESTAMP           : 2024-12-27 23:55:09.290354
+2024-12-27 23:55:09,291 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-beer-mug-3-nachrichten-ersatz-abteilung-34/
+2024-12-27 23:55:09,764 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-beer-mug-3-nachrichten-ersatz-abteilung-34/.
+2024-12-27 23:55:09,764 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-beer-mug-3-nachrichten-ersatz-abteilung-34/ as images are already uploaded.
+2024-12-27 23:55:09,765 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-usmc-m1-helmet-camouflage-mosquito-cover-3/
+2024-12-27 23:55:10,236 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-usmc-m1-helmet-camouflage-mosquito-cover-3/.
+2024-12-27 23:55:10,236 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-usmc-m1-helmet-camouflage-mosquito-cover-3/ as images are already uploaded.
+2024-12-27 23:55:10,237 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-nsb-in-flanders-belgium-newspaper/
+2024-12-27 23:55:10,710 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-nsb-in-flanders-belgium-newspaper/.
+2024-12-27 23:55:10,710 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-nsb-in-flanders-belgium-newspaper/ as images are already uploaded.
+2024-12-27 23:55:10,711 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-nsb-vlaanderen-stationery/
+2024-12-27 23:55:11,186 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-nsb-vlaanderen-stationery/.
+2024-12-27 23:55:11,187 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-nsb-vlaanderen-stationery/ as images are already uploaded.
+2024-12-27 23:55:11,187 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-finnish-kp-31-suomi-eu-deko/
+2024-12-27 23:55:11,659 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-finnish-kp-31-suomi-eu-deko/.
+2024-12-27 23:55:11,660 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-finnish-kp-31-suomi-eu-deko/ as images are already uploaded.
+2024-12-27 23:55:11,660 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-russian-army-m43-major-general-tunic/
+2024-12-27 23:55:12,131 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-russian-army-m43-major-general-tunic/.
+2024-12-27 23:55:12,132 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-russian-army-m43-major-general-tunic/ as images are already uploaded.
+2024-12-27 23:55:12,132 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-waffen-ss-m44-wool-trousers/
+2024-12-27 23:55:12,605 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-waffen-ss-m44-wool-trousers/.
+2024-12-27 23:55:12,606 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-waffen-ss-m44-wool-trousers/ as images are already uploaded.
+2024-12-27 23:55:12,606 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-belgisch-nationaal-legioen-fascist-membership-and-invitation-card/
+2024-12-27 23:55:13,078 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-belgisch-nationaal-legioen-fascist-membership-and-invitation-card/.
+2024-12-27 23:55:13,078 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-belgisch-nationaal-legioen-fascist-membership-and-invitation-card/ as images are already uploaded.
+2024-12-27 23:55:13,079 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-large-map-of-the-united-kingdom-and-ireland/
+2024-12-27 23:55:13,551 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-large-map-of-the-united-kingdom-and-ireland/.
+2024-12-27 23:55:13,552 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-large-map-of-the-united-kingdom-and-ireland/ as images are already uploaded.
+2024-12-27 23:55:13,552 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-british-army-map-of-bocholt-1944/
+2024-12-27 23:55:14,060 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-british-army-map-of-bocholt-1944/.
+2024-12-27 23:55:14,061 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-british-army-map-of-bocholt-1944/ as images are already uploaded.
+2024-12-27 23:55:14,061 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-stavoren-1943/
+2024-12-27 23:55:14,558 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-stavoren-1943/.
+2024-12-27 23:55:14,559 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-stavoren-1943/ as images are already uploaded.
+2024-12-27 23:55:14,559 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-map-of-terheijden-1944/
+2024-12-27 23:55:15,031 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-map-of-terheijden-1944/.
+2024-12-27 23:55:15,031 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-map-of-terheijden-1944/ as images are already uploaded.
+2024-12-27 23:55:15,031 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-hardenberg-1944/
+2024-12-27 23:55:15,552 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-hardenberg-1944/.
+2024-12-27 23:55:15,552 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-hardenberg-1944/ as images are already uploaded.
+2024-12-27 23:55:15,552 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-hoorn/
+2024-12-27 23:55:16,027 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-hoorn/.
+2024-12-27 23:55:16,027 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-hoorn/ as images are already uploaded.
+2024-12-27 23:55:16,028 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwi-german-k98-pouch-1915/
+2024-12-27 23:55:16,502 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwi-german-k98-pouch-1915/.
+2024-12-27 23:55:16,502 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwi-german-k98-pouch-1915/ as images are already uploaded.
+2024-12-27 23:55:16,503 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-k98-cleaning-kit-3/
+2024-12-27 23:55:16,975 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-k98-cleaning-kit-3/.
+2024-12-27 23:55:16,975 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-k98-cleaning-kit-3/ as images are already uploaded.
+2024-12-27 23:55:16,975 - DEBUG - Navigating to products page: https://oorlogsspullen.nl/product-categorie/new/page/3/
+2024-12-27 23:55:16,976 - DEBUG - Resetting dropped connection: oorlogsspullen.nl
+2024-12-27 23:55:19,599 - DEBUG - https://oorlogsspullen.nl:443 "GET /product-categorie/new/page/3/ HTTP/1.1" 200 20380
+2024-12-27 23:55:19,885 - INFO - 
+------------------------------------------------------------
+                    NEW INSTANCE STARTED                    
+------------------------------------------------------------
+2024-12-27 23:55:19,886 - INFO - MILITARIA SITE      : OORLOGSSPULLEN
+2024-12-27 23:55:19,886 - INFO - PRODUCTS URL        : https://oorlogsspullen.nl/product-categorie/new/page/3/
+2024-12-27 23:55:19,887 - INFO - CYCLES RUN          : 0
+2024-12-27 23:55:19,887 - INFO - PRODUCTS PROCESSED  : 0
+2024-12-27 23:55:19,887 - INFO - TIMESTAMP           : 2024-12-27 23:55:19.885451
+2024-12-27 23:55:19,887 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-mauser-k98-pouch-5/
+2024-12-27 23:55:20,359 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-mauser-k98-pouch-5/.
+2024-12-27 23:55:20,360 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-mauser-k98-pouch-5/ as images are already uploaded.
+2024-12-27 23:55:20,360 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-mauser-k98-pouch-1940/
+2024-12-27 23:55:20,832 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-mauser-k98-pouch-1940/.
+2024-12-27 23:55:20,832 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-mauser-k98-pouch-1940/ as images are already uploaded.
+2024-12-27 23:55:20,832 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-death-card-reeuwijk-celle/
+2024-12-27 23:55:21,304 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-death-card-reeuwijk-celle/.
+2024-12-27 23:55:21,304 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-death-card-reeuwijk-celle/ as images are already uploaded.
+2024-12-27 23:55:21,305 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-tropical-boots/
+2024-12-27 23:55:21,777 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-tropical-boots/.
+2024-12-27 23:55:21,777 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-luftwaffe-tropical-boots/ as images are already uploaded.
+2024-12-27 23:55:21,778 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-nederlandsche-arbeidsdienst-meisjes-ret-broche/
+2024-12-27 23:55:22,249 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-nederlandsche-arbeidsdienst-meisjes-ret-broche/.
+2024-12-27 23:55:22,250 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-nederlandsche-arbeidsdienst-meisjes-ret-broche/ as images are already uploaded.
+2024-12-27 23:55:22,250 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/the-genealogy-of-dutch-fascism-and-national-socialism-with-design-drawings/
+2024-12-27 23:55:22,727 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/the-genealogy-of-dutch-fascism-and-national-socialism-with-design-drawings/.
+2024-12-27 23:55:22,727 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/the-genealogy-of-dutch-fascism-and-national-socialism-with-design-drawings/ as images are already uploaded.
+2024-12-27 23:55:22,728 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-hitlerjugend-armband-5/
+2024-12-27 23:55:23,211 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-hitlerjugend-armband-5/.
+2024-12-27 23:55:23,212 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-hitlerjugend-armband-5/ as images are already uploaded.
+2024-12-27 23:55:23,212 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-german-ddr-grenztruppen-cuff-title/
+2024-12-27 23:55:23,686 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-german-ddr-grenztruppen-cuff-title/.
+2024-12-27 23:55:23,686 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-german-ddr-grenztruppen-cuff-title/ as images are already uploaded.
+2024-12-27 23:55:23,686 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-ddr-nva-strichtarn-camouflage-field-cap/
+2024-12-27 23:55:24,164 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-ddr-nva-strichtarn-camouflage-field-cap/.
+2024-12-27 23:55:24,164 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-ddr-nva-strichtarn-camouflage-field-cap/ as images are already uploaded.
+2024-12-27 23:55:24,165 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-german-ddr-overseas-cap/
+2024-12-27 23:55:24,635 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-german-ddr-overseas-cap/.
+2024-12-27 23:55:24,636 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-german-ddr-overseas-cap/ as images are already uploaded.
+2024-12-27 23:55:24,636 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-millingen-aan-de-rijn-1944/
+2024-12-27 23:55:25,106 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-millingen-aan-de-rijn-1944/.
+2024-12-27 23:55:25,106 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-us-army-map-of-millingen-aan-de-rijn-1944/ as images are already uploaded.
+2024-12-27 23:55:25,107 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-walloon-volunteer-legion-postcard-set/
+2024-12-27 23:55:25,578 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-walloon-volunteer-legion-postcard-set/.
+2024-12-27 23:55:25,579 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-walloon-volunteer-legion-postcard-set/ as images are already uploaded.
+2024-12-27 23:55:25,579 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-dutch-death-card-of-a-courier-for-the-2nd-british-army-in-limburg-merselo-leunen/
+2024-12-27 23:55:26,051 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-dutch-death-card-of-a-courier-for-the-2nd-british-army-in-limburg-merselo-leunen/.
+2024-12-27 23:55:26,052 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-dutch-death-card-of-a-courier-for-the-2nd-british-army-in-limburg-merselo-leunen/ as images are already uploaded.
+2024-12-27 23:55:26,052 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-wh-heer-signal-officer-uniform-jacket/
+2024-12-27 23:55:26,529 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-wh-heer-signal-officer-uniform-jacket/.
+2024-12-27 23:55:26,529 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-wh-heer-signal-officer-uniform-jacket/ as images are already uploaded.
+2024-12-27 23:55:26,530 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/original-wwii-german-wh-heer-artillery-nco-visor-cap/
+2024-12-27 23:55:27,023 - DEBUG - Image upload already completed for product URL: https://oorlogsspullen.nl/product/original-wwii-german-wh-heer-artillery-nco-visor-cap/.
+2024-12-27 23:55:27,024 - INFO - Skipping image upload for product: https://oorlogsspullen.nl/product/original-wwii-german-wh-heer-artillery-nco-visor-cap/ as images are already uploaded.
+2024-12-27 23:55:27,024 - DEBUG - Product URL constructed: https://oorlogsspullen.nl/product/originele-wwii-us-navy-officers-visor-cap-2/
