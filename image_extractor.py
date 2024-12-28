@@ -110,47 +110,6 @@ def concept500(product_soup):
         logging.error(f"Error in concept500: {e}")
         return []
 
-
-    
-def extract_default_gallery(product_soup):
-    """
-    Extracts images using default gallery logic with data-large_image.
-    """
-    try:
-        return [
-            tag['data-large_image']
-            for tag in product_soup.select("div.woocommerce-product-gallery__image")
-            if 'data-large_image' in tag.attrs
-        ]
-    except Exception as e:
-        logging.error(f"Error in extract_default_gallery: {e}")
-        return []
-
-def extract_img_src_fallback(product_soup):
-    """
-    Extracts images by falling back to <img src> within a gallery.
-    """
-    try:
-        return [
-            img_tag["src"]
-            for img_tag in product_soup.select("div.product-gallery img")
-            if "src" in img_tag.attrs
-        ]
-    except Exception as e:
-        logging.error(f"Error in extract_img_src_fallback: {e}")
-        return []
-
-def extract_site_specific(product_soup):
-    """
-    Custom extraction logic for a specific site.
-    """
-    try:
-        # Add specific site logic here
-        return []
-    except Exception as e:
-        logging.error(f"Error in extract_site_specific: {e}")
-        return []
-
 def fetch_images(product_soup, function_name):
     """
     Fetch images dynamically based on function name.
@@ -349,3 +308,100 @@ def the_war_front(product_soup):
     except Exception as e:
         logging.error(f"Error extracting images: {e}")
         return []
+    
+def the_ruptured_duck(product_soup):
+    """
+    Extracts high-resolution image URLs from The Ruptured Duck product pages.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: High-resolution image URLs.
+    """
+    try:
+        # Select all primary and thumbnail images
+        image_containers = product_soup.select(".product-single__thumbnail-item a")
+        
+        # Extract high-resolution image URLs from the href attribute
+        image_urls = []
+        for container in image_containers:
+            high_res_image = container.get("href")
+            if high_res_image:
+                # Ensure full URL is formed
+                if high_res_image.startswith("//"):
+                    high_res_image = "https:" + high_res_image
+                image_urls.append(high_res_image)
+
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error extracting images from The Ruptured Duck: {e}")
+        return []
+
+def virtual_grenadier(product_soup):
+    """
+    Extracts high-resolution image URLs from JOJ Militaria product pages.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: High-resolution image URLs.
+    """
+    try:
+        # Select all images within the detail shots section
+        image_containers = product_soup.select('div#innerdet a.album')
+
+        # Extract high-resolution image URLs from the href attribute
+        image_urls = []
+        for container in image_containers:
+            high_res_image = container.get('href')
+            if high_res_image:
+                # Ensure full URL is formed
+                if high_res_image.startswith("images/"):
+                    high_res_image = f"https://www.jojmilitaria.com/{high_res_image}"
+                image_urls.append(high_res_image)
+
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error extracting images from JOJ Militaria: {e}")
+        return []
+
+def concept500_2(product_soup):
+    """
+    Extracts high-quality image URLs from HTML within the 'content-part block-image' div.
+
+    Args:
+        product_soup (BeautifulSoup): Parsed HTML of the product page.
+
+    Returns:
+        list: List of absolute URLs for the largest images.
+    """
+    try:
+        # Collect URLs from 'content-part block-image'
+        image_urls = [
+            tag['href']
+            for tag in product_soup.select("div.content-part.block-image a")
+            if 'href' in tag.attrs
+        ]
+
+        # If image URLs are relative, prepend the inferred base URL
+        if image_urls and not image_urls[0].startswith("http"):
+            base_tag = product_soup.find('base')
+            inferred_base_url = (
+                base_tag['href'].rstrip('/')
+                if base_tag and 'href' in base_tag.attrs
+                else product_soup.select_one("link[rel='canonical']")['href'].rstrip('/')
+            )
+
+            image_urls = [
+                inferred_base_url + '/' + url.lstrip('/') if not url.startswith("http") else url
+                for url in image_urls
+            ]
+
+        return image_urls
+    except Exception as e:
+        logging.error(f"Error in concept500_2: {e}")
+        return []
+
+
