@@ -1,8 +1,10 @@
 from datetime import datetime
 import logging
 import json
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# This gets the main part started and looping
 def run_availability_check_loop(webScrapeManager, dataManager, jsonManager, selectorJson):
     """
     Run the availability check in a loop with a user-defined sleep interval.
@@ -30,13 +32,7 @@ def run_availability_check_loop(webScrapeManager, dataManager, jsonManager, sele
             logging.error(f"Error during availability check loop: {e}")
             break
 
-def validate_json_profile(militariaSite):
-    """Validate required keys in JSON profile."""
-    required_keys = {"source", "product_url_element", "productsPageUrl", "base_url"}
-    missing_keys = required_keys - set(militariaSite.keys())
-    if missing_keys:
-        raise ValueError(f"Missing required keys in JSON profile: {missing_keys}")
-
+# This is the main part of this program
 def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson):
     """Main availability check function."""
     current_datetime = datetime.now()
@@ -47,14 +43,9 @@ def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
 ------------------------------------------------------------""")
 
     # Load JSON selectors
-    try:
-        with open(selectorJson, 'r') as userFile:
-            jsonData = json.load(userFile)
-    except Exception as e:
-        logging.error(f"Error loading JSON selector file: {e}")
-        return
+    jsonData = jsonManager.load_json_selectors(selectorJson)
 
-    # Thread pool for concurrent processing
+    # This sets up workers to do the code in parallel and not serial
     with ThreadPoolExecutor(max_workers=6) as executor:
         future_to_site = {}
 
@@ -66,7 +57,7 @@ def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
 
             # Validate JSON profile
             try:
-                validate_json_profile(militariaSite)
+                jsonManager.validate_json_profile(militariaSite)
             except ValueError as e:
                 logging.error(f"Validation error for site '{source}': {e}")
                 continue

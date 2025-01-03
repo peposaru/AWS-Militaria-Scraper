@@ -1,5 +1,7 @@
 import os
 import logging
+import shutil
+
 
 # Default Settings
 DEFAULT_RDS_SETTINGS = {
@@ -18,9 +20,23 @@ DEFAULT_PC_SETTINGS = {
 
 # Which sites does the user want to process?
 def site_choice(jsonData):
+    # Determine terminal width and maximum site name length
+    term_width = shutil.get_terminal_size().columns
+    max_name_length = max(len(site['source']) for site in jsonData)
+    padding = 5  # Padding for spacing
+    col_width = max_name_length + padding
+    num_columns = term_width // col_width  # Fit as many columns as the terminal width allows
+    num_rows = (len(jsonData) + num_columns - 1) // num_columns
+
     print("Available sites:")
-    for idx, site in enumerate(jsonData):
-        print(f"{idx + 1}. {site['source']}")
+    for row in range(num_rows):
+        row_sites = []
+        for col in range(num_columns):
+            idx = row + col * num_rows
+            if idx < len(jsonData):
+                # Format each column with uniform width
+                row_sites.append(f"{idx + 1:>3}. {jsonData[idx]['source']:<{max_name_length}}")
+        print(" | ".join(row_sites))  # Join columns with a separator
 
     try:
         choice = input("Select sites to scrape (e.g., '1,3-5,7'): ")
@@ -39,8 +55,8 @@ def site_choice(jsonData):
         selected_sites = [jsonData[idx] for idx in selected_indices]
         return selected_sites
     except ValueError as e:
-        logging.error(f"Invalid selection: {e}")
-        return 
+        print(f"Invalid selection: {e}")
+        return
 
 def get_user_settings():
     """

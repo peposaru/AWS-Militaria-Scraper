@@ -52,3 +52,37 @@ class JsonManager:
         except Exception as e:
             logging.error(f"Error unpacking JSON selectors: {e}")
             raise
+
+    # This makes sure that the json profile has the required elements.
+    def validate_json_profile(militariaSite):
+        """Validate required keys in JSON profile."""
+        # Define all possible keys in the JSON profile
+        all_keys = {
+            "source",
+            "product_url_element",
+            "productsPageUrl",
+            "base_url",
+            "page_increment",
+            "currency",
+            "products",
+            "title_element",
+            "desc_element",
+            "price_element",
+            "available_element",
+            "image_element",
+            "conflict_element",
+            "nation_element",
+            "item_type_element",
+            "grade_element"
+        }
+
+        # Define optional keys
+        optional_keys = {"conflict_element", "nation_element", "item_type_element", "grade_element"}
+
+        # Calculate required keys by excluding optional keys
+        required_keys = all_keys - optional_keys
+
+        # Determine missing keys by comparing the JSON keys to the required keys
+        missing_keys = required_keys - set(militariaSite.keys())
+        if missing_keys:
+            raise ValueError(f"Missing required keys in JSON profile: {missing_keys}")

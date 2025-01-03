@@ -4,6 +4,8 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from datetime import datetime, timezone
 import psycopg2
+from flask import request
+
 
 app = Flask(__name__)
 CORS(app, origins=["https://www.keenannilson.com"])
@@ -42,6 +44,10 @@ def time_ago(date_collected):
 @app.route('/latest-products', methods=['GET'])
 def latest_products():
     try:
+        # Parse query parameters
+        site_filter = request.args.get('site', None)  # Filter by site
+        limit = request.args.get('limit', 250)  # Limit the number of items, default to 250
+
         # Load database credentials
         credentials = load_db_credentials()
         connection = psycopg2.connect(
@@ -51,17 +57,25 @@ def latest_products():
             password=credentials["pwd"],
             port=credentials["portId"]
         )
-        
+
         cursor = connection.cursor()
 
-        # Execute the query to fetch the latest 100 products
+        # Build the query dynamically
         query = """
             SELECT title, description, price, url, date_collected, site, currency, original_image_urls
             FROM militaria
-            ORDER BY date_collected DESC
-            LIMIT 250;
         """
-        cursor.execute(query)
+        conditions = []
+        if site_filter:
+            conditions.append("site = %s")
+        if conditions:
+            query += " WHERE " + " AND ".join(conditions)
+        query += " ORDER BY date_collected DESC LIMIT %s"
+
+        # Execute query with parameters
+        params = [site_filter] if site_filter else []
+        params.append(limit)
+        cursor.execute(query, params)
         rows = cursor.fetchall()
 
         # Format the data into a list of dictionaries
@@ -69,15 +83,14 @@ def latest_products():
         for row in rows:
             first_image = None
             if row[7]:  # original_image_urls column
-                if isinstance(row[7], list):  # If it's already a list
+                if isinstance(row[7], list):
                     image_urls = row[7]
                     first_image = image_urls[0] if image_urls else None
-                else:  # If it's a string, parse it as JSON
+                else:
                     try:
                         image_urls = json.loads(row[7])
                         first_image = image_urls[0] if image_urls else None
                     except json.JSONDecodeError:
-                        print(f"Error parsing image URLs: {row[7]}")
                         first_image = None
 
             products.append({

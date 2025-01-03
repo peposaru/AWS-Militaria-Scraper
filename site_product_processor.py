@@ -22,7 +22,7 @@ def process_site(webScrapeManager, dataManager, jsonManager, prints, site, targe
     while True:
         if consecutiveMatches == targetMatch:
             # Ensure termination when the targetMatch is reached
-            logging.info(f"Target match count ({targetMatch}) reached. Exiting the processing loop.")
+            logging.warning(f"Target match count ({targetMatch}) reached. Exiting the processing loop.")
             break
 
         # Generate link for the sites products page. Typically the new items page.
@@ -52,7 +52,7 @@ def process_site(webScrapeManager, dataManager, jsonManager, prints, site, targe
 
             # Stop if the target match count is reached
             if consecutiveMatches == targetMatch:
-                logging.info(f"Target match count ({targetMatch}) reached. Terminating site processing.")
+                logging.warning(f"Target match count ({targetMatch}) reached. Terminating site processing.")
                 prints.terminating(source, consecutiveMatches, targetMatch, runCycle, productsProcessed)
                 return
 
@@ -79,7 +79,7 @@ def process_product(
 
         # Check if the target match count has been reached
         if consecutiveMatches >= targetMatch:
-            logging.info(f"Target match count ({targetMatch}) reached. Halting product processing.")
+            logging.warning(f"Target match count ({targetMatch}) reached. Halting product processing.")
             return urlCount, consecutiveMatches
 
         # Create the product URL and if it doesn't work, stop.

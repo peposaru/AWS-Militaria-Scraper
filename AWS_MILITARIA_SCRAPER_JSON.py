@@ -24,7 +24,7 @@ def initialize_logging():
     log_file_name = f"{current_date}_instance_{instance_number}.log"
     log_file_path = os.path.join(log_dir, log_file_name)
     logging.basicConfig(
-        level=logging.DEBUG, # Levels are NOTSET , DEBUG , INFO , WARN , ERROR , CRITICAL
+        level=logging.INFO, # Levels are NOTSET , DEBUG , INFO , WARN , ERROR , CRITICAL
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler(log_file_path, encoding='utf-8'),
@@ -100,13 +100,13 @@ def main():
                 webScrapeManager, dataManager, jsonManager, prints, site,
                 targetMatch, runCycle, productsProcessed, s3_manager
                 )
-                logging.info(f"Successfully processed site: {site['source']}")
+                logging.warning(f"Successfully processed site: {site['source']}")
             except Exception as e:
                 logging.error(f"Error processing site {site['source']}: {e}")
 
         # Use the user-defined sleeptime between cycles
         if sleeptime > 0:
-            logging.info(f"Pausing for {sleeptime} seconds before starting the next cycle...")
+            logging.warning(f"Pausing for {sleeptime} seconds before starting the next cycle...")
             try:
                 for _ in range(sleeptime):
                     sleep(1)
