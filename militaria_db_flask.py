@@ -41,12 +41,44 @@ def time_ago(date_collected):
     except Exception as e:
         return "Unknown time"
 
+@app.route('/sites', methods=['GET'])
+def get_sites():
+    try:
+        # Load database credentials
+        credentials = load_db_credentials()
+        connection = psycopg2.connect(
+            host=credentials["hostName"],
+            database=credentials["dataBase"],
+            user=credentials["userName"],
+            password=credentials["pwd"],
+            port=credentials["portId"]
+        )
+        
+        cursor = connection.cursor()
+
+        # Query to fetch distinct site values
+        query = "SELECT DISTINCT site FROM militaria;"
+        cursor.execute(query)
+        rows = cursor.fetchall()
+
+        # Close connections
+        cursor.close()
+        connection.close()
+
+        # Format results as a list
+        sites = [row[0] for row in rows]
+        return jsonify(sites)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+
 @app.route('/latest-products', methods=['GET'])
 def latest_products():
     try:
-        # Parse query parameters
-        site_filter = request.args.get('site', None)  # Filter by site
-        limit = request.args.get('limit', 250)  # Limit the number of items, default to 250
+        # Get query parameters
+        site_filter = request.args.get('sites', None)  # Comma-separated list of sources
+        limit = int(request.args.get('limit', 250))  # Default limit to 250
 
         # Load database credentials
         credentials = load_db_credentials()
@@ -57,41 +89,40 @@ def latest_products():
             password=credentials["pwd"],
             port=credentials["portId"]
         )
-
+        
         cursor = connection.cursor()
 
-        # Build the query dynamically
+        # Base query
         query = """
             SELECT title, description, price, url, date_collected, site, currency, original_image_urls
             FROM militaria
         """
-        conditions = []
-        if site_filter:
-            conditions.append("site = %s")
-        if conditions:
-            query += " WHERE " + " AND ".join(conditions)
-        query += " ORDER BY date_collected DESC LIMIT %s"
+        params = []
 
-        # Execute query with parameters
-        params = [site_filter] if site_filter else []
+        # Add WHERE clause if filtering by sites
+        if site_filter:
+            site_list = site_filter.split(",")  # Convert to a list
+            placeholders = ','.join(['%s'] * len(site_list))  # Generate placeholders for SQL IN clause
+            query += f" WHERE site IN ({placeholders})"
+            params.extend(site_list)
+
+        # Add ORDER BY and LIMIT
+        query += " ORDER BY date_collected DESC LIMIT %s"
         params.append(limit)
+
         cursor.execute(query, params)
         rows = cursor.fetchall()
 
-        # Format the data into a list of dictionaries
+        # Format the results
         products = []
         for row in rows:
             first_image = None
             if row[7]:  # original_image_urls column
-                if isinstance(row[7], list):
-                    image_urls = row[7]
+                try:
+                    image_urls = json.loads(row[7]) if isinstance(row[7], str) else row[7]
                     first_image = image_urls[0] if image_urls else None
-                else:
-                    try:
-                        image_urls = json.loads(row[7])
-                        first_image = image_urls[0] if image_urls else None
-                    except json.JSONDecodeError:
-                        first_image = None
+                except json.JSONDecodeError:
+                    first_image = None
 
             products.append({
                 "title": row[0],
@@ -103,7 +134,6 @@ def latest_products():
                 "image_url": first_image,
             })
 
-        # Close connections
         cursor.close()
         connection.close()
 
@@ -111,6 +141,40 @@ def latest_products():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/stats', methods=['GET'])
+def get_stats():
+    try:
+        # Load database credentials
+        credentials = load_db_credentials()
+        connection = psycopg2.connect(
+            host=credentials["hostName"],
+            database=credentials["dataBase"],
+            user=credentials["userName"],
+            password=credentials["pwd"],
+            port=credentials["portId"]
+        )
+        cursor = connection.cursor()
+
+        # Query to count unique sites and total products
+        site_count_query = "SELECT COUNT(DISTINCT site) FROM militaria;"
+        product_count_query = "SELECT COUNT(*) FROM militaria;"
+
+        cursor.execute(site_count_query)
+        unique_sites = cursor.fetchone()[0]
+
+        cursor.execute(product_count_query)
+        total_products = cursor.fetchone()[0]
+
+        # Close connection
+        cursor.close()
+        connection.close()
+
+        return jsonify({
+            "unique_sites": unique_sites,
+            "total_products": total_products
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
