@@ -20,10 +20,13 @@ def run_availability_check_loop(webScrapeManager, dataManager, jsonManager, sele
     sleep_seconds = sleep_minutes * 60
 
     # Run the availability check in a loop
+    availability_checks_completed = 0
     while True:
         try:
-            check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
+            check_availability(webScrapeManager, dataManager, jsonManager, selectorJson,availability_checks_completed)
             print(f"Availability check completed. Sleeping for {sleep_minutes} minutes...")
+            availability_checks_completed += 1
+            logging.info(f'Availability Checks Complete : {availability_checks_completed}')
             time.sleep(sleep_seconds)
         except KeyboardInterrupt:
             print("Availability check loop interrupted by user. Exiting...")
@@ -33,12 +36,12 @@ def run_availability_check_loop(webScrapeManager, dataManager, jsonManager, sele
             break
 
 # This is the main part of this program
-def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson):
+def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson,availability_checks_completed):
     """Main availability check function."""
     current_datetime = datetime.now()
     logging.info(f"""
 ------------------------------------------------------------
-                 AVAILABILITY CHECK INITIATED
+                 AVAILABILITY CHECK #{availability_checks_completed} INITIATED 
                      {current_datetime}          
 ------------------------------------------------------------""")
 
@@ -50,7 +53,11 @@ def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
         future_to_site = {}
 
         for militariaSite in jsonData:
-            source = militariaSite.get("source", "Unknown")
+            try:
+                source = militariaSite.get("source", "Unknown")
+            except:
+                logging.warning('Site being processed has missing site name.')
+                break
 
             # Log the JSON for debugging
             logging.debug(f"Processing site '{source}' JSON data: {militariaSite}")
@@ -64,17 +71,25 @@ def check_availability(webScrapeManager, dataManager, jsonManager, selectorJson)
 
             availableElement = militariaSite.get("available_element")
 
-            if availableElement in ["True", "False"]:
-                # Skip sites with hardcoded availableElement
+            # All products hardwired to be available we don't need to check.
+            if availableElement == "True":
                 logging.info(f"Skipping site '{source}' as availableElement is set to '{availableElement}'")
                 continue
 
-            try:
-                # Determine whether to use full scraping or availableElement logic
-                if availableElement:
-                    future = executor.submit(process_site_with_available_element, webScrapeManager, dataManager, militariaSite)
-                else:
+            # If products are hardwired to be sold, we need to see what items have been sold.
+            elif availableElement == "False":
+                logging.info(f"Processing site '{source}' as availableElement is hardcoded to 'False'")
+                try:
+                    # Use full-site scraping to process the archive
                     future = executor.submit(process_site_full_scrape, webScrapeManager, dataManager, militariaSite)
+                    future_to_site[future] = source
+                except Exception as e:
+                    logging.error(f"Error submitting archive processing task for site '{source}': {e}")
+                continue  # Skip further processing as we already handled this case.
+
+            # For other cases, process normally based on availableElement logic.
+            try:
+                future = executor.submit(process_site_with_available_element, webScrapeManager, dataManager, militariaSite)
                 future_to_site[future] = source
             except Exception as e:
                 logging.error(f"Error submitting task for site '{source}': {e}")
@@ -102,8 +117,12 @@ def process_site_with_available_element(webScrapeManager, dataManager, militaria
     for url, db_available in products:
         try:
             productSoup = webScrapeManager.fetch_page(url)
+            # Product url doesn't return anything? Mark as sold.
             if not productSoup:
-                logging.warning(f"Failed to fetch product: {url}")
+                logging.warning(f"Failed to fetch product: {url}. Marking as unavailable.")
+                # Mark the product as unavailable in the database
+                update_query = "UPDATE militaria SET available = FALSE, date_modified = %s WHERE url = %s"
+                dataManager.sqlExecute(update_query, (datetime.now(), url))
                 continue
 
             # Evaluate availableElement

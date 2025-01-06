@@ -1751,7 +1751,7 @@
         "productsPageUrl": "/archive-38/results,{page}",
         "page_increment": "50",
         "currency": "EUR",
-        "products": "soup.find_all('div', class_='product vm-col vm-col-1')",
+        "products": "soup.find_all('div', class_='product vm-col vm-col-1 hidesold')",
         "product_url_element": "base_url + product.find('a')['href']",
         "title_element": "productSoup.find('h2').text.strip()",
         "desc_element": "productSoup.find('div', class_='product-description').find('p').text.strip()",

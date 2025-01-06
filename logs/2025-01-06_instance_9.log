@@ -1,0 +1,41 @@
+2025-01-06 16:57:33,968 - INFO - Logging initialized. Log file: logs\2025-01-06_instance_9.log
+2025-01-06 16:57:35,448 - WARNING - 
+------------------------------------------------------------
+PROGRAM INITIALIZED 2025-01-06 16:57:35.448832
+------------------------------------------------------------
+2025-01-06 16:57:41,166 - INFO - PostgreSQL connection pool initialized.
+2025-01-06 16:57:41,349 - INFO - S3Manager initialized for bucket militaria-images
+2025-01-06 16:57:44,657 - INFO - 
+------------------------------------------------------------
+                 AVAILABILITY CHECK #0 INITIATED 
+                     2025-01-06 16:57:44.657102          
+------------------------------------------------------------
+2025-01-06 16:57:44,659 - INFO - Processing site 'SEAFORTH_MILITARY_COLLECTABLES' using availableElement logic...
+2025-01-06 16:57:44,659 - INFO - Processing site 'SMI_MILITARIA' using availableElement logic...
+2025-01-06 16:57:44,660 - INFO - Processing site 'SOLDIER_BEAR_MILITARIA' using availableElement logic...
+2025-01-06 16:57:44,660 - INFO - Processing site 'SPECIAL_BADGE_SERVICES' using availableElement logic...
+2025-01-06 16:57:44,660 - INFO - Processing site 'SSBW_MILITARIA' using availableElement logic...
+2025-01-06 16:57:44,661 - INFO - Processing site 'STRACHAN_MILITARIA' using availableElement logic...
+2025-01-06 16:57:44,661 - INFO - Processing site 'OORLOGSSPULLEN' as availableElement is hardcoded to 'False'
+2025-01-06 16:57:44,662 - INFO - Processing site 'CIRCA1941' as availableElement is hardcoded to 'False'
+2025-01-06 16:57:44,662 - INFO - Processing site 'CS_MILITARIA' as availableElement is hardcoded to 'False'
+2025-01-06 16:57:44,662 - INFO - Processing site 'MV40_45' as availableElement is hardcoded to 'False'
+2025-01-06 16:57:44,663 - INFO - Processing site 'MILITARIA_PLAZA' as availableElement is hardcoded to 'False'
+2025-01-06 16:57:44,663 - INFO - Skipping site 'VIRTUAL_GRENADIER' as availableElement is set to 'True'
+2025-01-06 16:57:44,663 - INFO - Skipping site 'VIRTUAL_GRENADIER' as availableElement is set to 'True'
+2025-01-06 16:57:44,663 - INFO - Processing site 'VIRTUAL_GRENADIER' as availableElement is hardcoded to 'False'
+2025-01-06 16:57:44,663 - INFO - Processing site 'VIRTUAL_GRENADIER' as availableElement is hardcoded to 'False'
+2025-01-06 16:57:47,735 - INFO - Product https://ssbw.co.uk/shop.php?code=51021 availability updated to False
+2025-01-06 16:57:50,475 - INFO - Product https://ssbw.co.uk/shop.php?code=51026 availability updated to False
+2025-01-06 16:57:50,638 - INFO - Product https://specialbadgeservices.com/shop.php?code=258 availability updated to False
+2025-01-06 16:57:58,834 - INFO - Product https://seaforthmilitaria.com/shop.php?code=52714 availability updated to False
+2025-01-06 16:57:59,291 - INFO - Product https://ismilitaria.co.uk/shop.php?code=13376 availability updated to False
+2025-01-06 16:57:59,836 - INFO - Processing site 'TELS_INSIGNIA' using availableElement logic...
+2025-01-06 16:57:59,836 - INFO - Finished processing site: SOLDIER_BEAR_MILITARIA
+2025-01-06 16:58:17,932 - INFO - Product https://tels-insignia.com/shop.php?code=103095 availability updated to False
+2025-01-06 16:58:22,832 - INFO - Product https://tels-insignia.com/shop.php?code=103074 availability updated to False
+2025-01-06 16:58:23,592 - INFO - Product https://tels-insignia.com/shop.php?code=103071 availability updated to False
+2025-01-06 16:58:27,027 - INFO - Product https://tels-insignia.com/shop.php?code=103058 availability updated to False
+2025-01-06 16:58:33,556 - INFO - Product https://tels-insignia.com/shop.php?code=103027 availability updated to False
+2025-01-06 16:59:02,598 - INFO - Processing site 'THE_LANES_ARMOURY' using availableElement logic...
+2025-01-06 16:59:02,598 - INFO - Finished processing site: SPECIAL_BADGE_SERVICES

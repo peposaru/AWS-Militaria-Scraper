@@ -54,7 +54,7 @@ class JsonManager:
             raise
 
     # This makes sure that the json profile has the required elements.
-    def validate_json_profile(militariaSite):
+    def validate_json_profile(self,militariaSite):
         """Validate required keys in JSON profile."""
         # Define all possible keys in the JSON profile
         all_keys = {

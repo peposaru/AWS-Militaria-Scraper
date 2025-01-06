@@ -78,8 +78,19 @@ def process_product(
         urlCount += 1
 
         # Check if the target match count has been reached
-        if consecutiveMatches >= targetMatch:
-            logging.warning(f"Target match count ({targetMatch}) reached. Halting product processing.")
+        if consecutiveMatches is None or targetMatch is None:
+            logging.error(
+                f"One of the values is None before comparison. consecutiveMatches={consecutiveMatches}, targetMatch={targetMatch}"
+            )
+        else:
+            logging.debug(
+                f"Checking target match in regular processing. consecutiveMatches={consecutiveMatches}, targetMatch={targetMatch}"
+            )
+
+        if consecutiveMatches is not None and targetMatch is not None and consecutiveMatches >= targetMatch:
+            logging.warning(
+                f"Target match count ({targetMatch}) reached. Halting product processing."
+            )
             return urlCount, consecutiveMatches
 
         # Create the product URL and if it doesn't work, stop.
@@ -125,8 +136,19 @@ def process_product(
         )
 
         # Stop processing immediately if the target match count is reached after updating
-        if consecutiveMatches >= targetMatch:
-            logging.info(f"Target match count ({targetMatch}) reached after processing product: {productUrl}.")
+        if consecutiveMatches is None or targetMatch is None:
+            logging.error(
+                f"One of the values is None before comparison. consecutiveMatches={consecutiveMatches}, targetMatch={targetMatch}"
+            )
+        else:
+            logging.debug(
+                f"Checking target match after update. consecutiveMatches={consecutiveMatches}, targetMatch={targetMatch}"
+            )
+
+        if consecutiveMatches is not None and targetMatch is not None and consecutiveMatches >= targetMatch:
+            logging.info(
+                f"Target match count ({targetMatch}) reached after processing product: {productUrl}."
+            )
             return urlCount, consecutiveMatches
 
         # Log based on whether the product was updated or not
