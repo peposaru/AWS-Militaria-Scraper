@@ -116,23 +116,28 @@ def process_site_with_available_element(webScrapeManager, dataManager, militaria
 
     for url, db_available in products:
         try:
-            productSoup = webScrapeManager.fetch_page(url)
-            # Product url doesn't return anything? Mark as sold.
+            productSoup, final_url = webScrapeManager.fetch_page_with_final_url(url)
             if not productSoup:
-                logging.warning(f"Failed to fetch product: {url}. Marking as unavailable.")
-                # Mark the product as unavailable in the database
-                update_query = "UPDATE militaria SET available = FALSE, date_modified = %s WHERE url = %s"
-                dataManager.sqlExecute(update_query, (datetime.now(), url))
-                continue
+                logging.warning(f"Failed to fetch product page. URL: {url}. Marking as unavailable.")
+                scraped_available = False
+            elif final_url != url:
+                logging.warning(f"URL mismatch detected. Expected: {url}, Got: {final_url}. Marking as unavailable.")
+                scraped_available = False
+            else:
+                try:
+                    scraped_available = bool(eval(availableElement))
+                except Exception as e:
+                    logging.error(f"Error evaluating availableElement for {url}: {e}")
+                    scraped_available = False
 
-            # Evaluate availableElement
-            scraped_available = bool(eval(availableElement))
+            # Update database only if the availability status changes
             if scraped_available != db_available:
                 update_query = "UPDATE militaria SET available = %s, date_modified = %s WHERE url = %s"
                 dataManager.sqlExecute(update_query, (scraped_available, datetime.now(), url))
                 logging.info(f"Product {url} availability updated to {scraped_available}")
         except Exception as e:
             logging.error(f"Error processing product {url}: {e}")
+
 
 def process_site_full_scrape(webScrapeManager, dataManager, militariaSite):
     """Perform full-site scraping and compare product URLs with the database."""

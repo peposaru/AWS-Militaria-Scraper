@@ -65,6 +65,28 @@ class ProductScraper:
             logging.error(f"Error occurred while accessing {url} - {e}")
             return None
 
+    def fetch_page_with_final_url(self, url):
+        """
+        Fetch the page and return the BeautifulSoup object along with the final URL after redirection.
+        """
+        headers = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
+        }
+        try:
+            # Allow redirects to capture the final URL
+            response = self.session.get(url, headers=headers, timeout=30, allow_redirects=True)
+            response.raise_for_status()
+            final_url = response.url  # The final URL after redirects
+            soup = BeautifulSoup(response.content, 'html.parser')  # Parse the page content
+            return soup, final_url
+        except Timeout:
+            logging.info(f"Timeout occurred while accessing {url}.")
+            return None, url  # Return original URL on timeout
+        except RequestException as e:
+            logging.error(f"Error occurred while accessing {url} - {e}")
+            return None, url  # Return original URL on error
+
+
     # Adding a retry system when getting productSoup
     def fetch_with_retries(self, fetch_function, *args, max_retries=3, backoff_factor=2, **kwargs):
         retries = 0

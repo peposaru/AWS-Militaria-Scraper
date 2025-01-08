@@ -340,7 +340,7 @@ def the_ruptured_duck(product_soup):
 
 def virtual_grenadier(product_soup):
     """
-    Extracts high-resolution image URLs from JOJ Militaria product pages.
+    Extracts high-resolution image URLs from Virtual Grenadier product pages.
 
     Args:
         product_soup (BeautifulSoup): Parsed HTML of the product page.
@@ -349,23 +349,30 @@ def virtual_grenadier(product_soup):
         list: High-resolution image URLs.
     """
     try:
-        # Select all images within the detail shots section
-        image_containers = product_soup.select('div#innerdet a.album')
+        # Extract main image
+        main_image_tag = product_soup.find('a', class_='album-main')
+        main_image_url = main_image_tag['href'] if main_image_tag and 'href' in main_image_tag.attrs else None
 
-        # Extract high-resolution image URLs from the href attribute
-        image_urls = []
-        for container in image_containers:
-            high_res_image = container.get('href')
-            if high_res_image:
-                # Ensure full URL is formed
-                if high_res_image.startswith("images/"):
-                    high_res_image = f"https://www.jojmilitaria.com/{high_res_image}"
-                image_urls.append(high_res_image)
+        # Extract detail images
+        detail_image_tags = product_soup.find_all('a', class_='album')
+        detail_image_urls = [tag['href'] for tag in detail_image_tags if 'href' in tag.attrs]
 
-        return image_urls
+        # Combine all images
+        all_images = []
+        if main_image_url:
+            all_images.append(main_image_url)
+        all_images.extend(detail_image_urls)
+
+        # Normalize image URLs (add base URL if needed)
+        if all_images and not all_images[0].startswith("http"):
+            inferred_base_url = "https://www.virtualgrenadier.com/"
+            all_images = [inferred_base_url + url.lstrip('/') for url in all_images]
+
+        return all_images
     except Exception as e:
-        logging.error(f"Error extracting images from JOJ Militaria: {e}")
+        logging.error(f"Error extracting images from Virtual Grenadier: {e}")
         return []
+
 
 def concept500_2(product_soup):
     """
